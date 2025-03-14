@@ -13,9 +13,13 @@ class ClassWorkController extends Controller
      */
     public function index()
     {
-        //
+        return view('pages.curriculum.homework');
     }
 
+    public function ex_homework()
+    {
+        return view('pages.curriculum.ex_homework');
+    }
     /**
      * Show the form for creating a new resource.
      */

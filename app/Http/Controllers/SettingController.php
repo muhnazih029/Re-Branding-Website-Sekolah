@@ -11,9 +11,19 @@ class SettingController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function vision_mission()
     {
-        //
+        return view('pages.profile.vision_mission');
+    }
+
+    public function history()
+    {
+        return view('pages.profile.school_history');
+    }
+
+    public function school_curriculum()
+    {
+        return view('pages.curriculum.school_curriculum');
     }
 
     /**

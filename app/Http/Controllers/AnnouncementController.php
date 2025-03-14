@@ -13,7 +13,12 @@ class AnnouncementController extends Controller
      */
     public function index()
     {
-        //
+        return view('pages.announcement.school_news');
+    }
+
+    public function new_student()
+    {
+        return view('pages.announcement.new_student_registration');
     }
 
     /**

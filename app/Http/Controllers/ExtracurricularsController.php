@@ -13,7 +13,7 @@ class ExtracurricularsController extends Controller
      */
     public function index()
     {
-        //
+        return view('pages.profile.extracurriculars');
     }
 
     /**

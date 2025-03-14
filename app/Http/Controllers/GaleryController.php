@@ -11,9 +11,14 @@ class GaleryController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function photo()
     {
-        //
+        return view('pages.galery.photos');
+    }
+
+    public function video()
+    {
+        return view('pages.galery.videos');
     }
 
     /**
