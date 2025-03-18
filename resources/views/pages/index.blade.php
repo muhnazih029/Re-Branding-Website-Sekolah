@@ -458,7 +458,7 @@
                 </div>
 
                 <!-- Foto Kepsek -->
-                <img src="{{ asset('img/kepsek1.png') }}" alt="Kepala Sekolah"
+                <img src="{{ asset('img/kepsek.png') }}" alt="Kepala Sekolah"
                     class="mx-auto w-50 h-74 md:w-50 md:h-70 rounded-lg relative z-10">
 
                 <!-- Kotak Nama -->
