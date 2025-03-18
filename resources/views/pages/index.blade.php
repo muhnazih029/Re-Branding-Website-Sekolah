@@ -517,7 +517,7 @@
             <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
                 <!-- Thumbnail Berita -->
                 <div class="w-full h-48 bg-gray-300 rounded-t-lg overflow-hidden">
-                    <img src="{{ asset('img/bts1.jpg') }}" alt="Berita 1" class="w-full h-full object-cover">
+                    <img src="{{ asset('img/berita1.jpg') }}" alt="Berita 1" class="w-full h-full object-cover">
                 </div>
 
                 <!-- Konten Berita -->
@@ -545,7 +545,7 @@
             <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
                 <!-- Thumbnail Berita -->
                 <div class="w-full h-48 bg-gray-300 rounded-t-lg overflow-hidden">
-                    <img src="{{ asset('img/bts2.jpg') }}" alt="Berita 2" class="w-full h-full object-cover">
+                    <img src="{{ asset('img/berita2.jpg') }}" alt="Berita 2" class="w-full h-full object-cover">
                 </div>
 
                 <!-- Konten Berita -->
@@ -570,7 +570,7 @@
             <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
                 <!-- Thumbnail Berita -->
                 <div class="w-full h-48 bg-gray-300 rounded-t-lg overflow-hidden">
-                    <img src="{{ asset('img/bts5.jpg') }}" alt="Berita 3" class="w-full h-full object-cover">
+                    <img src="{{ asset('img/berita3.jpg') }}" alt="Berita 3" class="w-full h-full object-cover">
                 </div>
 
                 <!-- Konten Berita -->
