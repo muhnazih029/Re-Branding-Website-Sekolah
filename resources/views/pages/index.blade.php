@@ -415,17 +415,17 @@
             <div class="swiper-wrapper">
                 <!-- Slide 1 -->
                 <div class="swiper-slide h-[300px] md:h-[500px] rounded-xl overflow-hidden bg-white">
-                    <img src="{{ asset('img/slider 4.jpeg') }}" alt="Gambar 1"
+                    <img src="{{ asset('img/slider1.jpeg') }}" alt="Gambar 1"
                         class="w-full h-full object-contain object-center">
                 </div>
                 <!-- Slide 2 -->
                 <div class="swiper-slide h-[300px] md:h-[500px] rounded-xl overflow-hidden bg-white">
-                    <img src="{{ asset('img/slider 1.jpg') }}" alt="Gambar 2"
+                    <img src="{{ asset('img/slider2.jpg') }}" alt="Gambar 2"
                         class="w-full h-full object-contain object-center">
                 </div>
                 <!-- Slide 3 -->
                 <div class="swiper-slide h-[300px] md:h-[500px] rounded-xl overflow-hidden bg-white">
-                    <img src="{{ asset('img/slider 2.jpeg') }}" alt="Gambar 3"
+                    <img src="{{ asset('img/slider3.jpeg') }}" alt="Gambar 3"
                         class="w-full h-full object-contain object-center">
                 </div>
             </div>
