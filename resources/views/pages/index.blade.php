@@ -159,8 +159,7 @@
                             class="block px-4 py-2 text-sm text-[rgb(45,51,107)] hover:bg-gray-100">Pendaftaran Peserta
                             Didik Baru</a>
                         <a href="#"
-                            class="block px-4 py-2 text-sm text-[rgb(45,51,107)] hover:bg-gray-100">Lomba Membuat
-                            Tulisan Motivasi</a>
+                            class="block px-4 py-2 text-sm text-[rgb(45,51,107)] hover:bg-gray-100">Lomba</a>
                     </div>
                 </div>
 
@@ -339,8 +338,7 @@
                             Sekolah</a>
                         <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Pendaftaran
                             Peserta Didik Baru</a>
-                        <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Lomba Membuat
-                            Tulisan Motivasi</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Lomba</a>
                     </div>
                 </div>
             </div>
@@ -396,6 +394,12 @@
                     class="absolute left-0 top-full mt-1 w-56 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none z-50">
                     <div class="py-1">
                         <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Kemendikbud</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Pemkot Semarang</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Dinas Pendidikan Kota Semarang</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Sang Juara</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Nomor Induk Siswa Nasional</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Dapodik</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">SIMPKB</a>
                     </div>
                 </div>
             </div>
