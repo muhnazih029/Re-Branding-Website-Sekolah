@@ -52,7 +52,6 @@ class TeacherResource extends Resource
                             ->options(
                                 collect(range(date('Y'), 1900))->mapWithKeys(fn($year) => [$year => $year])
                             )
-                            ->searchable()
                             ->required(),
                         Forms\Components\FileUpload::make('image')
                             ->label('Gambar')
