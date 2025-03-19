@@ -12,6 +12,7 @@ class CalendarAcademic extends Model
         'title',
         'document',
         'year',
+        'user_id',
     ];
 
     public function user(): BelongsTo
