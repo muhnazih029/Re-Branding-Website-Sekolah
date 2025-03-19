@@ -47,6 +47,10 @@ class User extends Authenticatable
         ];
     }
 
+    public function calendarAcademics(): HasMany
+    {
+        return $this->hasMany(CalendarAcademic::class);
+    }
     public function extracurriculars()
     {
         return $this->hasMany(Extracurriculars::class);
