@@ -17,7 +17,8 @@ return new class extends Migration
             $table->string('nip')->unique();
             $table->string('job');
             $table->string('image');
-            $table->date('starting_year');
+            $table->string('starting_year');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

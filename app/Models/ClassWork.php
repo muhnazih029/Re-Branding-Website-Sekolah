@@ -11,15 +11,11 @@ class ClassWork extends Model
     protected $fillable = [
         'title',
         'description',
+        'student_class_id',
     ];
 
-    public function class(): BelongsTo
+    public function student_class(): BelongsTo
     {
         return $this->belongsTo(StudentClass::class);
-    }
-
-    public function teacher(): BelongsTo
-    {
-        return $this->belongsTo(Teacher::class);
     }
 }
