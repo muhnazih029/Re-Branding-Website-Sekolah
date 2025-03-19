@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -38,8 +39,7 @@
 
     <!-- Menu Header -->
     <div x-data="{ open: false }" style="background-color: #E6EAF7;"
-        class="shadow-md relative z-50 flex justify-between items-center p-4">
-
+        class="shadow-md relative z-50 flex justify-between items-center p-2">
 
         <!-- Hamburger Menu (Muncul hanya ketika layar mode kecil/medium) -->
         <button @click="open = !open" @mouseenter="open = true" @mouseleave="open = open"
@@ -49,8 +49,6 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
             </svg>
         </button>
-
-
 
         <!-- Menu untuk layar medium/kecil -->
         <div x-show="open" x-transition:enter="transition ease-out duration-300"
@@ -155,29 +153,8 @@
                         <a href="#"
                             class="block px-4 py-2 text-sm text-[rgb(45,51,107)] hover:bg-gray-100">Pendaftaran Peserta
                             Didik Baru</a>
-                    </div>
-                </div>
-
-                <!-- Dropdown Lomba -->
-                <div x-data="{ open: false }" class="relative">
-                    <button @click="open = !open"
-                        class="text-[rgb(45,51,107)] font-semibold focus:outline-none uppercase px-4 py-2 w-full text-left hover:bg-gray-100 text-sm">
-                        Lomba
-                        <svg class="inline ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
-                            </path>
-                        </svg>
-                    </button>
-                    <div x-show="open" x-transition:enter="transition ease-out duration-200"
-                        x-transition:enter-start="opacity-0 transform scale-95"
-                        x-transition:enter-end="opacity-100 transform scale-100"
-                        x-transition:leave="transition ease-in duration-150"
-                        x-transition:leave-start="opacity-100 transform scale-100"
-                        x-transition:leave-end="opacity-0 transform scale-95" class="pl-4">
                         <a href="#"
-                            class="block px-4 py-2 text-sm text-[rgb(45,51,107)] hover:bg-gray-100">Lomba Membuat
-                            Tulisan Motivasi</a>
+                            class="block px-4 py-2 text-sm text-[rgb(45,51,107)] hover:bg-gray-100">Lomba</a>
                     </div>
                 </div>
 
@@ -249,7 +226,7 @@
         <!-- Menu untuk layar besar -->
         <div class="hidden md:flex container mx-auto flex-wrap justify-center space-x-2 py-3 uppercase">
             <!-- Beranda -->
-            <a href="#" class="text-[rgb(45,51,107)] font-semibold px-2 py-1 relative group text-sm">
+            <a href="#" class="text-[rgb(45,51,107)] font-semibold px-2 py-1 relative group text-lg">
                 Beranda
                 <span
                     class="absolute inset-x-0 bottom-0 h-0.5 bg-blue-900 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
@@ -258,7 +235,7 @@
             <!-- Dropdown Profil -->
             <div x-data="{ open: false }" class="relative">
                 <button @mouseenter="open = true" @mouseleave="open = false"
-                    class="text-[rgb(45,51,107)] font-semibold focus:outline-none uppercase px-2 py-1 relative group text-sm">
+                    class="text-[rgb(45,51,107)] font-semibold focus:outline-none uppercase px-2 py-1 relative group text-lg">
                     Profil
                     <svg class="inline ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg">
@@ -300,7 +277,7 @@
             <!-- Dropdown Kurikulum -->
             <div x-data="{ open: false }" class="relative">
                 <button @mouseenter="open = true" @mouseleave="open = false"
-                    class="text-[rgb(45,51,107)] font-semibold focus:outline-none uppercase px-2 py-1 relative group text-sm">
+                    class="text-[rgb(45,51,107)] font-semibold focus:outline-none uppercase px-2 py-1 relative group text-lg">
                     Kurikulum
                     <svg class="inline ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg">
@@ -333,7 +310,7 @@
             <!-- Dropdown Pengumuman -->
             <div x-data="{ open: false }" class="relative">
                 <button @mouseenter="open = true" @mouseleave="open = false"
-                    class="text-[rgb(45,51,107)] font-semibold focus:outline-none uppercase px-2 py-1 relative group text-sm">
+                    class="text-[rgb(45,51,107)] font-semibold focus:outline-none uppercase px-2 py-1 relative group text-lg">
                     Pengumuman
                     <svg class="inline ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg">
@@ -356,34 +333,7 @@
                             Sekolah</a>
                         <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Pendaftaran
                             Peserta Didik Baru</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Dropdown Lomba -->
-            <div x-data="{ open: false }" class="relative">
-                <button @mouseenter="open = true" @mouseleave="open = false"
-                    class="text-[rgb(45,51,107)] font-semibold focus:outline-none uppercase px-2 py-1 relative group text-sm">
-                    Lomba
-                    <svg class="inline ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
-                        </path>
-                    </svg>
-                    <span
-                        class="absolute inset-x-0 bottom-0 h-0.5 bg-blue-900 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
-                </button>
-                <div x-show="open" x-transition:enter="transition ease-out duration-200"
-                    x-transition:enter-start="opacity-0 transform scale-95"
-                    x-transition:enter-end="opacity-100 transform scale-100"
-                    x-transition:leave="transition ease-in duration-150"
-                    x-transition:leave-start="opacity-100 transform scale-100"
-                    x-transition:leave-end="opacity-0 transform scale-95" @mouseenter="open = true"
-                    @mouseleave="open = false" style="background-color: #2D336B;"
-                    class="absolute left-0 top-full mt-1 w-56 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none z-50">
-                    <div class="py-1">
-                        <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Lomba Membuat
-                            Tulisan Motivasi</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Lomba</a>
                     </div>
                 </div>
             </div>
@@ -391,7 +341,7 @@
             <!-- Dropdown Galeri -->
             <div x-data="{ open: false }" class="relative">
                 <button @mouseenter="open = true" @mouseleave="open = false"
-                    class="text-[rgb(45,51,107)] font-semibold focus:outline-none uppercase px-2 py-1 relative group text-sm">
+                    class="text-[rgb(45,51,107)] font-semibold focus:outline-none uppercase px-2 py-1 relative group text-lg">
                     Galeri
                     <svg class="inline ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg">
@@ -419,7 +369,7 @@
             <!-- Dropdown Website Terkait -->
             <div x-data="{ open: false }" class="relative">
                 <button @mouseenter="open = true" @mouseleave="open = false"
-                    class="text-[rgb(45,51,107)] font-semibold focus:outline-none uppercase px-2 py-1 relative group text-sm">
+                    class="text-[rgb(45,51,107)] font-semibold focus:outline-none uppercase px-2 py-1 relative group text-lg">
                     Website Terkait
                     <svg class="inline ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg">
@@ -439,11 +389,20 @@
                     class="absolute left-0 top-full mt-1 w-56 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none z-50">
                     <div class="py-1">
                         <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Kemendikbud</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Pemkot
+                            Semarang</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Dinas
+                            Pendidikan Kota Semarang</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Sang Juara</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Nomor Induk
+                            Siswa Nasional</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Dapodik</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">SIMPKB</a>
                     </div>
                 </div>
             </div>
-            <!-- Beranda -->
-            <a href="#" class="text-[rgb(45,51,107)] font-semibold px-2 py-1 relative group text-sm">
+            <!-- Kontak Kami -->
+            <a href="#" class="text-[rgb(45,51,107)] font-semibold px-2 py-1 relative group text-lg">
                 Kontak Kami
                 <span
                     class="absolute inset-x-0 bottom-0 h-0.5 bg-blue-900 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
@@ -453,24 +412,22 @@
     </div>
     <!-- Gambar Full Width -->
     <div class="w-full relative z-10">
-        <div class="w-full md:w-full h-[40vh] md:h-[30vh] bg-white  mx-auto flex items-center justify-center p-4">
+        <div class="w-full md:w-full h-[50vh] md:h-[50vh] bg-white  mx-auto flex items-center justify-center p-4">
             <img src="{{ asset('img/slider 4.jpeg') }}" alt="Gambar 1" class="w-full h-full object-cover">
         </div>
 
     </div>
 
-
-
     <!-- Konten Utama -->
     <div class="bg-gray-100 flex items-center justify-center min-h-screen">
         <div class="container mx-auto p-5 pl-20 md:pl-40">
             <!-- Kotak PROFIL dan Visi Misi Sekolah -->
-            <div class="flex flex-col md:flex-row space-y-5 md:space-y-0 md:space-x-5 mb-5">
+            <div class="flex flex-col md:flex-row md:items-start md:space-x-5 space-y-5 md:space-y-0 mb-5">
                 <div style="background-color: #2D336B;" class="w-[200px] shadow-md p-5 text-center">
                     <h1 class="text-xl font-bold text-white">PROFIL</h1>
                 </div>
                 <div style="background-color: #2D336B;"
-                    class="w-[300px] shadow-md p-5 text-center transform md:translate-x-20">
+                    class="w-[300px] shadow-md p-5 text-center md:ml-5 md:mt-0 mt-0">
                     <h1 class="text-xl font-bold text-white">Visi Misi Sekolah</h1>
                 </div>
             </div>
@@ -507,6 +464,7 @@
 
                 <!-- Konten -->
                 <div class="w-full md:w-3/4 p-5 md:ml-5 bg-gray-100 rounded-lg">
+                    <!-- Visi -->
                     <div class="mt-4">
                         <h2 style="background-color: #E6EAF7; color:#2D336B;"
                             class="text-xl font-bold px-3 py-1 inline-block rounded shadow-md">Visi</h2>
@@ -514,6 +472,8 @@
                             Bertaqwa, Santun, Terampil, Cerdas, Berprestasi, Ramah serta Berwawasan Budaya Lingkungan
                         </p>
                     </div>
+
+                    <!-- Misi -->
                     <div class="mt-4">
                         <h2 style="background-color: #E6EAF7; color:#2D336B;"
                             class="text-xl font-bold px-3 py-1 inline-block rounded shadow-md">Misi</h2>
