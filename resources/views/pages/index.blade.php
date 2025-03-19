@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -43,7 +44,6 @@
     <div x-data="{ open: false }" style="background-color: #E6EAF7;"
         class="shadow-md relative z-50 flex justify-between items-center p-2">
 
-
         <!-- Hamburger Menu (Muncul hanya ketika layar mode kecil/medium) -->
         <button @click="open = !open" @mouseenter="open = true" @mouseleave="open = open"
             class="md:hidden p-4 focus:outline-none ml-auto">
@@ -52,8 +52,6 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
             </svg>
         </button>
-
-
 
         <!-- Menu untuk layar medium/kecil -->
         <div x-show="open" x-transition:enter="transition ease-out duration-300"
@@ -159,8 +157,7 @@
                             class="block px-4 py-2 text-sm text-[rgb(45,51,107)] hover:bg-gray-100">Pendaftaran Peserta
                             Didik Baru</a>
                         <a href="#"
-                            class="block px-4 py-2 text-sm text-[rgb(45,51,107)] hover:bg-gray-100">Lomba Membuat
-                            Tulisan Motivasi</a>
+                            class="block px-4 py-2 text-sm text-[rgb(45,51,107)] hover:bg-gray-100">Lomba</a>
                     </div>
                 </div>
 
@@ -339,8 +336,7 @@
                             Sekolah</a>
                         <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Pendaftaran
                             Peserta Didik Baru</a>
-                        <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Lomba Membuat
-                            Tulisan Motivasi</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Lomba</a>
                     </div>
                 </div>
             </div>
@@ -396,6 +392,15 @@
                     class="absolute left-0 top-full mt-1 w-56 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none z-50">
                     <div class="py-1">
                         <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Kemendikbud</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Pemkot
+                            Semarang</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Dinas
+                            Pendidikan Kota Semarang</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Sang Juara</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Nomor Induk
+                            Siswa Nasional</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Dapodik</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">SIMPKB</a>
                     </div>
                 </div>
             </div>
@@ -517,24 +522,24 @@
             <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
                 <!-- Thumbnail Berita -->
                 <div class="w-full h-48 bg-gray-300 rounded-t-lg overflow-hidden">
-                    <img src="{{ asset('img/berita1.jpg') }}" alt="Berita 1" class="w-full h-full object-cover">
+                    <img src="{{ asset('img/berita 1.jpg') }}" alt="Berita 1" class="w-full h-full object-cover">
                 </div>
 
                 <!-- Konten Berita -->
                 <div class="p-4 flex flex-col flex-grow">
                     <!-- Judul Berita -->
-                    <h2 class="text-xl font-semibold text-blue-900">BTS Jadi Grup Penyanyi Paling Populer Edisi Akhir
-                        Tahun</h2>
+                    <h2 class="text-xl font-semibold text-blue-900">Siapakah Penemu Listrik? Michael Faraday atau
+                        Benjamin Franklin?</h2>
 
                     <!-- Deskripsi Singkat -->
                     <p class="text-sm text-gray-600 mt-2 line-clamp-3 flex-grow">
-                        Dilansir dari Soompi, Minggu (26/12/2021), The Korean Business Research Institute (Institut
-                        Penelitian Bisnis Korea) mengumumkan peringkat reputasi brand terpopuler untuk kategori penyanyi
-                        K-Pop.
+                        Kehadiran pemanfaatan listrik mengubah wajah dunia, mulai dari corak produksi, komunikasi,
+                        transportasi, dan lainnya. Kehadiran listrik ternyata mengalami perjalanan yang panjang hingga
+                        bisa kita nikmati sekarang.
                     </p>
 
                     <!-- Tombol Baca Selengkapnya -->
-                    <a href="https://bangka.sonora.id/read/503064846/bts-jadi-grup-penyanyi-paling-populer-edisi-akhir-tahun"
+                    <a href="https://www.ruangguru.com/blog/sejarah-penemuan-listrik"
                         class="mt-4 inline-block bg-blue-900 text-white text-sm font-semibold py-2 px-4 rounded-lg hover:bg-blue-800 transition duration-300 w-fit">
                         Baca Selengkapnya
                     </a>
@@ -545,21 +550,24 @@
             <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
                 <!-- Thumbnail Berita -->
                 <div class="w-full h-48 bg-gray-300 rounded-t-lg overflow-hidden">
-                    <img src="{{ asset('img/berita2.jpg') }}" alt="Berita 2" class="w-full h-full object-cover">
+                    <img src="{{ asset('img/berita 2.png') }}" alt="Berita 2" class="w-full h-full object-cover">
                 </div>
 
                 <!-- Konten Berita -->
                 <div class="p-4 flex flex-col flex-grow">
                     <!-- Judul Berita -->
-                    <h2 class="text-xl font-semibold text-blue-900">BTS (방탄소년단) 'Butter' Official MV</h2>
+                    <h2 class="text-xl font-semibold text-blue-900">Al Khawarizmi, Tokoh Penemu Matematika & Bapak
+                        Aljabar</h2>
 
                     <!-- Deskripsi Singkat -->
                     <p class="text-sm text-gray-600 mt-2 line-clamp-3 flex-grow">
-                        Smooth like butter~
+                        Al-Khawarizmi adalah ilmuwan yang menyumbangkan pemikiran terbesarnya di dalam matematika.
+                        Karya-karyanya sangat berpengaruh bagi peradaban manusia. Seperti apakah sosok penemu matematika
+                        ini?
                     </p>
 
                     <!-- Tombol Baca Selengkapnya -->
-                    <a href="https://www.youtube.com/watch?v=WMweEpGlu_U"
+                    <a href="https://www.ruangguru.com/blog/al-khawarizmi"
                         class="mt-4 inline-block bg-blue-900 text-white text-sm font-semibold py-2 px-4 rounded-lg hover:bg-blue-800 transition duration-300 w-fit">
                         Baca Selengkapnya
                     </a>
@@ -570,22 +578,23 @@
             <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
                 <!-- Thumbnail Berita -->
                 <div class="w-full h-48 bg-gray-300 rounded-t-lg overflow-hidden">
-                    <img src="{{ asset('img/berita3.jpg') }}" alt="Berita 3" class="w-full h-full object-cover">
+                    <img src="{{ asset('img/berita 3.jpg') }}" alt="Berita 3" class="w-full h-full object-cover">
                 </div>
 
                 <!-- Konten Berita -->
                 <div class="p-4 flex flex-col flex-grow">
                     <!-- Judul Berita -->
-                    <h2 class="text-xl font-semibold text-blue-900">BTS (방탄소년단) 'MIC Drop (Steve Aoki Remix)' Official
-                        MV</h2>
+                    <h2 class="text-xl font-semibold text-blue-900">7 Tips Memulai Semester Baru yang Sebaiknya Kamu
+                        Lakukan!</h2>
 
                     <!-- Deskripsi Singkat -->
                     <p class="text-sm text-gray-600 mt-2 line-clamp-3 flex-grow">
-                        Did you see my bag?
+                        Liburan telah usai, saatnya menyambut semester baru! Yuk, cari tahu apa saja hal penting yang
+                        harus kamu lakukan untuk memulai semester baru kali ini.
                     </p>
 
                     <!-- Tombol Baca Selengkapnya -->
-                    <a href="https://www.youtube.com/watch?v=kTlv5_Bs8aw"
+                    <a href="https://www.ruangguru.com/blog/menyambut-semester-baru"
                         class="mt-4 inline-block bg-blue-900 text-white text-sm font-semibold py-2 px-4 rounded-lg hover:bg-blue-800 transition duration-300 w-fit">
                         Baca Selengkapnya
                     </a>
@@ -596,24 +605,23 @@
             <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
                 <!-- Thumbnail Berita -->
                 <div class="w-full h-48 bg-gray-300 rounded-t-lg overflow-hidden">
-                    <img src="{{ asset('img/berita4.jpg') }}" alt="Berita 4" class="w-full h-full object-cover">
+                    <img src="{{ asset('img/berita 4.png') }}" alt="Berita 4" class="w-full h-full object-cover">
                 </div>
 
                 <!-- Konten Berita -->
                 <div class="p-4 flex flex-col flex-grow">
                     <!-- Judul Berita -->
-                    <h2 class="text-xl font-semibold text-blue-900">yung kai - blue (official music video)</h2>
+                    <h2 class="text-xl font-semibold text-blue-900">15 Contoh Cerita Liburan Sekolah Seru Berbagai Tema
+                    </h2>
 
                     <!-- Deskripsi Singkat -->
                     <p class="text-sm text-gray-600 mt-2 line-clamp-3 flex-grow">
-                        Your morning eyes, I could stare like watching stars
-                        I could walk you by, and I'll tell without a thought
-                        You'd be mine, would you mind if I took your hand tonight?
-                        Know you're all that I want this life
+                        Liburan sekolah memang menjadi hal yang dinanti-nanti. Yuk, simak beberapa contoh cerita liburan
+                        sekolah seru dan menarik yang bisa kamu jadikan referensi.
                     </p>
 
                     <!-- Tombol Baca Selengkapnya -->
-                    <a href="https://www.youtube.com/watch?v=IpFX2vq8HKw"
+                    <a href="https://www.ruangguru.com/blog/contoh-cerita-liburan-sekolah-berbagai-tema"
                         class="mt-4 inline-block bg-blue-900 text-white text-sm font-semibold py-2 px-4 rounded-lg hover:bg-blue-800 transition duration-300 w-fit">
                         Baca Selengkapnya
                     </a>
@@ -624,29 +632,23 @@
             <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
                 <!-- Thumbnail Berita -->
                 <div class="w-full h-48 bg-gray-300 rounded-t-lg overflow-hidden">
-                    <img src="{{ asset('img/berita5.jpg') }}" alt="Berita 5" class="w-full h-full object-cover">
+                    <img src="{{ asset('img/berita 5.png') }}" alt="Berita 5" class="w-full h-full object-cover">
                 </div>
 
                 <!-- Konten Berita -->
                 <div class="p-4 flex flex-col flex-grow">
                     <!-- Judul Berita -->
-                    <h2 class="text-xl font-semibold text-blue-900">BTS (방탄소년단) '작은 것들을 위한 시 (Boy With Luv) (feat.
-                        Halsey)' Official MV</h2>
+                    <h2 class="text-xl font-semibold text-blue-900">Benarkah Penyumbang Oksigen Terbesar Bumi Berasal
+                        dari Pohon?</h2>
 
                     <!-- Deskripsi Singkat -->
                     <p class="text-sm text-gray-600 mt-2 line-clamp-3 flex-grow">
-                        Oh, my, my, my (uh)
-                        Oh, my, my, my
-                        You got me high so fast
-                        네 전부를 함께하고 싶어
-                        Oh, my, my, my
-                        Oh, my, my, my
-                        You got me fly so fast
-                        이제 조금은 나 알겠어
+                        Artikel ini mengungkap fakta bahwa pohon bukanlah sumber oksigen terbesar di planet kita. Lalu,
+                        apa penyumbang oksigen terbesar di bumi? Yuk, cari tahu!
                     </p>
 
                     <!-- Tombol Baca Selengkapnya -->
-                    <a href="https://www.youtube.com/watch?v=XsX3ATc3FbA"
+                    <a href="https://www.ruangguru.com/blog/benarkah-penyumbang-oksigen-terbesar-kita-berasal-dari-pohon"
                         class="mt-4 inline-block bg-blue-900 text-white text-sm font-semibold py-2 px-4 rounded-lg hover:bg-blue-800 transition duration-300 w-fit">
                         Baca Selengkapnya
                     </a>
@@ -678,4 +680,3 @@
 </body>
 
 </html>
-
