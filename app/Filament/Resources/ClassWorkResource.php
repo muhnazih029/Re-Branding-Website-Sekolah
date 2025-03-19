@@ -17,7 +17,7 @@ use App\Filament\Resources\ClassWorkResource\RelationManagers;
 class ClassWorkResource extends Resource
 {
     protected static ?string $model = ClassWork::class;
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-folder-open';
     protected static ?string $navigationGroup = 'Akademik';
     protected static ?int $navigationSort = 4;
     public static function getLabel(): string
