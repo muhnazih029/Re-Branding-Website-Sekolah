@@ -410,17 +410,16 @@
         </div>
     </div>
     </div>
-    <!-- Gambar Full Width -->
-    <div class="w-full relative z-10">
-        <div class="w-full md:w-full h-[50vh] md:h-[50vh] bg-white  mx-auto flex items-center justify-center p-4">
-            <img src="{{ asset('img/slider 4.jpeg') }}" alt="Gambar 1" class="w-full h-full object-cover">
-        </div>
-
+ <!-- Gambar Full Width -->
+<div class="w-full relative z-10">
+    <div class="w-full h-[50vh] bg-white mx-auto flex items-center justify-center">
+        <img src="{{ asset('img/berita 1.jpg') }}" alt="Gambar 1" class="w-full h-full object-cover">
     </div>
+</div>
 
     <!-- Konten Utama -->
     <div class="bg-gray-100 flex items-center justify-center min-h-screen">
-        <div class="container mx-auto p-5 pl-20 md:pl-40">
+        <div class="container mx-auto p-5 pl-10 md:pl-20">
             <!-- Kotak PROFIL dan Visi Misi Sekolah -->
             <div class="flex flex-col md:flex-row md:items-start md:space-x-5 space-y-5 md:space-y-0 mb-5">
                 <div style="background-color: #2D336B;" class="w-[200px] shadow-md p-5 text-center">
