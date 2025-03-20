@@ -5,13 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-class Extracurriculars extends Model
+class Extracurricular extends Model
 {
     protected $table = 'extracurriculars';
     protected $fillable = [
         'extra_name',
         'description',
         'image',
+        'user_id',
     ];
 
     public function user(): BelongsTo
