@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('school_operational_assistances', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
+            $table->date('date');
             $table->string('receipt');
             $table->string('expenditure');
             $table->string('bank_balance');

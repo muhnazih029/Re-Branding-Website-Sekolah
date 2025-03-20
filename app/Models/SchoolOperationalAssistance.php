@@ -9,10 +9,11 @@ class SchoolOperationalAssistance extends Model
 {
     protected $table = 'school_operational_assistances';
     protected $fillable = [
-        'title',
+        'date',
         'receipt',
         'expenditure',
         'bank_balance',
+        'user_id',
     ];
 
     public function user(): BelongsTo
