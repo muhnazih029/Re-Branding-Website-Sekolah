@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('galeries', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('file');
+            $table->json('file');
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });
