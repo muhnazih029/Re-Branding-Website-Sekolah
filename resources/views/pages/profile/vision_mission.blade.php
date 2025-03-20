@@ -435,25 +435,21 @@
             </div>
         </div>
     </div>
-<!-- Kotak Gambar di Bawah Header -->
-<div class="relative -mt-16 w-full h-80 md:h-[60vh] bg-cover bg-center"
-     style="background-image: url('{{ asset('img/berita 1.jpg') }}');">
-    <!-- Overlay untuk memastikan teks tidak tertutup -->
-    <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+    <!-- Kotak Gambar di Bawah Header -->
+    <div class="relative -mt-16 w-full h-80 md:h-[60vh] bg-cover bg-center"
+        style="background-image: url('{{ asset('img/berita 1.jpg') }}');">
+        <!-- Overlay untuk memastikan teks tidak tertutup -->
+        <div class="absolute inset-0 bg-black bg-opacity-30"></div>
 
-    <!-- Kotak Profil Besar di Bawah -->
-    <div  class="absolute bottom-16 left-0 bg-[#E6EAF7] px-8 py-6 shadow-lg  z-10 w-60 h-20 flex items-center justify-center">
-        <span class="text-2xl font-bold text-[#2D336B]">PROFIL</span>
+        <!-- Kotak Profil Besar di Bawah -->
+        <div
+            class="absolute bottom-16 left-0 bg-[#E6EAF7] px-8 py-6 shadow-lg  z-10 w-60 h-20 flex items-center justify-center">
+            <span class="text-2xl font-bold text-[#2D336B]">PROFIL</span>
+        </div>
     </div>
-</div>
-
-
-
-
-
 
     <!-- Konten Utama -->
-    <div class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-gray-100 flex items-center justify-center min-h-screen mt-4">
         <div class="container mx-auto p-5 pl-10 md:pl-20">
             <!-- Kotak PROFIL dan Visi Misi Sekolah -->
             <div class="flex flex-col md:flex-row md:items-start md:space-x-5 space-y-5 md:space-y-0 mb-5">
@@ -472,7 +468,8 @@
             <!-- Konten dan Sidebar -->
             <div class="flex flex-col md:flex-row">
                 <!-- Sidebar Menu Profil -->
-                <div style="background-color: #E6EAF7; color:#2D336B;" class="w-[250px] shadow-md p-5 mb-5 md:mb-0">
+                <div style="background-color: #E6EAF7; color:#2D336B;"
+                    class="w-[250px] h-[50vh] shadow-md p-5 mb-5 md:mb-0">
                     <h2 class="text-xl font-bold mb-4">Profil</h2>
                     <ul class="space-y-2">
                         <li><a href="#" class="block text-[#7886C7] hover:text-blue-900 font-semibold">Visi Misi
@@ -499,30 +496,36 @@
                 <!-- Konten -->
                 <div class="w-full md:w-3/4 p-5 md:ml-5 bg-gray-100 rounded-lg">
                     <!-- Visi -->
-                    <div class="mt-4">
+                    <div class="mt-4 h-[80vh]">
                         <h2 style="background-color: #E6EAF7; color:#2D336B;"
                             class="text-xl font-bold px-3 py-1 inline-block rounded shadow-md">Visi</h2>
                         <p class="mt-2 text-[rgb(45,51,107)] pl-2 font-semibold">Terwujudnya Peserta Didik yang
                             Bertaqwa, Santun, Terampil, Cerdas, Berprestasi, Ramah serta Berwawasan Budaya Lingkungan
                         </p>
+                        <!-- Misi -->
+                        <div class="mt-4">
+                            <h2 style="background-color: #E6EAF7; color:#2D336B;"
+                                class="text-xl font-bold px-3 py-1 inline-block rounded shadow-md">Misi</h2>
+                            <ul
+                                class="list-decimal list-inside mt-2 pl-2 space-y-2 text-[rgb(45,51,107)] font-semibold">
+                                <li>Melaksanakan pendidikan dan pembelajaran untuk mengembangkan ketakwaan terhadap
+                                    Tuhan
+                                    Yang Maha Esa</li>
+                                <li>Menumbuhkan budaya tertib, disiplin, santun dalam ucapan, sopan dalam perilaku
+                                    terhadap
+                                    sesama berdasarkan iman dan taqwa</li>
+                                <li>Menumbuhkan kreativitas dan inovasi di bidang akademik, prestasi dan keterampilan
+                                </li>
+                                <li>Menumbuhkan semangat berprestasi dan budaya kompetitif yang jujur, sportif bagi
+                                    seluruh
+                                    warga sekolah dalam berlomba meraih prestasi</li>
+                                <li>Melaksanakan pendidikan dan pembelajaran yang ramah</li>
+                                <li>Melaksanakan pendidikan dan pembelajaran yang berwawasan budaya lingkungan</li>
+                            </ul>
+                        </div>
                     </div>
 
-                    <!-- Misi -->
-                    <div class="mt-4">
-                        <h2 style="background-color: #E6EAF7; color:#2D336B;"
-                            class="text-xl font-bold px-3 py-1 inline-block rounded shadow-md">Misi</h2>
-                        <ul class="list-decimal list-inside mt-2 pl-2 space-y-2 text-[rgb(45,51,107)] font-semibold">
-                            <li>Melaksanakan pendidikan dan pembelajaran untuk mengembangkan ketakwaan terhadap Tuhan
-                                Yang Maha Esa</li>
-                            <li>Menumbuhkan budaya tertib, disiplin, santun dalam ucapan, sopan dalam perilaku terhadap
-                                sesama berdasarkan iman dan taqwa</li>
-                            <li>Menumbuhkan kreativitas dan inovasi di bidang akademik, prestasi dan keterampilan</li>
-                            <li>Menumbuhkan semangat berprestasi dan budaya kompetitif yang jujur, sportif bagi seluruh
-                                warga sekolah dalam berlomba meraih prestasi</li>
-                            <li>Melaksanakan pendidikan dan pembelajaran yang ramah</li>
-                            <li>Melaksanakan pendidikan dan pembelajaran yang berwawasan budaya lingkungan</li>
-                        </ul>
-                    </div>
+
                 </div>
             </div>
 
