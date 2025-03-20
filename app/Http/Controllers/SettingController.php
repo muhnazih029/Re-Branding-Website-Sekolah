@@ -13,17 +13,20 @@ class SettingController extends Controller
      */
     public function vision_mission()
     {
-        return view('pages.profile.vision_mission');
+        $settings = Setting::whereIn('key', ['visi', 'misi'])->pluck('value', 'key');
+        return view('pages.profile.vision_mission', compact('settings'));
     }
 
     public function history()
     {
-        return view('pages.profile.school_history');
+        $settings = Setting::where('key', 'sejarah_text')->pluck('value', 'key');
+        return view('pages.profile.school_history', compact('settings'));
     }
 
     public function school_curriculum()
     {
-        return view('pages.curriculum.school_curriculum');
+        $settings = Setting::where('key', 'kurikulum_sekolah')->pluck('value', 'key');
+        return view('pages.curriculum.school_curriculum', compact('settings'));
     }
 
     /**
