@@ -17,7 +17,8 @@
     </style>
 </head>
 
-<body class="bg-gray-100 font-poppins">
+<body class="bg-gray-100 font-poppins pt-[190px]">
+    <div class="fixed top-0 left-0 w-full z-50">
 
     <!-- Header -->
     <nav style="background-color: #304193;" class="text-white p-2 md:p-4 flex justify-between items-center"></nav>
