@@ -2,16 +2,17 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\SettingResource\Pages;
-use App\Filament\Resources\SettingResource\RelationManagers;
-use App\Models\Setting;
 use Filament\Forms;
-use Filament\Forms\Form;
-use Filament\Resources\Resource;
 use Filament\Tables;
+use App\Models\Setting;
+use Filament\Forms\Form;
 use Filament\Tables\Table;
+use Filament\Resources\Resource;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Database\Eloquent\Builder;
+use App\Filament\Resources\SettingResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use App\Filament\Resources\SettingResource\RelationManagers;
 
 class SettingResource extends Resource
 {
@@ -39,11 +40,6 @@ class SettingResource extends Resource
                     ->label('Deskripsi')
                     ->columnSpanFull()
                     ->visible(fn($record) => in_array($record?->type, ['text']))
-                    ->required(),
-                Forms\Components\Textarea::make('value')
-                    ->label('Deskripsi')
-                    ->columnSpanFull()
-                    ->visible(fn($record) => in_array($record?->type, ['textarea']))
                     ->required(),
                 Forms\Components\RichEditor::make('value')
                     ->label('Deskripsi')
@@ -86,7 +82,18 @@ class SettingResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make()
-                    ->modalWidth('2xl'),
+                    ->modalWidth('2xl')
+                    ->using(function (Setting $record, array $data): Setting {
+                        $record->fill($data);
+                        if ($record->isDirty('image')) {
+                            $oldImage = $record->getOriginal('image');
+                            if ($oldImage && Storage::exists($oldImage)) {
+                                Storage::delete($oldImage);
+                            }
+                        }
+                        $record->save();
+                        return $record;
+                    }),
             ])
             ->bulkActions([
                 //
