@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
-use Illuminate\Database\Eloquent\Relations\HasOne;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class StudentClass extends Model
 {
@@ -12,6 +12,7 @@ class StudentClass extends Model
     protected $fillable = [
         'class_name',
         'image',
+        'teacher_id',
     ];
 
     public function students(): HasMany
@@ -24,8 +25,8 @@ class StudentClass extends Model
         return $this->hasMany(ClassWork::class);
     }
 
-    public function teacher(): HasOne
+    public function teacher(): BelongsTo
     {
-        return $this->hasOne(Teacher::class);
+        return $this->belongsTo(Teacher::class);
     }
 }

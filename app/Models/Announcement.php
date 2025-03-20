@@ -14,6 +14,7 @@ class Announcement extends Model
         'content',
         'image',
         'type',
+        'user_id',
     ];
 
     public function user(): BelongsTo

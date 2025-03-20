@@ -12,9 +12,11 @@ class Student extends Model
         'student_name',
         'nisn',
         'gender',
+        'image',
+        'student_class_id',
     ];
 
-    public function class(): BelongsTo
+    public function student_class(): BelongsTo
     {
         return $this->belongsTo(StudentClass::class);
     }

@@ -12,6 +12,7 @@ class Facility extends Model
         'name',
         'quantity',
         'image',
+        'user_id',
     ];
 
     public function user(): BelongsTo

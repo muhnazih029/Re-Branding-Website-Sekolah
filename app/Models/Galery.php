@@ -11,7 +11,19 @@ class Galery extends Model
     protected $fillable = [
         'name',
         'file',
+        'user_id',
     ];
+    protected $casts = [
+        'file' => 'array',
+    ];
+
+    public function setFileAttribute($value)
+    {
+        $this->attributes['file'] = json_encode(
+            array_map(fn($file) => str_replace('\\', '', $file), $value),
+            JSON_UNESCAPED_SLASHES
+        );
+    }
 
     public function user(): BelongsTo
     {

@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('nisn')->unique();
             $table->string('gender');
             $table->string('image');
+            $table->foreignId('student_class_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });
     }
