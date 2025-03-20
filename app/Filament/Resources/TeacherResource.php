@@ -102,8 +102,8 @@ class TeacherResource extends Resource
                             $record->fill($data);
                             if ($record->isDirty('image')) {
                                 $oldImage = $record->getOriginal('image');
-                                if ($oldImage && Storage::disk('public')->exists($oldImage)) {
-                                    Storage::disk('public')->delete($oldImage);
+                                if ($oldImage && Storage::exists($oldImage)) {
+                                    Storage::delete($oldImage);
                                 }
                             }
                             $record->save();
@@ -118,7 +118,12 @@ class TeacherResource extends Resource
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
                     Tables\Actions\DeleteBulkAction::make(),
-                    Tables\Actions\ForceDeleteBulkAction::make(),
+                    Tables\Actions\ForceDeleteBulkAction::make()
+                        ->using(function (Teacher $record) {
+                            Storage::delete($record->image);
+                            $record->delete();
+                            return $record;
+                        }),
                     Tables\Actions\RestoreBulkAction::make(),
                 ]),
             ]);

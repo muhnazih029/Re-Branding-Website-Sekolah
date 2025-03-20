@@ -19,7 +19,7 @@ use App\Filament\Resources\FacilityResource\RelationManagers;
 class FacilityResource extends Resource
 {
     protected static ?string $model = Facility::class;
-    protected static ?string $navigationIcon = 'heroicon-o-home';
+    protected static ?string $navigationIcon = 'heroicon-o-table-cells';
     protected static ?string $navigationGroup = 'Manajemen Sekolah';
     protected static ?int $navigationSort = 3;
     public static function getLabel(): string
@@ -82,7 +82,18 @@ class FacilityResource extends Resource
                     Tables\Actions\ViewAction::make()
                         ->modalWidth('xl'),
                     Tables\Actions\EditAction::make()
-                        ->modalWidth('xl'),
+                        ->modalWidth('xl')
+                        ->using(function (Facility $record, array $data): Facility {
+                            $record->fill($data);
+                            if ($record->isDirty('image')) {
+                                $oldImage = $record->getOriginal('image');
+                                if ($oldImage && Storage::exists($oldImage)) {
+                                    Storage::delete($oldImage);
+                                }
+                            }
+                            $record->save();
+                            return $record;
+                        }),
                     Tables\Actions\DeleteAction::make()
                         ->using(function (Facility $record): Facility {
                             Storage::delete($record->image);

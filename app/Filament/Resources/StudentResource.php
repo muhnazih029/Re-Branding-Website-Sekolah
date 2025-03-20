@@ -114,8 +114,8 @@ class StudentResource extends Resource
                             $record->fill($data);
                             if ($record->isDirty('image')) {
                                 $oldImage = $record->getOriginal('image');
-                                if ($oldImage && Storage::disk('public')->exists($oldImage)) {
-                                    Storage::disk('public')->delete($oldImage);
+                                if ($oldImage && Storage::exists($oldImage)) {
+                                    Storage::delete($oldImage);
                                 }
                             }
                             $record->save();
@@ -123,7 +123,7 @@ class StudentResource extends Resource
                         }),
                     Tables\Actions\DeleteAction::make()
                         ->using(function (Student $record): Student {
-                            Storage::disk('public')->delete($record->image);
+                            Storage::delete($record->image);
                             $record->delete();
                             return $record;
                         }),

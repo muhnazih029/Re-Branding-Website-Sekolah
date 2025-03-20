@@ -82,7 +82,17 @@ class ExtracurricularResource extends Resource
                     Tables\Actions\ViewAction::make()
                         ->modalWidth('xl'),
                     Tables\Actions\EditAction::make()
-                        ->modalWidth('xl'),
+                        ->modalWidth('xl')
+                        ->using(function (Extracurricular $record, array $data): Extracurricular {
+                            $record->fill($data);
+                            if ($record->isDirty('image')) {
+                                $oldImage = $record->getOriginal('image');
+                                if ($oldImage && Storage::exists($oldImage)) {
+                                    Storage::delete($oldImage);
+                                }
+                            }
+                            return $record;
+                        }),
                     Tables\Actions\DeleteAction::make()
                         ->using(function (Extracurricular $record): Extracurricular {
                             Storage::delete($record->image);
