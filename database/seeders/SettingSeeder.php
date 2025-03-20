@@ -23,22 +23,27 @@ class SettingSeeder extends Seeder
             [
                 'key' => 'visi',
                 'label' => 'Visi',
-                'value' => 'Mewujudkan peserta didik yang beriman, berakhlak mulia, berprestasi, dan peduli lingkungan.',
+                'value' => 'Terwujudnya Peserta Didik yang Bertaqwa, Santun, Terampil, Cerdas, Berprestasi, Ramah serta Berwawasan Budaya Lingkungan',
                 'type' => 'longtext',
                 'image' => null,
             ],
             [
                 'key' => 'misi',
                 'label' => 'Misi',
-                'value' => '1. Melaksanakan pembelajaran efektif.\n2. Menumbuhkan semangat berprestasi.\n3. Menanamkan disiplin dan kepedulian lingkungan.',
+                'value' => 'Melaksanakan pendidikan dan pembelajaran untuk mengembangkan ketakwaan terhadap Tuhan Yang Maha Esa
+                            Menumbuhkan budaya tertib, disiplin, santun dalam ucapan, sopan dalam perilaku terhadap sesama berdasarkan iman dan taqwa
+                            Menumbuhkan kreativitas dan inovasi di bidang akademik, prestasi dan keterampilan
+                            Menumbuhkan semangat berprestasi dan budaya kompetitif yang jujur, sportif bagi seluruh warga sekolah dalam berlomba meraih prestasi
+                            Melaksanakan pendidikan dan pembelajaran yang ramah
+                            Melaksanakan pendidikan dan pembelajaran yang berwawasan budaya lingkungan',
                 'type' => 'longtext',
                 'image' => null,
             ],
             [
                 'key' => 'sejarah_text',
                 'label' => 'Sejarah Singkat - Text',
-                'value' => 'SDN Bandarharjo 01 berdiri sejak 1960 dan menjadi salah satu sekolah dasar tertua di Semarang.',
-                'type' => 'textarea',
+                'value' => 'Secara administrasi Sekolah Dasar (SD) Negeri Bandarharjo 01 beralamat di Jalan Cumi-cumi Raya No. 2, Kelurahan Bandarharjo, Kecamatan Semarang Utara, Kota Semarang, Provinsi Jawa Tengah. Untuk menunjang proses Kegiatan Belajar Mengajar, sekolah mempunyai fasilitas sebagai berikut: - 6 Ruang Kelas - 1 ruang Kepala Sekolah menyatu dengan: (1 ruang tamu Kepala Sekolah - 1 ruang tata usaha, 1 ruang Guru) - 1 ruang Guru - 1 ruang Perpustakaan menyatu dengan ruang komputer - 1 ruang UKS - 1 ruang ibadah - 2 kamar mandi guru - 3 toilet Siswa - 2 Kantin sekolah SDN Bandarharjo 01 berdiri sejak tahun 1973 dan berdasarkan Surat Wali kota Nomor : 030/1301 tanggal 6 April 2006 telah dimasukan inventarisasi aset tanah Pemerintah Kota Semarang. Sejak pertama kali berdiri sudah berganti kepala sekolah sebanyak 9 kali hingga saat ini: Bu Suwarti, Bapak Soeyoto, Bu Veronika Utami, Bu Sri Lestari, Bu Rustiah, Bapak Sarpio, Bu Diah Erowati, Bu Sri Widiyati, Bu Bugiyanti. Sekolah SDN Bandarharjo 01 adalah salah satu SD awal yang pertama kali berdiri di kota semarang. Memberi pelayanan pendidikan guna meningkatakn SDM yang berkualitas dan bermartabat berdasarkan ketaqwaan dan cinta tanah air & bangsa.',
+                'type' => 'longtext',
                 'image' => null,
             ],
             [
