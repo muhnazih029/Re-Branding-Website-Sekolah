@@ -525,86 +525,85 @@
                             </div>
                         </div>
                         <!-- Pendidik 2 -->
-                        <div class="mt-4 h-[80vh]">
-                            <!-- Profil -->
-                            <div class="bg-white p-5 rounded-lg shadow-md flex items-start">
-                                <!-- Kotak Foto -->
-                                <div class="w-24 h-24 md:w-32 md:h-32 bg-gray-300 rounded-lg overflow-hidden mr-5">
-                                    <img src="https://via.placeholder.com/150" alt="Foto Christina Ardiyanti"
-                                        class="w-full h-full object-cover">
-                                </div>
-                                <!-- Informasi Teks -->
-                                <div class="flex-1">
-                                    <h2 class="text-xl font-bold text-blue-900">Christina Ardiyanti, S.Pd</h2>
-                                    <div class="mt-3">
-                                        <table class="w-48">
-                                            <tr>
-                                                <th class="text-left py-1 whitespace-nowrap">NIP :</th>
-                                                <td class="py-1"></td>
-                                            </tr>
-                                            <tr>
-                                                <th class="text-left py-1 whitespace-nowrap">Jenis Kelamin :</th>
-                                                <td class="py-1"></td>
-                                            </tr>
-                                            <tr>
-                                                <th class="text-left py-1 whitespace-nowrap">Jabatan :</th>
-                                                <td class="py-1"></td>
-                                            </tr>
-                                        </table>
-                                    </div>
+                    <div class="mt-4 h-[80vh]">
+                        <!-- Profil -->
+                        <div class="bg-white p-5 rounded-lg shadow-md flex items-start">
+                            <!-- Kotak Foto -->
+                            <div class="w-24 h-24 md:w-32 md:h-32 bg-gray-300 rounded-lg overflow-hidden mr-5">
+                                <img src="https://via.placeholder.com/150" alt="Foto Christina Ardiyanti"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <!-- Informasi Teks -->
+                            <div class="flex-1">
+                                <h2 class="text-xl font-bold text-blue-900">Christina Ardiyanti, S.Pd</h2>
+                                <div class="mt-3">
+                                    <table class="w-48">
+                                        <tr>
+                                            <th class="text-left py-1 whitespace-nowrap">NIP :</th>
+                                            <td class="py-1"></td>
+                                        </tr>
+                                        <tr>
+                                            <th class="text-left py-1 whitespace-nowrap">Jenis Kelamin :</th>
+                                            <td class="py-1"></td>
+                                        </tr>
+                                        <tr>
+                                            <th class="text-left py-1 whitespace-nowrap">Jabatan :</th>
+                                            <td class="py-1"></td>
+                                        </tr>
+                                    </table>
                                 </div>
                             </div>
+                        </div>
                             <!-- Pendidik 3 -->
-                            <div class="mt-4 h-[80vh]">
-                                <!-- Profil -->
-                                <div class="bg-white p-5 rounded-lg shadow-md flex items-start">
-                                    <!-- Kotak Foto -->
-                                    <div class="w-24 h-24 md:w-32 md:h-32 bg-gray-300 rounded-lg overflow-hidden mr-5">
-                                        <img src="https://via.placeholder.com/150" alt="Foto Christina Ardiyanti"
-                                            class="w-full h-full object-cover">
-                                    </div>
-                                    <!-- Informasi Teks -->
-                                    <div class="flex-1">
-                                        <h2 class="text-xl font-bold text-blue-900">Christina Ardiyanti, S.Pd</h2>
-                                        <div class="mt-3">
-                                            <table class="w-48">
-                                                <tr>
-                                                    <th class="text-left py-1 whitespace-nowrap">NIP :</th>
-                                                    <td class="py-1"></td>
-                                                </tr>
-                                                <tr>
-                                                    <th class="text-left py-1 whitespace-nowrap">Jenis Kelamin :</th>
-                                                    <td class="py-1"></td>
-                                                </tr>
-                                                <tr>
-                                                    <th class="text-left py-1 whitespace-nowrap">Jabatan :</th>
-                                                    <td class="py-1"></td>
-                                                </tr>
-                                            </table>
-                                        </div>
-                                    </div>
+                    <div class="mt-4 h-[80vh]">
+                        <!-- Profil -->
+                        <div class="bg-white p-5 rounded-lg shadow-md flex items-start">
+                            <!-- Kotak Foto -->
+                            <div class="w-24 h-24 md:w-32 md:h-32 bg-gray-300 rounded-lg overflow-hidden mr-5">
+                                <img src="https://via.placeholder.com/150" alt="Foto Christina Ardiyanti"
+                                    class="w-full h-full object-cover">
+                            </div>
+                            <!-- Informasi Teks -->
+                            <div class="flex-1">
+                                <h2 class="text-xl font-bold text-blue-900">Christina Ardiyanti, S.Pd</h2>
+                                <div class="mt-3">
+                                    <table class="w-48">
+                                        <tr>
+                                            <th class="text-left py-1 whitespace-nowrap">NIP :</th>
+                                            <td class="py-1"></td>
+                                        </tr>
+                                        <tr>
+                                            <th class="text-left py-1 whitespace-nowrap">Jenis Kelamin :</th>
+                                            <td class="py-1"></td>
+                                        </tr>
+                                        <tr>
+                                            <th class="text-left py-1 whitespace-nowrap">Jabatan :</th>
+                                            <td class="py-1"></td>
+                                        </tr>
+                                    </table>
                                 </div>
+                            </div>
+                        </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Breadcrumb Navigation -->
-                    <div class="flex items-center space-x-2 mt-10">
-                        <a href="#"
-                            class="bg-[#E6EAF7] text-[#2D336B] font-bold px-4 py-2 rounded-full shadow-md">Beranda</a>
-                        <span class="text-[#2D336B]">›</span>
-                        <a href="#"
-                            class="bg-[#E6EAF7] text-[#2D336B] font-bold px-4 py-2 rounded-full shadow-md">Profil</a>
-                        <span class="text-[#2D336B]">›</span>
-                        <a href="#"
-                            class="bg-[#E6EAF7] text-[#2D336B] font-bold px-4 py-2 rounded-full shadow-md">Visi
-                            Misi</a>
+<!-- Breadcrumb Navigation -->
+<div class="flex items-center space-x-2 mt-10">
+    <a href="#"
+        class="bg-[#E6EAF7] text-[#2D336B] font-bold px-4 py-2 rounded-full shadow-md">Beranda</a>
+    <span class="text-[#2D336B]">›</span>
+    <a href="#"
+        class="bg-[#E6EAF7] text-[#2D336B] font-bold px-4 py-2 rounded-full shadow-md">Profil</a>
+    <span class="text-[#2D336B]">›</span>
+    <a href="#" class="bg-[#E6EAF7] text-[#2D336B] font-bold px-4 py-2 rounded-full shadow-md">Visi
+        Misi</a>
 
-                    </div>
-                </div>
+</div>
+</div>
 
-                <!-- Alpine.js -->
-                <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+                    <!-- Alpine.js -->
+                    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 </body>
 
 </html>
