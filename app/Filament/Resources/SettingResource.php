@@ -49,7 +49,25 @@ class SettingResource extends Resource
                 Forms\Components\FileUpload::make('image')
                     ->label('Gambar')
                     ->acceptedFileTypes(['image/png', 'image/jpeg', 'image/jpg'])
+                    ->visible(fn($record) => in_array($record?->type, ['image']))
                     ->columnSpanFull()
+                    ->multiple()
+                    ->maxParallelUploads(1)
+                    ->maxFiles(5)
+                    ->directory('settings')
+                    ->openable()
+                    ->downloadable()
+                    ->image()
+                    ->imageEditor()
+                    ->maxSize(2048),
+                Forms\Components\FileUpload::make('image')
+                    ->label('Gambar')
+                    ->acceptedFileTypes(['image/png', 'image/jpeg', 'image/jpg'])
+                    ->visible(fn($record) => in_array($record?->type, ['text', 'longtext']))
+                    ->columnSpanFull()
+                    ->directory('settings')
+                    ->openable()
+                    ->downloadable()
                     ->image()
                     ->imageEditor()
                     ->maxSize(2048),
@@ -83,15 +101,14 @@ class SettingResource extends Resource
             ->actions([
                 Tables\Actions\EditAction::make()
                     ->modalWidth('2xl')
-                    ->using(function (Setting $record, array $data): Setting {
-                        $record->fill($data);
-                        if ($record->isDirty('image')) {
-                            $oldImage = $record->getOriginal('image');
-                            if ($oldImage && Storage::exists($oldImage)) {
-                                Storage::delete($oldImage);
-                            }
+                    ->before(function (Setting $record, array $data): Setting {
+                        $originalFiles = is_array($record->image) ? array_values($record->image) : (empty($record->image) ? [] : [$record->image]);
+                        $newFiles = is_array($data['image'] ?? null) ? array_values($data['image']) : (empty($data['image']) ? [] : [$data['image']]);
+                        $deletedFiles = array_diff($originalFiles, $newFiles);
+
+                        foreach ($deletedFiles as $image) {
+                            Storage::delete($image);
                         }
-                        $record->save();
                         return $record;
                     }),
             ])
