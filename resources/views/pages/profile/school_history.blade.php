@@ -435,15 +435,14 @@
             </div>
         </div>
     </div>
-    <!-- Kotak Gambar di Bawah Header -->
+    <!-- Kotak Gambar Tittle -->
     <div class="relative -mt-16 w-full h-80 md:h-[60vh] bg-cover bg-center"
-        style="background-image: url('{{ asset('img/berita 1.jpg') }}');">
-        <!-- Overlay untuk memastikan teks tidak tertutup -->
-        <div class="absolute inset-0 bg-black bg-opacity-30"></div>
-
-        <!-- Kotak Profil Besar di Bawah -->
+        style="background-image: url('{{ asset('img/sekolah.jpg') }}');">
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-gradient-to-r from-gray-900/50 to-transparent"></div>
+        <!-- Title-->
         <div
-            class="absolute bottom-16 left-0 bg-[#E6EAF7] px-8 py-6 shadow-lg  z-10 w-60 h-20 flex items-center justify-center">
+            class="absolute bottom-16 left-0 bg-[#E6EAF7] px-8 py-6 shadow-lg  z-10 w-[200px] flex items-center justify-center">
             <span class="text-2xl font-bold text-[#2D336B]">PROFIL</span>
         </div>
     </div>
@@ -496,7 +495,7 @@
                 <!-- Konten -->
                 <div class="w-full md:w-3/4 p-5 md:ml-5 bg-gray-100 rounded-lg">
                     <!-- Sejarah -->
-                    <div class="mt-2 h-[90vh]">
+                    <div class="mt-2 h-[100vh]">
 
                         <img src="{{ asset('img/berita 1.jpg') }}" alt="Gambar Contoh"
                             class="w-full md:w-3/4 lg:w-1/2 h-auto rounded-lg">
@@ -519,7 +518,7 @@
                             <li>2 kamar mandi guru</li>
                             <li>3 toilet Siswa</li>
                             <li>2 Kantin sekolah</li>
-                        </ul><br>
+                        </ul>
                         <p class="mt-2 text-[rgb(45,51,107)] pl-2 font-semibold">SDN Bandarharjo 01 berdiri sejak tahun
                             1973 dan berdasarkan Surat Wali kota Nomor : 030/1301 tanggal 6 April 2006 telah dimasukan
                             inventarisasi aset tanah Pemerintah Kota Semarang.<br>
@@ -541,13 +540,13 @@
                 <a href="#"
                     class="bg-[#E6EAF7] text-[#2D336B] font-bold px-4 py-2 rounded-full shadow-md">Profil</a>
                 <span class="text-[#2D336B]">›</span>
-                <a href="#" class="bg-[#E6EAF7] text-[#2D336B] font-bold px-4 py-2 rounded-full shadow-md">Sejarah</a>
+                <a href="#"
+                    class="bg-[#E6EAF7] text-[#2D336B] font-bold px-4 py-2 rounded-full shadow-md">Sejarah</a>
             </div>
         </div>
     </div>
 
-        </div>
-    </div>
+
 
 
     <!-- Alpine.js -->

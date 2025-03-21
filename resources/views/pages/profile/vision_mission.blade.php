@@ -435,18 +435,19 @@
             </div>
         </div>
     </div>
-    <!-- Kotak Gambar di Bawah Header -->
-    <div class="relative -mt-16 w-full h-80 md:h-[60vh] bg-cover bg-center"
-        style="background-image: url('{{ asset('img/berita 1.jpg') }}');">
-        <!-- Overlay untuk memastikan teks tidak tertutup -->
-        <div class="absolute inset-0 bg-black bg-opacity-30"></div>
 
-        <!-- Kotak Profil Besar di Bawah -->
+    <!-- Kotak Gambar Tittle -->
+    <div class="relative -mt-16 w-full h-80 md:h-[60vh] bg-cover bg-center"
+        style="background-image: url('{{ asset('img/sekolah.jpg') }}');">
+        <!-- Overlay-->
+        <div class="absolute inset-0 bg-gradient-to-r from-gray-900/50 to-transparent"></div>
+        <!-- Title-->
         <div
-            class="absolute bottom-16 left-0 bg-[#E6EAF7] px-8 py-6 shadow-lg  z-10 w-60 h-20 flex items-center justify-center">
+            class="absolute bottom-16 left-0 bg-[#E6EAF7] px-8 py-6 shadow-lg  z-10 w-[200px] flex items-center justify-center">
             <span class="text-2xl font-bold text-[#2D336B]">PROFIL</span>
         </div>
     </div>
+
 
     <!-- Konten Utama -->
     <div class="bg-gray-100 flex items-center justify-center min-h-screen mt-4">
@@ -524,22 +525,24 @@
                             </ul>
                         </div>
                     </div>
-
+<!-- Breadcrumb Navigation -->
+<div class="flex items-center space-x-2 mt-10">
+    <a href="#"
+        class="bg-[#E6EAF7] text-[#2D336B] font-bold px-4 py-2 rounded-full shadow-md">Beranda</a>
+    <span class="text-[#2D336B]">›</span>
+    <a href="#"
+        class="bg-[#E6EAF7] text-[#2D336B] font-bold px-4 py-2 rounded-full shadow-md">Profil</a>
+    <span class="text-[#2D336B]">›</span>
+    <a href="#" class="bg-[#E6EAF7] text-[#2D336B] font-bold px-4 py-2 rounded-full shadow-md">Visi
+        Misi</a>
+</div>
+</div>
+</div>
 
                 </div>
             </div>
 
-            <!-- Breadcrumb Navigation -->
-            <div class="flex items-center space-x-2 mt-10">
-                <a href="#"
-                    class="bg-[#E6EAF7] text-[#2D336B] font-bold px-4 py-2 rounded-full shadow-md">Beranda</a>
-                <span class="text-[#2D336B]">›</span>
-                <a href="#"
-                    class="bg-[#E6EAF7] text-[#2D336B] font-bold px-4 py-2 rounded-full shadow-md">Profil</a>
-                <span class="text-[#2D336B]">›</span>
-                <a href="#" class="bg-[#E6EAF7] text-[#2D336B] font-bold px-4 py-2 rounded-full shadow-md">Visi
-                    Misi</a>
-            </div>
+            
         </div>
     </div>
 
