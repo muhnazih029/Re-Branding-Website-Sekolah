@@ -14,6 +14,13 @@ class SettingSeeder extends Seeder
     {
         $settings = [
             [
+                'key' => 'corousel',
+                'label' => 'Corousel',
+                'value' => null,
+                'type' => 'image',
+                'image' => null,
+            ],
+            [
                 'key' => 'sambutan_text',
                 'label' => 'Sambutan Kepala Sekolah - Text',
                 'value' => 'Selamat datang di website SDN Bandarharjo 01. Website ini menjadi media informasi, komunikasi, dan publikasi sekolah kami kepada masyarakat luas.',

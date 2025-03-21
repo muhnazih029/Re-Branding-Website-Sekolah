@@ -28,7 +28,6 @@ class SettingController extends Controller
         $settings = Setting::where('key', 'kurikulum_sekolah')->pluck('value', 'key');
         return view('pages.curriculum.school_curriculum', compact('settings'));
     }
-
     /**
      * Show the form for creating a new resource.
      */
