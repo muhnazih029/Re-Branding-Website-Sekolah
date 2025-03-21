@@ -65,7 +65,7 @@
                 class="md:hidden absolute top-full left-0 w-full bg-white shadow-lg">
                 <div class="container mx-auto flex flex-col space-y-2 py-3 uppercase">
                     <!-- Beranda -->
-                    <a href="#"
+                    <a href="/.."
                         class="text-[rgb(45,51,107)] font-semibold px-4 py-2 hover:bg-gray-100 text-sm">Beranda</a>
 
                     <!-- Dropdown Profil -->
@@ -250,7 +250,7 @@
             <!-- Menu untuk layar besar -->
             <div class="hidden md:flex container mx-auto flex-wrap justify-center space-x-2 py-3 uppercase">
                 <!-- Beranda -->
-                <a href="#" class="text-[rgb(45,51,107)] font-semibold px-2 py-1 relative group text-lg">
+                <a href="/.." class="text-[rgb(45,51,107)] font-semibold px-2 py-1 relative group text-lg">
                     Beranda
                     <span
                         class="absolute inset-x-0 bottom-0 h-0.5 bg-blue-900 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
@@ -278,22 +278,28 @@
                         @mouseleave="open = false" style="background-color: #2D336B;"
                         class="absolute left-0 top-full mt-1 w-56 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none z-50">
                         <div class="py-1">
-                            <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Visi &
+                            <a href="/profile/visi-misi"
+                                class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Visi &
                                 Misi</a>
                             <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">NPSN</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Sejarah
+                            <a href="/profile/sejarah-sekolah"
+                                class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Sejarah
                                 Sekolah</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Pendidik &
+                            <a href="/profile/pendidik"
+                                class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Pendidik &
                                 Tenaga Pendidik</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Peserta
+                            <a href="/profile/peserta-didik"
+                                class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Peserta
                                 Didik</a>
                             <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Prestasi
                                 Sekolah</a>
-                            <a href="#"
+                            <a href="/profile/ekstrakulikuler"
                                 class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Ekstrakurikuler</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">BOS Bantuan
+                            <a href="/profile/dana-bos"
+                                class="block px-4 py-2 text-sm text-white hover:bg-blue-900">BOS Bantuan
                                 Operasional Sekolah</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Sarana &
+                            <a href="/profile/sarana-prasarana"
+                                class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Sarana &
                                 Prasarana</a>
                         </div>
                     </div>
