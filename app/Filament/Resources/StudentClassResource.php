@@ -109,11 +109,6 @@ class StudentClassResource extends Resource
                                         Forms\Components\TextInput::make('title')
                                             ->label('Judul')
                                             ->required(),
-                                        Forms\Components\Select::make('student_class_id')
-                                            ->label('Kelas')
-                                            ->relationship('student_class', 'class_name')
-                                            ->searchable()
-                                            ->required(),
                                         Forms\Components\RichEditor::make('description')
                                             ->label('Deskripsi')
                                             ->required(),
@@ -183,9 +178,15 @@ class StudentClassResource extends Resource
                             }
                         }),
                     Tables\Actions\DeleteAction::make()
-                        ->using(function (StudentClass $record): StudentClass {
-                            Storage::delete($record->image);
-                            $record->delete();
+                        ->using(function (StudentClass $record, array $data): StudentClass {
+                            $record->fill($data);
+                            if ($record->isDirty('image')) {
+                                $oldImage = $record->getOriginal('image');
+                                if ($oldImage && Storage::exists($oldImage)) {
+                                    Storage::delete($oldImage);
+                                }
+                            }
+                            $record->save();
                             return $record;
                         })
                         ->after(function ($record) {

@@ -1,20 +1,20 @@
 <?php
 
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AnnouncementController;
-use App\Http\Controllers\CalendarAcademicController;
-use App\Http\Controllers\ClassWorkController;
-use App\Http\Controllers\ExtracurricularsController;
-use App\Http\Controllers\FacilityController;
 use App\Http\Controllers\GaleryController;
-use App\Http\Controllers\SchoolOperationalAssistanceController;
 use App\Http\Controllers\SettingController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\TeacherController;
+use App\Http\Controllers\FacilityController;
+use App\Http\Controllers\ClassWorkController;
+use App\Http\Controllers\AnnouncementController;
+use App\Http\Controllers\CalendarAcademicController;
+use App\Http\Controllers\ExtracurricularsController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\SchoolOperationalAssistanceController;
 
-Route::get('/', function () {
-    return view('pages.index');
-})->name('home');
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::prefix('pengumuman')->group(function () {
     Route::get('/', [AnnouncementController::class, 'index']);

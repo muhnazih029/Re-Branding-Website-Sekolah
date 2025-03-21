@@ -2,16 +2,17 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\SettingResource\Pages;
-use App\Filament\Resources\SettingResource\RelationManagers;
-use App\Models\Setting;
 use Filament\Forms;
-use Filament\Forms\Form;
-use Filament\Resources\Resource;
 use Filament\Tables;
+use App\Models\Setting;
+use Filament\Forms\Form;
 use Filament\Tables\Table;
+use Filament\Resources\Resource;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Database\Eloquent\Builder;
+use App\Filament\Resources\SettingResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use App\Filament\Resources\SettingResource\RelationManagers;
 
 class SettingResource extends Resource
 {
@@ -40,11 +41,6 @@ class SettingResource extends Resource
                     ->columnSpanFull()
                     ->visible(fn($record) => in_array($record?->type, ['text']))
                     ->required(),
-                Forms\Components\Textarea::make('value')
-                    ->label('Deskripsi')
-                    ->columnSpanFull()
-                    ->visible(fn($record) => in_array($record?->type, ['textarea']))
-                    ->required(),
                 Forms\Components\RichEditor::make('value')
                     ->label('Deskripsi')
                     ->columnSpanFull()
@@ -53,7 +49,25 @@ class SettingResource extends Resource
                 Forms\Components\FileUpload::make('image')
                     ->label('Gambar')
                     ->acceptedFileTypes(['image/png', 'image/jpeg', 'image/jpg'])
+                    ->visible(fn($record) => in_array($record?->type, ['image']))
                     ->columnSpanFull()
+                    ->multiple()
+                    ->maxParallelUploads(1)
+                    ->maxFiles(5)
+                    ->directory('settings')
+                    ->openable()
+                    ->downloadable()
+                    ->image()
+                    ->imageEditor()
+                    ->maxSize(2048),
+                Forms\Components\FileUpload::make('image')
+                    ->label('Gambar')
+                    ->acceptedFileTypes(['image/png', 'image/jpeg', 'image/jpg'])
+                    ->visible(fn($record) => in_array($record?->type, ['text', 'longtext']))
+                    ->columnSpanFull()
+                    ->directory('settings')
+                    ->openable()
+                    ->downloadable()
                     ->image()
                     ->imageEditor()
                     ->maxSize(2048),
@@ -86,7 +100,17 @@ class SettingResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make()
-                    ->modalWidth('2xl'),
+                    ->modalWidth('2xl')
+                    ->before(function (Setting $record, array $data): Setting {
+                        $originalFiles = is_array($record->image) ? array_values($record->image) : (empty($record->image) ? [] : [$record->image]);
+                        $newFiles = is_array($data['image'] ?? null) ? array_values($data['image']) : (empty($data['image']) ? [] : [$data['image']]);
+                        $deletedFiles = array_diff($originalFiles, $newFiles);
+
+                        foreach ($deletedFiles as $image) {
+                            Storage::delete($image);
+                        }
+                        return $record;
+                    }),
             ])
             ->bulkActions([
                 //

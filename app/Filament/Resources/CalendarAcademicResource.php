@@ -28,27 +28,30 @@ class CalendarAcademicResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('title')
-                    ->label('Judul')
-                    ->required(),
-                Forms\Components\FileUpload::make('document')
-                    ->label('Dokumen')
-                    ->directory('calendar_academics')
-                    ->acceptedFileTypes(['application/pdf'])
-                    ->maxSize(2048)
-                    ->openable()
-                    ->downloadable()
-                    ->required(),
-                Forms\Components\Select::make('year')
-                    ->label('Tahun')
-                    ->options(
-                        collect(range(date('Y'), 1900))->mapWithKeys(fn($year) => [$year => $year])
-                    )
-                    ->required(),
-                Forms\Components\Hidden::make('user_id')
-                    ->default(Filament::auth()->user()->id)
-                    ->dehydrated()
-                    ->required(),
+                Forms\Components\Section::make()
+                    ->schema([
+                        Forms\Components\TextInput::make('title')
+                            ->label('Judul')
+                            ->required(),
+                        Forms\Components\Select::make('year')
+                            ->label('Tahun')
+                            ->options(
+                                collect(range(date('Y'), 1900))->mapWithKeys(fn($year) => [$year => $year])
+                            )
+                            ->required(),
+                        Forms\Components\FileUpload::make('document')
+                            ->label('Dokumen')
+                            ->directory('calendar_academics')
+                            ->acceptedFileTypes(['application/pdf'])
+                            ->maxSize(2048)
+                            ->openable()
+                            ->downloadable()
+                            ->required(),
+                        Forms\Components\Hidden::make('user_id')
+                            ->default(Filament::auth()->user()->id)
+                            ->dehydrated()
+                            ->required(),
+                    ])
             ]);
     }
 

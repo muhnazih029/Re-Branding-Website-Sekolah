@@ -18,33 +18,33 @@
 </head>
 
 <body class="bg-gray-100 font-poppins pt-[190px]">
-    <div class="fixed top-0 left-0 w-full z-50">
+    <div class="fixed top-0 left-0 z-50 w-full">
 
         <!-- Header -->
-        <nav style="background-color: #304193;" class="text-white p-2 md:p-4 flex justify-between items-center"></nav>
-        <nav style="background-color: #2D336B;" class="text-white p-4 md:p-6 flex justify-between items-center">
+        <nav style="background-color: #304193;" class="flex items-center justify-between p-2 text-white md:p-4"></nav>
+        <nav style="background-color: #2D336B;" class="flex items-center justify-between p-4 text-white md:p-6">
             <!-- Logo dan Nama Sekolah -->
-            <div class="flex items-center space-x-2 md:space-x-3 ml-2 md:ml-20">
-                <img src="{{ asset('img/logo.png') }}" alt="Logo SDN Bandarharjo" class="w-15 h-12">
+            <div class="flex items-center ml-2 space-x-2 md:space-x-3 md:ml-20">
+                <img src="{{ asset('img/logo.png') }}" alt="Logo SDN Bandarharjo" class="h-12 w-15">
                 <div class="flex flex-col">
-                    <span class="text-sm md:text-lg font-semibold">SDN BANDARHARJO 01</span>
-                    <span class="text-sm md:text-lg font-semibold">KOTA SEMARANG</span>
+                    <span class="text-sm font-semibold md:text-lg">SDN BANDARHARJO 01</span>
+                    <span class="text-sm font-semibold md:text-lg">KOTA SEMARANG</span>
                 </div>
             </div>
             <!-- Tombol Gabung -->
             <button style="color: #2D336B;"
-                class="bg-white font-bold px-3 py-1 md:px-4 md:py-2 rounded-full mr-2 md:mr-20 text-sm md:text-base">
+                class="px-3 py-1 mr-2 text-sm font-bold bg-white rounded-full md:px-4 md:py-2 md:mr-20 md:text-base">
                 Gabung
             </button>
         </nav>
 
         <!-- Menu Header -->
         <div x-data="{ open: false }" style="background-color: #E6EAF7;"
-            class="shadow-md relative z-50 flex justify-between items-center p-2">
+            class="relative z-50 flex items-center justify-between p-2 shadow-md">
 
             <!-- Hamburger Menu (Muncul hanya ketika layar mode kecil/medium) -->
             <button @click="open = !open" @mouseenter="open = true" @mouseleave="open = open"
-                class="md:hidden p-4 focus:outline-none ml-auto">
+                class="p-4 ml-auto md:hidden focus:outline-none">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
@@ -59,8 +59,8 @@
                 x-transition:leave="transition ease-in duration-200"
                 x-transition:leave-start="opacity-100 transform translate-y-0"
                 x-transition:leave-end="opacity-0 transform -translate-y-4"
-                class="md:hidden absolute top-full left-0 w-full bg-white shadow-lg">
-                <div class="container mx-auto flex flex-col space-y-2 py-3 uppercase">
+                class="absolute left-0 w-full bg-white shadow-lg md:hidden top-full">
+                <div class="container flex flex-col py-3 mx-auto space-y-2 uppercase">
                     <!-- Beranda -->
                     <a href="#"
                         class="text-[rgb(45,51,107)] font-semibold px-4 py-2 hover:bg-gray-100 text-sm">Beranda</a>
@@ -70,7 +70,7 @@
                         <button @click="open = !open"
                             class="text-[rgb(45,51,107)] font-semibold focus:outline-none uppercase px-4 py-2 w-full text-left hover:bg-gray-100 text-sm">
                             Profil
-                            <svg class="inline ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            <svg class="inline w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M19 9l-7 7-7-7">
@@ -117,7 +117,7 @@
                         <button @click="open = !open"
                             class="text-[rgb(45,51,107)] font-semibold focus:outline-none uppercase px-4 py-2 w-full text-left hover:bg-gray-100 text-sm">
                             Kurikulum
-                            <svg class="inline ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            <svg class="inline w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M19 9l-7 7-7-7">
@@ -148,7 +148,7 @@
                         <button @click="open = !open"
                             class="text-[rgb(45,51,107)] font-semibold focus:outline-none uppercase px-4 py-2 w-full text-left hover:bg-gray-100 text-sm">
                             Pengumuman
-                            <svg class="inline ml-1 w-4 h-4" fill="none" stroke="currentColor"
+                            <svg class="inline w-4 h-4 ml-1" fill="none" stroke="currentColor"
                                 viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M19 9l-7 7-7-7">
@@ -178,7 +178,7 @@
                         <button @click="open = !open"
                             class="text-[rgb(45,51,107)] font-semibold focus:outline-none uppercase px-4 py-2 w-full text-left hover:bg-gray-100 text-sm">
                             Galeri
-                            <svg class="inline ml-1 w-4 h-4" fill="none" stroke="currentColor"
+                            <svg class="inline w-4 h-4 ml-1" fill="none" stroke="currentColor"
                                 viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M19 9l-7 7-7-7">
@@ -203,7 +203,7 @@
                         <button @click="open = !open"
                             class="text-[rgb(45,51,107)] font-semibold focus:outline-none uppercase px-4 py-2 w-full text-left hover:bg-gray-100 text-sm">
                             Website Terkait
-                            <svg class="inline ml-1 w-4 h-4" fill="none" stroke="currentColor"
+                            <svg class="inline w-4 h-4 ml-1" fill="none" stroke="currentColor"
                                 viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M19 9l-7 7-7-7">
@@ -245,7 +245,7 @@
             </div>
 
             <!-- Menu untuk layar besar -->
-            <div class="hidden md:flex container mx-auto flex-wrap justify-center space-x-2 py-3 uppercase">
+            <div class="container flex-wrap justify-center hidden py-3 mx-auto space-x-2 uppercase md:flex">
                 <!-- Beranda -->
                 <a href="#" class="text-[rgb(45,51,107)] font-semibold px-2 py-1 relative group text-lg">
                     Beranda
@@ -258,7 +258,7 @@
                     <button @mouseenter="open = true" @mouseleave="open = false"
                         class="text-[rgb(45,51,107)] font-semibold focus:outline-none uppercase px-2 py-1 relative group text-lg">
                         Profil
-                        <svg class="inline ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        <svg class="inline w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                             xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
                             </path>
@@ -273,7 +273,7 @@
                         x-transition:leave-start="opacity-100 transform scale-100"
                         x-transition:leave-end="opacity-0 transform scale-95" @mouseenter="open = true"
                         @mouseleave="open = false" style="background-color: #2D336B;"
-                        class="absolute left-0 top-full mt-1 w-56 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none z-50">
+                        class="absolute left-0 z-50 w-56 mt-1 rounded-md shadow-lg top-full ring-1 ring-black ring-opacity-5 focus:outline-none">
                         <div class="py-1">
                             <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Visi &
                                 Misi</a>
@@ -301,7 +301,7 @@
                     <button @mouseenter="open = true" @mouseleave="open = false"
                         class="text-[rgb(45,51,107)] font-semibold focus:outline-none uppercase px-2 py-1 relative group text-lg">
                         Kurikulum
-                        <svg class="inline ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        <svg class="inline w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                             xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
                             </path>
@@ -316,7 +316,7 @@
                         x-transition:leave-start="opacity-100 transform scale-100"
                         x-transition:leave-end="opacity-0 transform scale-95" @mouseenter="open = true"
                         @mouseleave="open = false" style="background-color: #2D336B;"
-                        class="absolute left-0 top-full mt-1 w-48 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none z-50">
+                        class="absolute left-0 z-50 w-48 mt-1 rounded-md shadow-lg top-full ring-1 ring-black ring-opacity-5 focus:outline-none">
                         <div class="py-1">
                             <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Kurikulum
                                 Sekolah</a>
@@ -335,7 +335,7 @@
                     <button @mouseenter="open = true" @mouseleave="open = false"
                         class="text-[rgb(45,51,107)] font-semibold focus:outline-none uppercase px-2 py-1 relative group text-lg">
                         Pengumuman
-                        <svg class="inline ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        <svg class="inline w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                             xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
                             </path>
@@ -350,7 +350,7 @@
                         x-transition:leave-start="opacity-100 transform scale-100"
                         x-transition:leave-end="opacity-0 transform scale-95" @mouseenter="open = true"
                         @mouseleave="open = false" style="background-color: #2D336B;"
-                        class="absolute left-0 top-full mt-1 w-56 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none z-50">
+                        class="absolute left-0 z-50 w-56 mt-1 rounded-md shadow-lg top-full ring-1 ring-black ring-opacity-5 focus:outline-none">
                         <div class="py-1">
                             <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Berita
                                 Sekolah</a>
@@ -366,7 +366,7 @@
                     <button @mouseenter="open = true" @mouseleave="open = false"
                         class="text-[rgb(45,51,107)] font-semibold focus:outline-none uppercase px-2 py-1 relative group text-lg">
                         Galeri
-                        <svg class="inline ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        <svg class="inline w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                             xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
                             </path>
@@ -381,7 +381,7 @@
                         x-transition:leave-start="opacity-100 transform scale-100"
                         x-transition:leave-end="opacity-0 transform scale-95" @mouseenter="open = true"
                         @mouseleave="open = false" style="background-color: #2D336B;"
-                        class="absolute left-0 top-full mt-1 w-56 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none z-50">
+                        class="absolute left-0 z-50 w-56 mt-1 rounded-md shadow-lg top-full ring-1 ring-black ring-opacity-5 focus:outline-none">
                         <div class="py-1">
                             <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Foto</a>
                             <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Video</a>
@@ -394,7 +394,7 @@
                     <button @mouseenter="open = true" @mouseleave="open = false"
                         class="text-[rgb(45,51,107)] font-semibold focus:outline-none uppercase px-2 py-1 relative group text-lg">
                         Website Terkait
-                        <svg class="inline ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        <svg class="inline w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                             xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
                             </path>
@@ -409,7 +409,7 @@
                         x-transition:leave-start="opacity-100 transform scale-100"
                         x-transition:leave-end="opacity-0 transform scale-95" @mouseenter="open = true"
                         @mouseleave="open = false" style="background-color: #2D336B;"
-                        class="absolute left-0 top-full mt-1 w-56 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none z-50">
+                        class="absolute left-0 z-50 w-56 mt-1 rounded-md shadow-lg top-full ring-1 ring-black ring-opacity-5 focus:outline-none">
                         <div class="py-1">
                             <a href="#"
                                 class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Kemendikbud</a>
@@ -448,10 +448,10 @@
     </div>
 
     <!-- Konten Utama -->
-    <div class="bg-gray-100 flex items-center justify-center min-h-screen mt-4">
-        <div class="container mx-auto p-5 pl-10 md:pl-20">
+    <div class="flex items-center justify-center min-h-screen mt-4 bg-gray-100">
+        <div class="container p-5 pl-10 mx-auto md:pl-20">
             <!-- Kotak PROFIL dan Sejarah Sekolah -->
-            <div class="flex flex-col md:flex-row md:items-start md:space-x-5 space-y-5 md:space-y-0 mb-5">
+            <div class="flex flex-col mb-5 space-y-5 md:flex-row md:items-start md:space-x-5 md:space-y-0">
                 <div style="background-color: #2D336B;" class="w-[200px] shadow-md p-5 text-center">
                     <h1 class="text-xl font-bold text-white">PROFIL</h1>
                 </div>
@@ -469,7 +469,7 @@
                 <!-- Sidebar Menu Profil -->
                 <div style="background-color: #E6EAF7; color:#2D336B;"
                     class="w-[250px] h-[50vh] shadow-md p-5 mb-5 md:mb-0 flex-shrink-0 flex-grow-0">
-                    <h2 class="text-xl font-bold mb-4">Profil</h2>
+                    <h2 class="mb-4 text-xl font-bold">Profil</h2>
                     <ul class="space-y-2">
                         <li><a href="#" class="block text-[#7886C7] hover:text-blue-900 font-semibold">Visi Misi
                                 Sekolah</a></li>
@@ -493,12 +493,12 @@
                 </div>
 
                 <!-- Konten -->
-                <div class="w-full md:w-3/4 p-5 md:ml-5 bg-gray-100 rounded-lg">
+                <div class="w-full p-5 bg-gray-100 rounded-lg md:w-3/4 md:ml-5">
                     <!-- Sejarah -->
                     <div class="mt-2 h-[100vh]">
 
                         <img src="{{ asset('img/berita 1.jpg') }}" alt="Gambar Contoh"
-                            class="w-full md:w-3/4 lg:w-1/2 h-auto rounded-lg">
+                            class="w-full h-auto rounded-lg md:w-3/4 lg:w-1/2">
                         <p class="mt-2 text-[rgb(45,51,107)] pl-2 font-semibold">Secara administrasi Sekolah Dasar (SD)
                             Negeri Bandarharjo 01 beralamat di Jalan Cumi-cumi Raya No. 2, Kelurahan Bandarharjo,
                             Kecamatan Semarang Utara, Kota Semarang, Provinsi Jawa Tengah.<br>
@@ -532,8 +532,11 @@
                     </div>
                 </div>
             </div>
+            {{ '<strong>Ini data dari database</strong>' }}
+            <br>
+            {{ $settings['sejarah_text'] }}
             <!-- Breadcrumb Navigation -->
-            <div class="flex items-center space-x-2 mt-10">
+            <div class="flex items-center mt-10 space-x-2">
                 <a href="#"
                     class="bg-[#E6EAF7] text-[#2D336B] font-bold px-4 py-2 rounded-full shadow-md">Beranda</a>
                 <span class="text-[#2D336B]">›</span>
@@ -546,7 +549,8 @@
         </div>
     </div>
 
-
+        </div>
+    </div>
 
 
     <!-- Alpine.js -->
