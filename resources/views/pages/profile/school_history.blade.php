@@ -497,9 +497,8 @@
                     <!-- Sejarah -->
                     <div class="mt-2 h-[100vh]">
 
-                        <img src="{{ asset('img/berita 1.jpg') }}" alt="Gambar Contoh"
-                            class="w-full h-auto rounded-lg md:w-3/4 lg:w-1/2">
-                        <p class="mt-2 text-[rgb(45,51,107)] pl-2 font-semibold">Secara administrasi Sekolah Dasar (SD)
+                        <img src="{{ asset('img/sekolah.jpg') }}" alt="Gambar Contoh" class="w-full h-auto md:w-3/4 lg:w-1/2 mx-auto">
+                        <p class="mt-6 text-[rgb(45,51,107)] pl-2 font-semibold">Secara administrasi Sekolah Dasar (SD)
                             Negeri Bandarharjo 01 beralamat di Jalan Cumi-cumi Raya No. 2, Kelurahan Bandarharjo,
                             Kecamatan Semarang Utara, Kota Semarang, Provinsi Jawa Tengah.<br>
 
@@ -532,9 +531,11 @@
                     </div>
                 </div>
             </div>
-            {{ '<strong>Ini data dari database</strong>' }}
+
+            {{-- {{ '<strong>Ini data dari database</strong>' }}
             <br>
-            {{ $settings['sejarah_text'] }}
+            {{ $settings['sejarah_text'] }} --}}
+
             <!-- Breadcrumb Navigation -->
             <div class="flex items-center mt-10 space-x-2">
                 <a href="#"
