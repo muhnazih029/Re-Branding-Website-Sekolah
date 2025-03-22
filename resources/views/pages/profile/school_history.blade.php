@@ -497,7 +497,8 @@
                     <!-- Sejarah -->
                     <div class="mt-2 h-[100vh]">
 
-                        <img src="{{ asset('img/sekolah.jpg') }}" alt="Gambar Contoh" class="w-full h-auto md:w-3/4 lg:w-1/2 mx-auto">
+                        <img src="{{ asset('img/sekolah.jpg') }}" alt="Gambar Contoh"
+                            class="w-full h-auto md:w-3/4 lg:w-1/2 mx-auto">
                         <p class="mt-6 text-[rgb(45,51,107)] pl-2 font-semibold">Secara administrasi Sekolah Dasar (SD)
                             Negeri Bandarharjo 01 beralamat di Jalan Cumi-cumi Raya No. 2, Kelurahan Bandarharjo,
                             Kecamatan Semarang Utara, Kota Semarang, Provinsi Jawa Tengah.<br>
@@ -531,29 +532,20 @@
                     </div>
                 </div>
             </div>
-
-            {{-- {{ '<strong>Ini data dari database</strong>' }}
-            <br>
-            {{ $settings['sejarah_text'] }} --}}
-
             <!-- Breadcrumb Navigation -->
-            <div class="flex items-center mt-10 space-x-2">
+            <div class="flex items-center space-x-2 mt-[300px] md:mt-[200px]">
                 <a href="#"
                     class="bg-[#E6EAF7] text-[#2D336B] font-bold px-4 py-2 rounded-full shadow-md">Beranda</a>
                 <span class="text-[#2D336B]">›</span>
                 <a href="#"
                     class="bg-[#E6EAF7] text-[#2D336B] font-bold px-4 py-2 rounded-full shadow-md">Profil</a>
                 <span class="text-[#2D336B]">›</span>
-                <a href="#"
-                    class="bg-[#E6EAF7] text-[#2D336B] font-bold px-4 py-2 rounded-full shadow-md">Sejarah</a>
+                <a href="#" class="bg-[#E6EAF7] text-[#2D336B] font-bold px-4 py-2 rounded-full shadow-md">Visi
+                    Misi</a>
             </div>
         </div>
     </div>
-
-        </div>
     </div>
-
-
     <!-- Alpine.js -->
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 </body>

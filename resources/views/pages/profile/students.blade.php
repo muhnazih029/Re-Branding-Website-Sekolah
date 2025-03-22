@@ -437,7 +437,7 @@
     </div>
 
     <!-- Kotak Gambar Tittle -->
-    <div class="relative -mt-16 w-full h-80 md:h-[60vh] bg-cover bg-center"
+    <div class="relative -mt-16 w-full h-80 md:h-[60vh] bg-cover bg-center "
         style="background-image: url('{{ asset('img/sekolah.jpg') }}');">
         <!-- Overlay-->
         <div class="absolute inset-0 bg-gradient-to-r from-gray-900/50 to-transparent"></div>
@@ -450,7 +450,7 @@
 
 
     <!-- Konten Utama -->
-    <div class="flex items-center justify-center min-h-screen mt-4 bg-gray-100">
+    <div class="flex items-center justify-center min-h-screen mt-4 bg-gray-100 ">
         <div class="container p-5 pl-10 mx-auto md:pl-20">
             <!-- Kotak PROFIL dan Peserta Didik-->
             <div class="flex flex-col mb-5 space-y-5 md:flex-row md:items-start md:space-x-5 md:space-y-0">
@@ -511,7 +511,8 @@
                                     <!-- Judul Kelas -->
                                     <h2 class="text-xl font-bold text-blue-900 mx-auto">KELAS 1</h2>
                                     <!-- Tombol Baca Selengkapnya -->
-                                    <a href="/.." class="mt-4 inline-block bg-blue-900 text-white text-sm font-semibold py-2 px-4 rounded-lg hover:bg-blue-800 transition duration-300 w-fit mx-auto">Selengkapnya</a>
+                                    <a href="/.."
+                                        class="mt-4 inline-block bg-blue-900 text-white text-sm font-semibold py-2 px-4 rounded-lg hover:bg-blue-800 transition duration-300 w-fit mx-auto">Selengkapnya</a>
                                     </a>
                                 </div>
                             </div>
@@ -528,7 +529,8 @@
                                     <!-- Judul Kelas -->
                                     <h2 class="text-xl font-bold text-blue-900 mx-auto">KELAS 2</h2>
                                     <!-- Tombol Baca Selengkapnya -->
-                                    <a href="/.." class="mt-4 inline-block bg-blue-900 text-white text-sm font-semibold py-2 px-4 rounded-lg hover:bg-blue-800 transition duration-300 w-fit mx-auto">Selengkapnya</a>
+                                    <a href="/.."
+                                        class="mt-4 inline-block bg-blue-900 text-white text-sm font-semibold py-2 px-4 rounded-lg hover:bg-blue-800 transition duration-300 w-fit mx-auto">Selengkapnya</a>
                                     </a>
                                 </div>
                             </div>
@@ -545,7 +547,8 @@
                                     <!-- Judul Kelas -->
                                     <h2 class="text-xl font-bold text-blue-900 mx-auto">KELAS 3</h2>
                                     <!-- Tombol Baca Selengkapnya -->
-                                    <a href="/.." class="mt-4 inline-block bg-blue-900 text-white text-sm font-semibold py-2 px-4 rounded-lg hover:bg-blue-800 transition duration-300 w-fit mx-auto">Selengkapnya</a>
+                                    <a href="/.."
+                                        class="mt-4 inline-block bg-blue-900 text-white text-sm font-semibold py-2 px-4 rounded-lg hover:bg-blue-800 transition duration-300 w-fit mx-auto">Selengkapnya</a>
                                     </a>
                                 </div>
                             </div>
@@ -561,7 +564,8 @@
                                     <!-- Judul Kelas -->
                                     <h2 class="text-xl font-bold text-blue-900 mx-auto">KELAS 4</h2>
                                     <!-- Tombol Baca Selengkapnya -->
-                                    <a href="/.." class="mt-4 inline-block bg-blue-900 text-white text-sm font-semibold py-2 px-4 rounded-lg hover:bg-blue-800 transition duration-300 w-fit mx-auto">Selengkapnya</a>
+                                    <a href="/.."
+                                        class="mt-4 inline-block bg-blue-900 text-white text-sm font-semibold py-2 px-4 rounded-lg hover:bg-blue-800 transition duration-300 w-fit mx-auto">Selengkapnya</a>
                                     </a>
                                 </div>
                             </div>
@@ -577,7 +581,8 @@
                                     <!-- Judul Kelas -->
                                     <h2 class="text-xl font-bold text-blue-900 mx-auto">KELAS 5</h2>
                                     <!-- Tombol Baca Selengkapnya -->
-                                    <a href="/.." class="mt-4 inline-block bg-blue-900 text-white text-sm font-semibold py-2 px-4 rounded-lg hover:bg-blue-800 transition duration-300 w-fit mx-auto">Selengkapnya</a>
+                                    <a href="/.."
+                                        class="mt-4 inline-block bg-blue-900 text-white text-sm font-semibold py-2 px-4 rounded-lg hover:bg-blue-800 transition duration-300 w-fit mx-auto">Selengkapnya</a>
                                     </a>
                                 </div>
                             </div>
@@ -593,27 +598,32 @@
                                     <!-- Judul Kelas -->
                                     <h2 class="text-xl font-bold text-blue-900 mx-auto">KELAS 6</h2>
                                     <!-- Tombol Baca Selengkapnya -->
-                                    <a href="/.." class="mt-4 inline-block bg-blue-900 text-white text-sm font-semibold py-2 px-4 rounded-lg hover:bg-blue-800 transition duration-300 w-fit mx-auto">Selengkapnya</a>
-                                </a>
+                                    <a href="/.."
+                                        class="mt-4 inline-block bg-blue-900 text-white text-sm font-semibold py-2 px-4 rounded-lg hover:bg-blue-800 transition duration-300 w-fit mx-auto">Selengkapnya</a>
+                                    </a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- Breadcrumb Navigation -->
+            <div class="flex items-center space-x-2 mt-[950px] md:mt-[200px]">
+                <a href="#"
+                    class="bg-[#E6EAF7] text-[#2D336B] font-bold px-4 py-2 rounded-full shadow-md">Beranda</a>
+                <span class="text-[#2D336B]">›</span>
+                <a href="#"
+                    class="bg-[#E6EAF7] text-[#2D336B] font-bold px-4 py-2 rounded-full shadow-md">Profil</a>
+                <span class="text-[#2D336B]">›</span>
+                <a href="#" class="bg-[#E6EAF7] text-[#2D336B] font-bold px-4 py-2 rounded-full shadow-md">Visi
+                    Misi</a>
+            </div>
         </div>
 
+    </div>
 
-    </div>
-    <!-- Breadcrumb Navigation -->
-    <div class="flex items-center space-x-2 mt-10">
-        <a href="#" class="bg-[#E6EAF7] text-[#2D336B] font-bold px-4 py-2 rounded-full shadow-md">Beranda</a>
-        <span class="text-[#2D336B]">›</span>
-        <a href="#" class="bg-[#E6EAF7] text-[#2D336B] font-bold px-4 py-2 rounded-full shadow-md">Profil</a>
-        <span class="text-[#2D336B]">›</span>
-        <a href="#" class="bg-[#E6EAF7] text-[#2D336B] font-bold px-4 py-2 rounded-full shadow-md">Visi
-            Misi</a>
-    </div>
+
+
     </div>
 
 

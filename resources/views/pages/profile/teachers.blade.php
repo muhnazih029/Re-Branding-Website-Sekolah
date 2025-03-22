@@ -625,15 +625,18 @@
                                 </div>
                             </div>
                         </div>
+
                     </div>
+
                     <!-- Popup Container -->
                     <div id="popup"
                         class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
                         <div class="bg-white p-2 shadow-lg max-w-[100vw] max-h-[100vh] overflow-auto">
                             <img id="popupImage" src="" alt="Popup Image" class="max-w-[50vh] max-h-[50vh]">
-                                <button onclick="closePopup()" class="absolute top-2 right-2 text-gray-600 hover:text-gray-900 text-2xl">
-                                    &times;
-                                </button>
+                            <button onclick="closePopup()"
+                                class="absolute top-2 right-2 text-gray-600 hover:text-gray-900 text-2xl">
+                                &times;
+                            </button>
                         </div>
                     </div>
                 </div>
