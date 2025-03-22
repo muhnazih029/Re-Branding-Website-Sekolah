@@ -13,7 +13,12 @@ class StudentController extends Controller
      */
     public function index()
     {
-        return view('pages.profile.students');
+        // $students = Student::select('student_name', 'nisn', 'image')->with('student_class')->paginate(5);
+        $students = Student::select('students.*', 'student_classes.class_name', 'teachers.teacher_name')
+            ->join('student_classes', 'students.student_class_id', '=', 'student_classes.id')
+            ->join('teachers', 'student_classes.teacher_id', '=', 'teachers.id')
+            ->get();
+        return view('pages.profile.students', compact('students'));
     }
 
     /**
