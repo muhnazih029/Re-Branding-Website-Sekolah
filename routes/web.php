@@ -10,7 +10,7 @@ use App\Http\Controllers\FacilityController;
 use App\Http\Controllers\ClassWorkController;
 use App\Http\Controllers\AnnouncementController;
 use App\Http\Controllers\CalendarAcademicController;
-use App\Http\Controllers\ExtracurricularsController;
+use App\Http\Controllers\ExtracurricularController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\SchoolOperationalAssistanceController;
 
@@ -50,7 +50,7 @@ Route::prefix('profile')->group(function () {
     Route::get('/sejarah-sekolah', [SettingController::class, 'history']);
     Route::get('/peserta-didik', [StudentController::class, 'index']);
     Route::get('/pendidik', [TeacherController::class, 'index']);
-    Route::get('/ekstrakulikuler', [ExtracurricularsController::class, 'index']);
+    Route::get('/ekstrakulikuler', [ExtracurricularController::class, 'index']);
     Route::get('/sarana-prasarana', [FacilityController::class, 'index']);
     Route::get('/dana-bos', [SchoolOperationalAssistanceController::class, 'index']);
 });

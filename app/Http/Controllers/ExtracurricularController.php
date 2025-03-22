@@ -6,7 +6,7 @@ use App\Models\Extracurriculars;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class ExtracurricularsController extends Controller
+class ExtracurricularController extends Controller
 {
     /**
      * Display a listing of the resource.
