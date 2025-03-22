@@ -13,7 +13,8 @@ class TeacherController extends Controller
      */
     public function index()
     {
-        return view('pages.profile.teachers');
+        $teachers = Teacher::select('teacher_name', 'nip', 'image', 'job', 'starting_year')->paginate(3);
+        return view('pages.profile.teachers', compact('teachers'));
     }
 
     /**
