@@ -86,30 +86,30 @@
                             x-transition:leave="transition ease-in duration-150"
                             x-transition:leave-start="opacity-100 transform scale-100"
                             x-transition:leave-end="opacity-0 transform scale-95" class="pl-4">
-                            <a href="#"
+                            <a href="/profile/visi-misi"
                                 class="block px-4 py-2 text-sm text-[rgb(45,51,107)] hover:bg-gray-100">Visi &
                                 Misi</a>
-                            <a href="#"
+                            <a href="https://referensi.data.kemdikbud.go.id/tabs.php?npsn=20329336"
                                 class="block px-4 py-2 text-sm text-[rgb(45,51,107)] hover:bg-gray-100">NPSN</a>
-                            <a href="#"
+                            <a href="/profile/sejarah-sekolah"
                                 class="block px-4 py-2 text-sm text-[rgb(45,51,107)] hover:bg-gray-100">Sejarah
                                 Sekolah</a>
-                            <a href="#"
+                            <a href="/profile/pendidik"
                                 class="block px-4 py-2 text-sm text-[rgb(45,51,107)] hover:bg-gray-100">Pendidik &
                                 Tenaga
                                 Pendidik</a>
-                            <a href="#"
+                            <a href="/profile/peserta-didik"
                                 class="block px-4 py-2 text-sm text-[rgb(45,51,107)] hover:bg-gray-100">Peserta
                                 Didik</a>
                             <a href="#"
                                 class="block px-4 py-2 text-sm text-[rgb(45,51,107)] hover:bg-gray-100">Prestasi
                                 Sekolah</a>
-                            <a href="#"
+                            <a href="/profile/ekstrakulikuler"
                                 class="block px-4 py-2 text-sm text-[rgb(45,51,107)] hover:bg-gray-100">Ekstrakurikuler</a>
-                            <a href="#"
+                            <a href="/profile/dana-bos"
                                 class="block px-4 py-2 text-sm text-[rgb(45,51,107)] hover:bg-gray-100">BOS
                                 Bantuan Operasional Sekolah</a>
-                            <a href="#"
+                            <a href="/profile/sarana-prasarana"
                                 class="block px-4 py-2 text-sm text-[rgb(45,51,107)] hover:bg-gray-100">Sarana
                                 & Prasarana</a>
                         </div>
@@ -133,13 +133,13 @@
                             x-transition:leave="transition ease-in duration-150"
                             x-transition:leave-start="opacity-100 transform scale-100"
                             x-transition:leave-end="opacity-0 transform scale-95" class="pl-4">
-                            <a href="#"
+                            <a href="/kurikulum/kurikulum-sekolah"
                                 class="block px-4 py-2 text-sm text-[rgb(45,51,107)] hover:bg-gray-100">Kurikulum
                                 Sekolah</a>
-                            <a href="#"
+                            <a href="/kurikulum/kalender-akademik"
                                 class="block px-4 py-2 text-sm text-[rgb(45,51,107)] hover:bg-gray-100">Kalender
                                 Pendidikan</a>
-                            <a href="#"
+                            <a href="/kurikulum/video-pembelajaran"
                                 class="block px-4 py-2 text-sm text-[rgb(45,51,107)] hover:bg-gray-100">Video
                                 Pembelajaran
                                 Siswa</a>
@@ -167,7 +167,7 @@
                             <a href="#"
                                 class="block px-4 py-2 text-sm text-[rgb(45,51,107)] hover:bg-gray-100">Berita
                                 Sekolah</a>
-                            <a href="#"
+                            <a href="/pengumuman/ppdb"
                                 class="block px-4 py-2 text-sm text-[rgb(45,51,107)] hover:bg-gray-100">Pendaftaran
                                 Peserta
                                 Didik Baru</a>
@@ -194,9 +194,9 @@
                             x-transition:leave="transition ease-in duration-150"
                             x-transition:leave-start="opacity-100 transform scale-100"
                             x-transition:leave-end="opacity-0 transform scale-95" class="pl-4">
-                            <a href="#"
+                            <a href="/galeri/foto"
                                 class="block px-4 py-2 text-sm text-[rgb(45,51,107)] hover:bg-gray-100">Foto</a>
-                            <a href="#"
+                            <a href="/galeri/video"
                                 class="block px-4 py-2 text-sm text-[rgb(45,51,107)] hover:bg-gray-100">Video</a>
                         </div>
                     </div>
@@ -242,7 +242,7 @@
                         </div>
                     </div>
                     <!-- Kontak Kami -->
-                    <a href="#"
+                    <a href="/kontak"
                         class="text-[rgb(45,51,107)] font-semibold px-4 py-2 hover:bg-gray-100 text-sm">Kontak Kami</a>
                 </div>
             </div>
@@ -281,7 +281,7 @@
                             <a href="/profile/visi-misi"
                                 class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Visi &
                                 Misi</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">NPSN</a>
+                            <a href="https://referensi.data.kemdikbud.go.id/tabs.php?npsn=20329336" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">NPSN</a>
                             <a href="/profile/sejarah-sekolah"
                                 class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Sejarah
                                 Sekolah</a>
@@ -327,13 +327,13 @@
                         @mouseleave="open = false" style="background-color: #2D336B;"
                         class="absolute left-0 top-full mt-1 w-48 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none z-50">
                         <div class="py-1">
-                            <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Kurikulum
+                            <a href="/kurikulum/kurikulum-sekolah" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Kurikulum
                                 Sekolah</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Kalender
+                            <a href="kurikulum/kalender-akademik" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Kalender
                                 Pendidikan</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Tugas
+                            <a href="kurikulum/tugas-siswa" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Tugas
                                 Siswa</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Video
+                            <a href="kurikulum/video-pembelajaran" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Video
                                 Pembelajaran Siswa</a>
                         </div>
                     </div>
@@ -363,7 +363,7 @@
                         <div class="py-1">
                             <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Berita
                                 Sekolah</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Pendaftaran
+                            <a href="/pengumuman/ppdp" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Pendaftaran
                                 Peserta Didik Baru</a>
                             <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Lomba</a>
                         </div>
@@ -392,8 +392,8 @@
                         @mouseleave="open = false" style="background-color: #2D336B;"
                         class="absolute left-0 top-full mt-1 w-56 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none z-50">
                         <div class="py-1">
-                            <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Foto</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Video</a>
+                            <a href="/galeri/foto" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Foto</a>
+                            <a href="/galeri/video" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Video</a>
                         </div>
                     </div>
                 </div>
@@ -436,7 +436,7 @@
                     </div>
                 </div>
                 <!-- Kontak Kami -->
-                <a href="#" class="text-[rgb(45,51,107)] font-semibold px-2 py-1 relative group text-lg">
+                <a href="/kontak" class="text-[rgb(45,51,107)] font-semibold px-2 py-1 relative group text-lg">
                     Kontak Kami
                     <span
                         class="absolute inset-x-0 bottom-0 h-0.5 bg-blue-900 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>

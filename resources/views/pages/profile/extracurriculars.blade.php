@@ -535,13 +535,13 @@
 
             <!-- Breadcrumb Navigation -->
             <div class="flex items-center space-x-2 mt-[250px]">
-                <a href="#"
+                <a href="/.."
                     class="bg-[#E6EAF7] text-[#2D336B] font-bold px-4 py-2 rounded-full shadow-md">Beranda</a>
                 <span class="text-[#2D336B]">›</span>
-                <a href="#"
+                <a href="/profile/ekstrakulikuler"
                     class="bg-[#E6EAF7] text-[#2D336B] font-bold px-4 py-2 rounded-full shadow-md">Profil</a>
                 <span class="text-[#2D336B]">›</span>
-                <a href="#" class="bg-[#E6EAF7] text-[#2D336B] font-bold px-4 py-2 rounded-full shadow-md">Ekstrakulikuler</a>
+                <a href="/profile/esktrakulikuler" class="bg-[#E6EAF7] text-[#2D336B] font-bold px-4 py-2 rounded-full shadow-md">Ekstrakulikuler</a>
             </div>
         </div>
     </div>

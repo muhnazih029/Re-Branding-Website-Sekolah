@@ -530,13 +530,13 @@
 
             <!-- Breadcrumb Navigation -->
             <div class="flex items-center space-x-2 mt-10">
-                <a href="#"
+                <a href="/.."
                     class="bg-[#E6EAF7] text-[#2D336B] font-bold px-4 py-2 rounded-full shadow-md">Beranda</a>
                 <span class="text-[#2D336B]">›</span>
-                <a href="#"
+                <a href="/profile/visi-misi"
                     class="bg-[#E6EAF7] text-[#2D336B] font-bold px-4 py-2 rounded-full shadow-md">Profil</a>
                 <span class="text-[#2D336B]">›</span>
-                <a href="#" class="bg-[#E6EAF7] text-[#2D336B] font-bold px-4 py-2 rounded-full shadow-md">Visi
+                <a href="/profile/visi-misi" class="bg-[#E6EAF7] text-[#2D336B] font-bold px-4 py-2 rounded-full shadow-md">Visi
                     Misi</a>
             </div>
         </div>

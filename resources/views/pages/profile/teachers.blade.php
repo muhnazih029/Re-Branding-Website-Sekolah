@@ -645,14 +645,15 @@
             </div>
              <!-- Breadcrumb Navigation -->
              <div class="flex items-center space-x-2 mt-[full] md:mt-[200px]">
-                <a href="#"
+                <a href="/.."
                     class="bg-[#E6EAF7] text-[#2D336B] font-bold px-4 py-2 rounded-full shadow-md">Beranda</a>
                 <span class="text-[#2D336B]">›</span>
-                <a href="#"
+                <a href="/profile/pendidik"
                     class="bg-[#E6EAF7] text-[#2D336B] font-bold px-4 py-2 rounded-full shadow-md">Profil</a>
                 <span class="text-[#2D336B]">›</span>
-                <a href="#" class="bg-[#E6EAF7] text-[#2D336B] font-bold px-4 py-2 rounded-full shadow-md">Pendidik</a>
+                <a href="/profile/pendidik" class="bg-[#E6EAF7] text-[#2D336B] font-bold px-4 py-2 rounded-full shadow-md">Pendidik</a>
             </div>
+
             <!-- Popup Container -->
             <div id="popup"
             class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
