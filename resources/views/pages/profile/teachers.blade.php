@@ -494,169 +494,195 @@
 
                 <!-- Konten -->
                 <div class="w-full p-5 bg-gray-100 rounded-lg">
-                    <!-- Pendidik 1 -->
                     <div class="mt-4">
-                        <!-- Profil -->
-                        <div
-                            class="bg-white p-5 rounded-lg shadow-md flex flex-col md:flex-row items-start max-w-[400px] md:max-w-[800px]">
-                            <!-- Kotak Foto -->
-                            <div class="w-32 h-35 md:w-32 md:h-35 bg-gray-300 overflow-hidden mb-4 md:mb-0 md:mr-5">
-                                <img src="{{ asset('img/ks.jpg') }}" alt="Foto1"
-                                    class="w-full h-full object-cover cursor-pointer hover:opacity-50 transition-opacity"
-                                    onclick="openPopup('{{ asset('img/ks.jpg') }}')">
-                            </div>
-                            <!-- Informasi Teks -->
-                            <div class="flex-1">
-                                <h2 class="text-xl font-bold text-blue-900">Christina Ardiyanti, S.Pd</h2>
-                                <div class="mt-3">
-                                    <table class="w-full">
-                                        <tr>
-                                            <th class="text-left font-semibold py-2 whitespace-nowrap">NIP :
-                                                12345678910</th>
-                                        </tr>
-                                        <tr>
-                                            <th class="text-left font-semibold py-2 whitespace-nowrap">Jenis Kelamin :
-                                                Perempuan</th>
-                                        </tr>
-                                        <tr>
-                                            <th class="text-left font-semibold py-2 whitespace-nowrap">Jabatan : Kepala
-                                                Sekolah</th>
-                                        </tr>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Pendidik 2 -->
-                    <div class="mt-4">
-                        <!-- Profil -->
-                        <div
-                            class="bg-white p-5 rounded-lg shadow-md flex flex-col md:flex-row items-start max-w-[400px] md:max-w-[800px]">
-                            <!-- Kotak Foto -->
-                            <div class="w-32 h-35 md:w-32 md:h-35 bg-gray-300 overflow-hidden mb-4 md:mb-0 md:mr-5">
-                                <img src="{{ asset('img/BU YULI.jpg') }}" alt="Foto2"
-                                    class="w-full h-full object-cover cursor-pointer hover:opacity-50 transition-opacity"
-                                    onclick="openPopup('{{ asset('img/BU YULI.jpg') }}')">
-                            </div>
-                            <!-- Informasi Teks -->
-                            <div class="flex-1">
-                                <h2 class="text-xl font-bold text-blue-900">Yuli Andari, S.Pd.SD</h2>
-                                <div class="mt-3">
-                                    <table class="w-full">
-                                        <tr>
-                                            <th class="text-left font-semibold py-2 whitespace-nowrap">NIP :
-                                                12345678910</th>
-                                        </tr>
-                                        <tr>
-                                            <th class="text-left font-semibold py-2 whitespace-nowrap">Jenis Kelamin :
-                                                Perempuan</th>
-                                        </tr>
-                                        <tr>
-                                            <th class="text-left font-semibold py-2 whitespace-nowrap">Jabatan : Guru
-                                                Kelas I</th>
-                                        </tr>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Pendidik 3 -->
-                    <div class="mt-4">
-                        <!-- Profil -->
-                        <div
-                            class="bg-white p-5 rounded-lg shadow-md flex flex-col md:flex-row items-start max-w-[400px] md:max-w-[800px]">
-                            <!-- Kotak Foto -->
-                            <div class="w-32 h-35 md:w-32 md:h-35 bg-gray-300 overflow-hidden mb-4 md:mb-0 md:mr-5">
-                                <img src="{{ asset('img/BU UMI.jpg') }}" alt="Foto3"
-                                    class="w-full h-full object-cover cursor-pointer hover:opacity-50 transition-opacity"
-                                    onclick="openPopup('{{ asset('img/BU UMI.jpg') }}')">
-                            </div>
-                            <!-- Informasi Teks -->
-                            <div class="flex-1">
-                                <h2 class="text-xl font-bold text-blue-900">Umiyati, S.Pd.SD</h2>
-                                <div class="mt-3">
-                                    <table class="w-full">
-                                        <tr>
-                                            <th class="text-left font-semibold py-2 whitespace-nowrap">NIP :
-                                                12345678910</th>
-                                        </tr>
-                                        <tr>
-                                            <th class="text-left font-semibold py-2 whitespace-nowrap">Jenis Kelamin :
-                                                Perempuan</th>
-                                        </tr>
-                                        <tr>
-                                            <th class="text-left font-semibold py-2 whitespace-nowrap">Jabatan : Guru
-                                                Kelas II</th>
-                                        </tr>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Pendidik 4 -->
-                    <div class="mt-4">
-                        <!-- Profil -->
-                        <div
-                            class="bg-white p-5 rounded-lg shadow-md flex flex-col md:flex-row items-start max-w-[400px] md:max-w-[800px]">
-                            <!-- Kotak Foto -->
-                            <div class="w-32 h-35 md:w-32 md:h-35 bg-gray-300 overflow-hidden mb-4 md:mb-0 md:mr-5">
-                                <img src="{{ asset('img/BU YANTI.jpg') }}" alt="Foto4"
-                                    class="w-full h-full object-cover cursor-pointer hover:opacity-50 transition-opacity"
-                                    onclick="openPopup('{{ asset('img/BU YANTI.jpg') }}')">
-                            </div>
-                            <!-- Informasi Teks -->
-                            <div class="flex-1">
-                                <h2 class="text-xl font-bold text-blue-900">Soesianti, S.Pd.SD</h2>
-                                <div class="mt-3">
-                                    <table class="w-full">
-                                        <tr>
-                                            <th class="text-left font-semibold py-2 whitespace-nowrap">NIP :
-                                                12345678910</th>
-                                        </tr>
-                                        <tr>
-                                            <th class="text-left font-semibold py-2 whitespace-nowrap">Jenis Kelamin :
-                                                Perempuan</th>
-                                        </tr>
-                                        <tr>
-                                            <th class="text-left font-semibold py-2 whitespace-nowrap">Jabatan : Guru
-                                                Kelas III</th>
-                                        </tr>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
 
-                    </div>
-
-                    <!-- Popup Container -->
-                    <div id="popup"
-                        class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
-                        <div class="bg-white p-2 shadow-lg max-w-[100vw] max-h-[100vh] overflow-auto">
-                            <img id="popupImage" src="" alt="Popup Image" class="max-w-[50vh] max-h-[50vh]">
-                            <button onclick="closePopup()"
-                                class="absolute top-2 right-2 text-gray-600 hover:text-gray-900 text-2xl">
-                                &times;
-                            </button>
+                        <!-- Pendidik 1 -->
+                        <div class="mt-4">
+                            <!-- Profil -->
+                            <div
+                                class="bg-white p-5 rounded-lg shadow-md flex flex-col md:flex-row items-start max-w-[400px] md:max-w-[800px]">
+                                <!-- Kotak Foto -->
+                                <div
+                                    class="w-32 h-35 md:w-32 md:h-35 bg-gray-300 overflow-hidden mb-4 md:mb-0 md:mr-5">
+                                    <img src="{{ asset('img/ks.jpg') }}" alt="Foto1"
+                                        class="w-full h-full object-cover cursor-pointer hover:opacity-50 transition-opacity"
+                                        onclick="openPopup('{{ asset('img/ks.jpg') }}')">
+                                </div>
+                                <!-- Informasi Teks -->
+                                <div class="flex-1">
+                                    <h2 class="text-xl font-bold text-blue-900">Christina Ardiyanti, S.Pd</h2>
+                                    <div class="mt-3">
+                                        <table class="w-full">
+                                            <tr>
+                                                <th class="text-left font-semibold py-2 whitespace-nowrap">NIP :
+                                                    12345678910</th>
+                                            </tr>
+                                            <tr>
+                                                <th class="text-left font-semibold py-2 whitespace-nowrap">Jenis
+                                                    Kelamin :
+                                                    Perempuan</th>
+                                            </tr>
+                                            <tr>
+                                                <th class="text-left font-semibold py-2 whitespace-nowrap">Jabatan :
+                                                    Kepala
+                                                    Sekolah</th>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Pendidik 2 -->
+                        <div class="mt-4">
+                            <!-- Profil -->
+                            <div
+                                class="bg-white p-5 rounded-lg shadow-md flex flex-col md:flex-row items-start max-w-[400px] md:max-w-[800px]">
+                                <!-- Kotak Foto -->
+                                <div
+                                    class="w-32 h-35 md:w-32 md:h-35 bg-gray-300 overflow-hidden mb-4 md:mb-0 md:mr-5">
+                                    <img src="{{ asset('img/BU YULI.jpg') }}" alt="Foto2"
+                                        class="w-full h-full object-cover cursor-pointer hover:opacity-50 transition-opacity"
+                                        onclick="openPopup('{{ asset('img/BU YULI.jpg') }}')">
+                                </div>
+                                <!-- Informasi Teks -->
+                                <div class="flex-1">
+                                    <h2 class="text-xl font-bold text-blue-900">Yuli Andari, S.Pd.SD</h2>
+                                    <div class="mt-3">
+                                        <table class="w-full">
+                                            <tr>
+                                                <th class="text-left font-semibold py-2 whitespace-nowrap">NIP :
+                                                    12345678910</th>
+                                            </tr>
+                                            <tr>
+                                                <th class="text-left font-semibold py-2 whitespace-nowrap">Jenis
+                                                    Kelamin :
+                                                    Perempuan</th>
+                                            </tr>
+                                            <tr>
+                                                <th class="text-left font-semibold py-2 whitespace-nowrap">Jabatan :
+                                                    Guru
+                                                    Kelas I</th>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Pendidik 3 -->
+                        <div class="mt-4">
+                            <!-- Profil -->
+                            <div
+                                class="bg-white p-5 rounded-lg shadow-md flex flex-col md:flex-row items-start max-w-[400px] md:max-w-[800px]">
+                                <!-- Kotak Foto -->
+                                <div
+                                    class="w-32 h-35 md:w-32 md:h-35 bg-gray-300 overflow-hidden mb-4 md:mb-0 md:mr-5">
+                                    <img src="{{ asset('img/BU UMI.jpg') }}" alt="Foto3"
+                                        class="w-full h-full object-cover cursor-pointer hover:opacity-50 transition-opacity"
+                                        onclick="openPopup('{{ asset('img/BU UMI.jpg') }}')">
+                                </div>
+                                <!-- Informasi Teks -->
+                                <div class="flex-1">
+                                    <h2 class="text-xl font-bold text-blue-900">Umiyati, S.Pd.SD</h2>
+                                    <div class="mt-3">
+                                        <table class="w-full">
+                                            <tr>
+                                                <th class="text-left font-semibold py-2 whitespace-nowrap">NIP :
+                                                    12345678910</th>
+                                            </tr>
+                                            <tr>
+                                                <th class="text-left font-semibold py-2 whitespace-nowrap">Jenis
+                                                    Kelamin :
+                                                    Perempuan</th>
+                                            </tr>
+                                            <tr>
+                                                <th class="text-left font-semibold py-2 whitespace-nowrap">Jabatan :
+                                                    Guru
+                                                    Kelas II</th>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Pendidik 4 -->
+                        <div class="mt-4">
+                            <!-- Profil -->
+                            <div
+                                class="bg-white p-5 rounded-lg shadow-md flex flex-col md:flex-row items-start max-w-[400px] md:max-w-[800px]">
+                                <!-- Kotak Foto -->
+                                <div
+                                    class="w-32 h-35 md:w-32 md:h-35 bg-gray-300 overflow-hidden mb-4 md:mb-0 md:mr-5">
+                                    <img src="{{ asset('img/BU YANTI.jpg') }}" alt="Foto4"
+                                        class="w-full h-full object-cover cursor-pointer hover:opacity-50 transition-opacity"
+                                        onclick="openPopup('{{ asset('img/BU YANTI.jpg') }}')">
+                                </div>
+                                <!-- Informasi Teks -->
+                                <div class="flex-1">
+                                    <h2 class="text-xl font-bold text-blue-900">Soesianti, S.Pd.SD</h2>
+                                    <div class="mt-3">
+                                        <table class="w-full">
+                                            <tr>
+                                                <th class="text-left font-semibold py-2 whitespace-nowrap">NIP :
+                                                    12345678910</th>
+                                            </tr>
+                                            <tr>
+                                                <th class="text-left font-semibold py-2 whitespace-nowrap">Jenis
+                                                    Kelamin :
+                                                    Perempuan</th>
+                                            </tr>
+                                            <tr>
+                                                <th class="text-left font-semibold py-2 whitespace-nowrap">Jabatan :
+                                                    Guru
+                                                    Kelas III</th>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </div>
+             <!-- Breadcrumb Navigation -->
+             <div class="flex items-center space-x-2 mt-[full] md:mt-[200px]">
+                <a href="#"
+                    class="bg-[#E6EAF7] text-[#2D336B] font-bold px-4 py-2 rounded-full shadow-md">Beranda</a>
+                <span class="text-[#2D336B]">›</span>
+                <a href="#"
+                    class="bg-[#E6EAF7] text-[#2D336B] font-bold px-4 py-2 rounded-full shadow-md">Profil</a>
+                <span class="text-[#2D336B]">›</span>
+                <a href="#" class="bg-[#E6EAF7] text-[#2D336B] font-bold px-4 py-2 rounded-full shadow-md">Visi
+                    Misi</a>
+            </div>
+            <!-- Popup Container -->
+            <div id="popup"
+            class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+            <div class="bg-white p-2 shadow-lg max-w-[100vw] max-h-[100vh] overflow-auto">
+                <img id="popupImage" src="" alt="Popup Image" class="max-w-[50vh] max-h-[50vh]">
+                <button onclick="closePopup()"
+                    class="absolute top-2 right-2 text-gray-600 hover:text-gray-900 text-2xl">
+                    &times;
+                </button>
+            </div>
+        </div>
+        </div>
 
-                <script>
-                    // Fungsi untuk membuka dan menutup pop-up
-                    function openPopup(src) {
-                        document.getElementById('popupImage').src = src;
-                        document.getElementById('popup').classList.remove('hidden');
-                    }
+        <script>
+            // Fungsi untuk membuka dan menutup pop-up
+            function openPopup(src) {
+                document.getElementById('popupImage').src = src;
+                document.getElementById('popup').classList.remove('hidden');
+            }
 
-                    function closePopup() {
-                        document.getElementById('popup').classList.add('hidden');
-                    }
+            function closePopup() {
+                document.getElementById('popup').classList.add('hidden');
+            }
 
-                    // Tutup pop-up saat mengklik di luar konten pop-up
-                    document.getElementById('popup').addEventListener('click', closePopup);
-                </script>
-                <!-- Alpine.js -->
-                <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+            // Tutup pop-up saat mengklik di luar konten pop-up
+            document.getElementById('popup').addEventListener('click', closePopup);
+        </script>
+        <!-- Alpine.js -->
+        <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 </body>
 
 </html>

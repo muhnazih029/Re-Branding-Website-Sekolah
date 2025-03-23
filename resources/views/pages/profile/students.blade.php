@@ -496,7 +496,7 @@
 
                 <!-- Konten -->
                 <div class="w-full p-5 bg-gray-100 rounded-lg md:w-3/4 md:ml-5">
-                    <div class="mt-4 h-[80vh]">
+                    <div class="mt-4 h-full">
                         <!-- Grid Kelas -->
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                             <!-- Kartu Kelas 1 -->
@@ -608,7 +608,7 @@
                 </div>
             </div>
             <!-- Breadcrumb Navigation -->
-            <div class="flex items-center space-x-2 mt-[950px] md:mt-[200px]">
+            <div class="flex items-center space-x-2 mt-[full] md:mt-[200px]">
                 <a href="#"
                     class="bg-[#E6EAF7] text-[#2D336B] font-bold px-4 py-2 rounded-full shadow-md">Beranda</a>
                 <span class="text-[#2D336B]">›</span>
