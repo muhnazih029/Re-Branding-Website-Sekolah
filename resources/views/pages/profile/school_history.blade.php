@@ -495,7 +495,7 @@
                 <!-- Konten -->
                 <div class="w-full p-5 bg-gray-100 rounded-lg md:w-3/4 md:ml-5">
                     <!-- Sejarah -->
-                    <div class="mt-2 h-[100vh]">
+                    <div class="mt-2 h-full">
 
                         <img src="{{ asset('img/sekolah.jpg') }}" alt="Gambar Contoh"
                             class="w-full h-auto md:w-3/4 lg:w-1/2 mx-auto">
@@ -532,8 +532,8 @@
                     </div>
                 </div>
             </div>
-            <!-- Breadcrumb Navigation -->
-            <div class="flex items-center space-x-2 mt-[300px] md:mt-[200px]">
+             <!-- Breadcrumb Navigation -->
+             <div class="flex items-center space-x-2 mt-[full] md:mt-[200px]">
                 <a href="#"
                     class="bg-[#E6EAF7] text-[#2D336B] font-bold px-4 py-2 rounded-full shadow-md">Beranda</a>
                 <span class="text-[#2D336B]">›</span>
