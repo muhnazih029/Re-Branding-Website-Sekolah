@@ -494,42 +494,48 @@
                     </ul>
                 </div>
 
- <!-- Konten -->
-<div class="w-full p-5 bg-gray-100 rounded-lg md:w-3/4 md:ml-5">
-    <div class="mt-4 h-full">
-        <!-- Pramuka Section -->
-        <div class="mb-6">
-            <h2 class="bg-[#7886C7] text-white px-4 py-2 shadow-md inline-block font-bold">1. Pramuka</h2>
-            <div class="mt-2 bg-gray-300 h-48 w-full md:w-[55vh] rounded-md">
-                <img src="{{ asset('img/pramuka.webp') }}" alt="Pramuka" class="h-full w-full object-cover rounded-md">
-            </div>
-        </div>
+                <!-- Konten -->
+                <div class="w-full p-5 bg-gray-100 rounded-lg md:w-3/4 md:ml-5">
+                    <div class="mt-4 h-full">
+                        <!-- Pramuka Section -->
+                        <div class="mb-6">
+                            <h2 class="bg-[#7886C7] text-white px-4 py-2 shadow-md inline-block font-bold">1. Pramuka
+                            </h2>
+                            <div class="mt-2 bg-gray-300 h-48 w-full md:w-[55vh] rounded-md">
+                                <img src="{{ asset('img/pramuka.webp') }}" alt="Pramuka"
+                                    class="h-full w-full object-cover rounded-md">
+                            </div>
+                        </div>
 
-        <!-- BTQ Section -->
-        <div class="mb-6">
-            <h2 class="bg-[#7886C7] text-white px-4 py-2 shadow-md inline-block font-bold">2. BTQ</h2>
-            <div class="mt-2 bg-gray-300 h-48 w-full md:w-[55vh] rounded-md">
-                <img src="{{ asset('img/btq.jpeg') }}" alt="BTQ" class="h-full w-full object-cover rounded-md">
-            </div>
-        </div>
+                        <!-- BTQ Section -->
+                        <div class="mb-6">
+                            <h2 class="bg-[#7886C7] text-white px-4 py-2 shadow-md inline-block font-bold">2. BTQ</h2>
+                            <div class="mt-2 bg-gray-300 h-48 w-full md:w-[55vh] rounded-md">
+                                <img src="{{ asset('img/btq.jpeg') }}" alt="BTQ"
+                                    class="h-full w-full object-cover rounded-md">
+                            </div>
+                        </div>
 
-        <!-- Komputer Section -->
-        <div class="mb-6">
-            <h2 class="bg-[#7886C7] text-white px-4 py-2 shadow-md inline-block font-bold">3. Komputer</h2>
-            <div class="mt-2 bg-gray-300 h-48 w-full md:w-[55vh] rounded-md">
-                <img src="{{ asset('img/komputer.jpg') }}" alt="Komputer" class="h-full w-full object-cover rounded-md">
-            </div>
-        </div>
+                        <!-- Komputer Section -->
+                        <div class="mb-6">
+                            <h2 class="bg-[#7886C7] text-white px-4 py-2 shadow-md inline-block font-bold">3. Komputer
+                            </h2>
+                            <div class="mt-2 bg-gray-300 h-48 w-full md:w-[55vh] rounded-md">
+                                <img src="{{ asset('img/komputer.jpg') }}" alt="Komputer"
+                                    class="h-full w-full object-cover rounded-md">
+                            </div>
+                        </div>
 
-        <!-- Tari Section -->
-        <div class="mb-6">
-            <h2 class="bg-[#7886C7] text-white px-4 py-2 shadow-md inline-block font-bold">4. Tari</h2>
-            <div class="mt-2 bg-gray-300 h-48 w-full md:w-[55vh] rounded-md">
-                <img src="{{ asset('img/tari.jpeg') }}" alt="Tari" class="h-full w-full object-cover rounded-md">
-            </div>
-        </div>
-    </div>
-</div>
+                        <!-- Tari Section -->
+                        <div class="mb-6">
+                            <h2 class="bg-[#7886C7] text-white px-4 py-2 shadow-md inline-block font-bold">4. Tari</h2>
+                            <div class="mt-2 bg-gray-300 h-48 w-full md:w-[55vh] rounded-md">
+                                <img src="{{ asset('img/tari.jpeg') }}" alt="Tari"
+                                    class="h-full w-full object-cover rounded-md">
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
             </div>
 
@@ -541,7 +547,8 @@
                 <a href="/profile/ekstrakulikuler"
                     class="bg-[#E6EAF7] text-[#2D336B] font-bold px-4 py-2 rounded-full shadow-md">Profil</a>
                 <span class="text-[#2D336B]">›</span>
-                <a href="/profile/esktrakulikuler" class="bg-[#E6EAF7] text-[#2D336B] font-bold px-4 py-2 rounded-full shadow-md">Ekstrakulikuler</a>
+                <a href="/profile/esktrakulikuler"
+                    class="bg-[#E6EAF7] text-[#2D336B] font-bold px-4 py-2 rounded-full shadow-md">Ekstrakulikuler</a>
             </div>
         </div>
     </div>

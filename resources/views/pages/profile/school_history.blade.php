@@ -532,15 +532,16 @@
                     </div>
                 </div>
             </div>
-             <!-- Breadcrumb Navigation -->
-             <div class="flex items-center space-x-2 mt-[full] md:mt-[200px]">
+            <!-- Breadcrumb Navigation -->
+            <div class="flex items-center space-x-2 mt-[full] md:mt-[200px]">
                 <a href="/.."
                     class="bg-[#E6EAF7] text-[#2D336B] font-bold px-4 py-2 rounded-full shadow-md">Beranda</a>
                 <span class="text-[#2D336B]">›</span>
                 <a href="/profile/sejarah-sekolah"
                     class="bg-[#E6EAF7] text-[#2D336B] font-bold px-4 py-2 rounded-full shadow-md">Profil</a>
                 <span class="text-[#2D336B]">›</span>
-                <a href="/profile/sejarah-sekolah" class="bg-[#E6EAF7] text-[#2D336B] font-bold px-4 py-2 rounded-full shadow-md">Sejarah</a>
+                <a href="/profile/sejarah-sekolah"
+                    class="bg-[#E6EAF7] text-[#2D336B] font-bold px-4 py-2 rounded-full shadow-md">Sejarah</a>
             </div>
         </div>
     </div>

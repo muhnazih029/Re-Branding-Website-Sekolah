@@ -643,28 +643,29 @@
                     </div>
                 </div>
             </div>
-             <!-- Breadcrumb Navigation -->
-             <div class="flex items-center space-x-2 mt-[full] md:mt-[200px]">
+            <!-- Breadcrumb Navigation -->
+            <div class="flex items-center space-x-2 mt-[full] md:mt-[200px]">
                 <a href="/.."
                     class="bg-[#E6EAF7] text-[#2D336B] font-bold px-4 py-2 rounded-full shadow-md">Beranda</a>
                 <span class="text-[#2D336B]">›</span>
                 <a href="/profile/pendidik"
                     class="bg-[#E6EAF7] text-[#2D336B] font-bold px-4 py-2 rounded-full shadow-md">Profil</a>
                 <span class="text-[#2D336B]">›</span>
-                <a href="/profile/pendidik" class="bg-[#E6EAF7] text-[#2D336B] font-bold px-4 py-2 rounded-full shadow-md">Pendidik</a>
+                <a href="/profile/pendidik"
+                    class="bg-[#E6EAF7] text-[#2D336B] font-bold px-4 py-2 rounded-full shadow-md">Pendidik</a>
             </div>
 
             <!-- Popup Container -->
             <div id="popup"
-            class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
-            <div class="bg-white p-2 shadow-lg max-w-[100vw] max-h-[100vh] overflow-auto">
-                <img id="popupImage" src="" alt="Popup Image" class="max-w-[50vh] max-h-[50vh]">
-                <button onclick="closePopup()"
-                    class="absolute top-2 right-2 text-gray-600 hover:text-gray-900 text-2xl">
-                    &times;
-                </button>
+                class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+                <div class="bg-white p-2 shadow-lg max-w-[100vw] max-h-[100vh] overflow-auto">
+                    <img id="popupImage" src="" alt="Popup Image" class="max-w-[50vh] max-h-[50vh]">
+                    <button onclick="closePopup()"
+                        class="absolute top-2 right-2 text-gray-600 hover:text-gray-900 text-2xl">
+                        &times;
+                    </button>
+                </div>
             </div>
-        </div>
         </div>
 
         <script>

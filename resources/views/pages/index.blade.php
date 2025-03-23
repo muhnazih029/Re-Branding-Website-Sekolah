@@ -281,7 +281,8 @@
                             <a href="/profile/visi-misi"
                                 class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Visi &
                                 Misi</a>
-                            <a href="https://referensi.data.kemdikbud.go.id/tabs.php?npsn=20329336" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">NPSN</a>
+                            <a href="https://referensi.data.kemdikbud.go.id/tabs.php?npsn=20329336"
+                                class="block px-4 py-2 text-sm text-white hover:bg-blue-900">NPSN</a>
                             <a href="/profile/sejarah-sekolah"
                                 class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Sejarah
                                 Sekolah</a>
@@ -327,13 +328,17 @@
                         @mouseleave="open = false" style="background-color: #2D336B;"
                         class="absolute left-0 top-full mt-1 w-48 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none z-50">
                         <div class="py-1">
-                            <a href="/kurikulum/kurikulum-sekolah" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Kurikulum
+                            <a href="/kurikulum/kurikulum-sekolah"
+                                class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Kurikulum
                                 Sekolah</a>
-                            <a href="kurikulum/kalender-akademik" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Kalender
+                            <a href="kurikulum/kalender-akademik"
+                                class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Kalender
                                 Pendidikan</a>
-                            <a href="kurikulum/tugas-siswa" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Tugas
+                            <a href="kurikulum/tugas-siswa"
+                                class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Tugas
                                 Siswa</a>
-                            <a href="kurikulum/video-pembelajaran" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Video
+                            <a href="kurikulum/video-pembelajaran"
+                                class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Video
                                 Pembelajaran Siswa</a>
                         </div>
                     </div>
@@ -363,7 +368,8 @@
                         <div class="py-1">
                             <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Berita
                                 Sekolah</a>
-                            <a href="/pengumuman/ppdp" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Pendaftaran
+                            <a href="/pengumuman/ppdp"
+                                class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Pendaftaran
                                 Peserta Didik Baru</a>
                             <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Lomba</a>
                         </div>
@@ -392,8 +398,10 @@
                         @mouseleave="open = false" style="background-color: #2D336B;"
                         class="absolute left-0 top-full mt-1 w-56 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none z-50">
                         <div class="py-1">
-                            <a href="/galeri/foto" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Foto</a>
-                            <a href="/galeri/video" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Video</a>
+                            <a href="/galeri/foto"
+                                class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Foto</a>
+                            <a href="/galeri/video"
+                                class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Video</a>
                         </div>
                     </div>
                 </div>
