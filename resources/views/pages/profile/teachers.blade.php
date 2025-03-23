@@ -651,8 +651,7 @@
                 <a href="#"
                     class="bg-[#E6EAF7] text-[#2D336B] font-bold px-4 py-2 rounded-full shadow-md">Profil</a>
                 <span class="text-[#2D336B]">›</span>
-                <a href="#" class="bg-[#E6EAF7] text-[#2D336B] font-bold px-4 py-2 rounded-full shadow-md">Visi
-                    Misi</a>
+                <a href="#" class="bg-[#E6EAF7] text-[#2D336B] font-bold px-4 py-2 rounded-full shadow-md">Pendidik</a>
             </div>
             <!-- Popup Container -->
             <div id="popup"
