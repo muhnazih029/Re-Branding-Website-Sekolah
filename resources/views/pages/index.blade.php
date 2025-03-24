@@ -431,16 +431,22 @@
                         <div class="py-1">
                             <a href="https://kemdiktisaintek.go.id/"
                                 class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Kemendikbud</a>
-                            <a href="https://semarangkota.go.id/" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Pemkot
+                            <a href="https://semarangkota.go.id/"
+                                class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Pemkot
                                 Semarang</a>
-                            <a href="https://disdiksmg.semarangkota.go.id/" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Dinas
+                            <a href="https://disdiksmg.semarangkota.go.id/"
+                                class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Dinas
                                 Pendidikan Kota Semarang</a>
-                            <a href="https://sangjuara.semarangkota.go.id/" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Sang
+                            <a href="https://sangjuara.semarangkota.go.id/"
+                                class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Sang
                                 Juara</a>
-                            <a href="https://nisn.data.kemdikbud.go.id/" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Nomor Induk
+                            <a href="https://nisn.data.kemdikbud.go.id/"
+                                class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Nomor Induk
                                 Siswa Nasional</a>
-                            <a href="https://dapo.dikdasmen.go.id/" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Dapodik</a>
-                            <a href="https://paspor-gtk.simpkb.id/casgpo/login?service=https%3A%2F%2Fgtk.belajar.dikdasmen.go.id%2Fauth%2Flogin" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">SIMPKB</a>
+                            <a href="https://dapo.dikdasmen.go.id/"
+                                class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Dapodik</a>
+                            <a href="https://paspor-gtk.simpkb.id/casgpo/login?service=https%3A%2F%2Fgtk.belajar.dikdasmen.go.id%2Fauth%2Flogin"
+                                class="block px-4 py-2 text-sm text-white hover:bg-blue-900">SIMPKB</a>
                         </div>
                     </div>
                 </div>
