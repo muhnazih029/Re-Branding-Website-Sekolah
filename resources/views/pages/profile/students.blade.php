@@ -638,15 +638,21 @@
                 </div>
             </div>
             <!-- Breadcrumb Navigation -->
-            <div class="flex items-center space-x-2 mt-[full] md:mt-[200px]">
+            <div class="flex items-center flex-wrap space-x-2 mt-[250px] px-4">
                 <a href="/.."
-                    class="bg-[#E6EAF7] text-[#2D336B] font-bold px-4 py-2 rounded-full shadow-md">Beranda</a>
-                <span class="text-[#2D336B]">›</span>
+                    class="bg-[#E6EAF7] text-[#2D336B] font-bold px-3 py-1 rounded-full shadow-md text-sm sm:text-base sm:px-4 sm:py-2">
+                    Beranda
+                </a>
+                <span class="text-[#2D336B] hidden sm:inline">›</span>
                 <a href="/profile/peserta-didik"
-                    class="bg-[#E6EAF7] text-[#2D336B] font-bold px-4 py-2 rounded-full shadow-md">Profil</a>
-                <span class="text-[#2D336B]">›</span>
+                    class="bg-[#E6EAF7] text-[#2D336B] font-bold px-3 py-1 rounded-full shadow-md text-sm sm:text-base sm:px-4 sm:py-2">
+                    Profil
+                </a>
+                <span class="text-[#2D336B] hidden sm:inline">›</span>
                 <a href="/profile/peserta-didik"
-                    class="bg-[#E6EAF7] text-[#2D336B] font-bold px-4 py-2 rounded-full shadow-md">Peserta Didik</a>
+                    class="bg-[#E6EAF7] text-[#2D336B] font-bold px-3 py-1 rounded-full shadow-md text-sm sm:text-base sm:px-4 sm:py-2">
+                    Peserta Didik
+                </a>
             </div>
         </div>
 

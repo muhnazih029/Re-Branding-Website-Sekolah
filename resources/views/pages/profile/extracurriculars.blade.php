@@ -496,7 +496,7 @@
 
                 <!-- Konten -->
                 <div class="w-full p-5 bg-gray-100 rounded-lg md:w-3/4 md:ml-5">
-                    <div class="mt-4 h-full">
+                    <div class="mt-4 h-full grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <!-- Pramuka Section -->
                         <div class="mb-6">
                             <h2 class="bg-[#7886C7] text-white px-4 py-2 shadow-md inline-block font-bold">1. Pramuka
@@ -540,15 +540,21 @@
             </div>
 
             <!-- Breadcrumb Navigation -->
-            <div class="flex items-center space-x-2 mt-[250px]">
+            <div class="flex items-center flex-wrap space-x-2 mt-[250px] px-4">
                 <a href="/.."
-                    class="bg-[#E6EAF7] text-[#2D336B] font-bold px-4 py-2 rounded-full shadow-md">Beranda</a>
-                <span class="text-[#2D336B]">›</span>
+                    class="bg-[#E6EAF7] text-[#2D336B] font-bold px-3 py-1 rounded-full shadow-md text-sm sm:text-base sm:px-4 sm:py-2">
+                    Beranda
+                </a>
+                <span class="text-[#2D336B] hidden sm:inline">›</span>
                 <a href="/profile/ekstrakulikuler"
-                    class="bg-[#E6EAF7] text-[#2D336B] font-bold px-4 py-2 rounded-full shadow-md">Profil</a>
-                <span class="text-[#2D336B]">›</span>
+                    class="bg-[#E6EAF7] text-[#2D336B] font-bold px-3 py-1 rounded-full shadow-md text-sm sm:text-base sm:px-4 sm:py-2">
+                    Profil
+                </a>
+                <span class="text-[#2D336B] hidden sm:inline">›</span>
                 <a href="/profile/esktrakulikuler"
-                    class="bg-[#E6EAF7] text-[#2D336B] font-bold px-4 py-2 rounded-full shadow-md">Ekstrakulikuler</a>
+                    class="bg-[#E6EAF7] text-[#2D336B] font-bold px-3 py-1 rounded-full shadow-md text-sm sm:text-base sm:px-4 sm:py-2">
+                    Ekstrakulikuler
+                </a>
             </div>
         </div>
     </div>

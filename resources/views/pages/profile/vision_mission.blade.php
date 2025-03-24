@@ -529,15 +529,15 @@
             </div>
 
             <!-- Breadcrumb Navigation -->
-            <div class="flex items-center space-x-2 mt-10">
+            <div class="flex items-center space-x-2 mt-[100px]">
                 <a href="/.."
-                    class="bg-[#E6EAF7] text-[#2D336B] font-bold px-4 py-2 rounded-full shadow-md">Beranda</a>
+                    class="bg-[#E6EAF7] text-[#2D336B] font-bold px-4 py-2 rounded-full shadow-md text-sm sm:text-base sm:px-4 sm:py-2">Beranda</a>
                 <span class="text-[#2D336B]">›</span>
                 <a href="/profile/visi-misi"
-                    class="bg-[#E6EAF7] text-[#2D336B] font-bold px-4 py-2 rounded-full shadow-md">Profil</a>
+                    class="bg-[#E6EAF7] text-[#2D336B] font-bold px-4 py-2 rounded-full shadow-md text-sm sm:text-base sm:px-4 sm:py-2">Profil</a>
                 <span class="text-[#2D336B]">›</span>
                 <a href="/profile/visi-misi"
-                    class="bg-[#E6EAF7] text-[#2D336B] font-bold px-4 py-2 rounded-full shadow-md">Visi
+                    class="bg-[#E6EAF7] text-[#2D336B] font-bold px-4 py-2 rounded-full shadow-md text-sm sm:text-base sm:px-4 sm:py-2">Visi
                     Misi</a>
             </div>
         </div>
