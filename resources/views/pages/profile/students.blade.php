@@ -500,7 +500,12 @@
                         <!-- Grid Kelas -->
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                             <!-- Kartu Kelas 1 -->
-                            <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
+                            <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col  relative">
+                                <!-- Label Jumlah Siswa -->
+                                <div
+                                    class="absolute top-2 left-2 bg-[#7886C7] text-white text-md font-semibold py-1 px-3 rounded-lg shadow">
+                                    X Siswa
+                                </div>
                                 <!-- Thumbnail Kelas -->
                                 <div class="w-full h-48 bg-gray-300 rounded-t-lg overflow-hidden">
                                     <img src="{{ asset('img/kelas1.jpg') }}" alt="Berita 1"
@@ -518,7 +523,12 @@
                             </div>
 
                             <!-- Kartu Kelas 2 -->
-                            <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
+                            <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col relative">
+                                <!-- Label Jumlah Siswa -->
+                                <div
+                                    class="absolute top-2 left-2 bg-[#7886C7] text-white text-md font-semibold py-1 px-3 rounded-lg shadow">
+                                    X Siswa
+                                </div>
                                 <!-- Thumbnail Kelas -->
                                 <div class="w-full h-48 bg-gray-300 rounded-t-lg overflow-hidden">
                                     <img src="{{ asset('img/kelas2.jpg') }}" alt="Berita 1"
@@ -536,7 +546,12 @@
                             </div>
 
                             <!-- Kartu Kelas 3 -->
-                            <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
+                            <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col relative">
+                                <!-- Label Jumlah Siswa -->
+                                <div
+                                    class="absolute top-2 left-2 bg-[#7886C7] text-white text-md font-semibold py-1 px-3 rounded-lg shadow">
+                                    X Siswa
+                                </div>
                                 <!-- Thumbnail Kelas -->
                                 <div class="w-full h-48 bg-gray-300 rounded-t-lg overflow-hidden">
                                     <img src="{{ asset('img/kelas3.jpg') }}" alt="Berita 1"
@@ -553,7 +568,12 @@
                                 </div>
                             </div>
                             <!-- Kartu Kelas 4 -->
-                            <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
+                            <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col relative">
+                                <!-- Label Jumlah Siswa -->
+                                <div
+                                    class="absolute top-2 left-2 bg-[#7886C7] text-white text-md font-semibold py-1 px-3 rounded-lg shadow">
+                                    X Siswa
+                                </div>
                                 <!-- Thumbnail Kelas -->
                                 <div class="w-full h-48 bg-gray-300 rounded-t-lg overflow-hidden">
                                     <img src="{{ asset('img/kelas4.jpg') }}" alt="Berita 1"
@@ -570,7 +590,12 @@
                                 </div>
                             </div>
                             <!-- Kartu Kelas 5 -->
-                            <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
+                            <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col relative">
+                                <!-- Label Jumlah Siswa -->
+                                <div
+                                    class="absolute top-2 left-2 bg-[#7886C7] text-white text-md font-semibold py-1 px-3 rounded-lg shadow">
+                                    X Siswa
+                                </div>
                                 <!-- Thumbnail Kelas -->
                                 <div class="w-full h-48 bg-gray-300 rounded-t-lg overflow-hidden">
                                     <img src="{{ asset('img/kelas5.jpeg') }}" alt="Berita 1"
@@ -587,7 +612,12 @@
                                 </div>
                             </div>
                             <!-- Kartu Kelas 6 -->
-                            <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
+                            <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col relative">
+                                <!-- Label Jumlah Siswa -->
+                                <div
+                                    class="absolute top-2 left-2 bg-[#7886C7] text-white text-md font-semibold py-1 px-3 rounded-lg shadow">
+                                    X Siswa
+                                </div>
                                 <!-- Thumbnail Kelas -->
                                 <div class="w-full h-48 bg-gray-300 rounded-t-lg overflow-hidden">
                                     <img src="{{ asset('img/kelas6.webp') }}" alt="Berita 1"
