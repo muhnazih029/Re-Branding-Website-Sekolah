@@ -26,7 +26,12 @@ class GaleryResource extends Resource
     {
         return 'Galeri';
     }
-
+    public static function getEloquentQuery(): Builder
+    {
+        return Galery::query()
+            ->select('galeries.*', 'users.name as user_name')
+            ->join('users', 'users.id', '=', 'galeries.user_id');
+    }
     public static function form(Form $form): Form
     {
         return $form
@@ -35,6 +40,7 @@ class GaleryResource extends Resource
                     ->schema([
                         Forms\Components\TextInput::make('name')
                             ->label('Nama')
+                            ->placeholder('Masukkan Nama Galeri')
                             ->required(),
                         Forms\Components\FileUpload::make('file')
                             ->label('File')
@@ -63,12 +69,12 @@ class GaleryResource extends Resource
                     ->searchable(),
                 Tables\Columns\ImageColumn::make('file')
                     ->label('File')
-                    ->height(50)
+                    ->height(100)
                     ->limit(3)
                     ->stacked()
                     ->wrap()
                     ->searchable(),
-                Tables\Columns\TextColumn::make('user.name')
+                Tables\Columns\TextColumn::make('user_name')
                     ->label('Dibuat Oleh')
                     ->sortable(),
             ])

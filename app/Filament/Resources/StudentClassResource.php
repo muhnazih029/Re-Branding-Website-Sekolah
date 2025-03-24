@@ -9,7 +9,9 @@ use Filament\Forms\Form;
 use Filament\Tables\Table;
 use App\Models\StudentClass;
 use Filament\Resources\Resource;
+use Illuminate\Support\Facades\DB;
 use Filament\Support\Enums\ActionSize;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Facades\Storage;
 use App\Filament\Resources\StudentClassResource\Pages;
 
@@ -23,7 +25,13 @@ class StudentClassResource extends Resource
     {
         return 'Kelas';
     }
-
+    public static function getEloquentQuery(): Builder
+    {
+        return StudentClass::query()
+            ->select('student_classes.*', 'teachers.teacher_name as teacher_name')
+            ->join('teachers', 'teachers.id', '=', 'student_classes.teacher_id')
+            ->withCount(['students', 'classWorks']);
+    }
     public static function form(Form $form): Form
     {
         return $form
@@ -42,7 +50,7 @@ class StudentClassResource extends Resource
                                     ->autofocus()
                                     ->required(),
                                 Forms\Components\FileUpload::make('image')
-                                    ->label('Image')
+                                    ->label('Gambar')
                                     ->directory('student_classes')
                                     ->acceptedFileTypes(['image/png', 'image/jpeg', 'image/jpg'])
                                     ->image()
@@ -56,11 +64,12 @@ class StudentClassResource extends Resource
                                     ->searchable()
                                     ->reactive()
                                     ->options(function (): array {
-                                        return Teacher::query()
+                                        return DB::table('teachers')
+                                            ->select('id', 'teacher_name')
                                             ->where('job', 'Wali Kelas')
                                             ->orderBy('teacher_name')
                                             ->pluck('teacher_name', 'id')
-                                            ->all();
+                                            ->toArray();
                                     }),
                             ]),
                         Forms\Components\Tabs\Tab::make('Siswa')
@@ -108,9 +117,11 @@ class StudentClassResource extends Resource
                                     ->schema([
                                         Forms\Components\TextInput::make('title')
                                             ->label('Judul')
+                                            ->placeholder('Masukkan Judul Tugas')
                                             ->required(),
                                         Forms\Components\RichEditor::make('description')
                                             ->label('Deskripsi')
+                                            ->placeholder('Masukkan Deskripsi Tugas')
                                             ->required(),
                                     ])
                             ])
@@ -121,11 +132,6 @@ class StudentClassResource extends Resource
     public static function table(Table $table): Table
     {
         return $table
-            ->query(
-                static::getModel()::query()
-                    ->with(['teacher'])
-                    ->withCount(['students', 'classWorks'])
-            )
             ->striped()
             ->defaultSort('created_at', 'desc')
             ->columns([
@@ -135,7 +141,7 @@ class StudentClassResource extends Resource
                 Tables\Columns\TextColumn::make('class_name')
                     ->label('Nama Kelas')
                     ->sortable(),
-                Tables\Columns\TextColumn::make('teacher.teacher_name')
+                Tables\Columns\TextColumn::make('teacher_name')
                     ->label('Wali Kelas')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('students_count')
@@ -178,21 +184,15 @@ class StudentClassResource extends Resource
                             }
                         }),
                     Tables\Actions\DeleteAction::make()
-                        ->using(function (StudentClass $record, array $data): StudentClass {
-                            $record->fill($data);
-                            if ($record->isDirty('image')) {
-                                $oldImage = $record->getOriginal('image');
-                                if ($oldImage && Storage::exists($oldImage)) {
-                                    Storage::delete($oldImage);
-                                }
-                            }
-                            $record->save();
+                        ->using(function (StudentClass $record): StudentClass {
+                            Storage::delete($record->image);
+                            $record->delete();
                             return $record;
                         })
                         ->after(function ($record) {
                             if ($record->teacher) {
                                 $record->teacher->update([
-                                    'job' => 'Guru',
+                                    'job' => 'Wali Kelas',
                                 ]);
                             }
                         }),

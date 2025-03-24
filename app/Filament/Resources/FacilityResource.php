@@ -26,7 +26,12 @@ class FacilityResource extends Resource
     {
         return 'Fasilitas';
     }
-
+    public static function getEloquentQuery(): Builder
+    {
+        return Facility::query()
+            ->select('facilities.*', 'users.name as user_name')
+            ->join('users', 'users.id', '=', 'facilities.user_id');
+    }
     public static function form(Form $form): Form
     {
         return $form
@@ -35,14 +40,17 @@ class FacilityResource extends Resource
                     ->schema([
                         Forms\Components\TextInput::make('name')
                             ->label('Nama')
+                            ->placeholder('Masukkan Nama Fasilitas')
                             ->required(),
                         Forms\Components\TextInput::make('quantity')
                             ->label('Jumlah')
+                            ->placeholder('Masukkan Jumlah Fasilitas')
                             ->numeric()
                             ->minValue(1)
                             ->required(),
                         Forms\Components\FileUpload::make('image')
                             ->label('Gambar')
+                            ->placeholder('Masukkan Gambar Fasilitas')
                             ->directory('facilities')
                             ->acceptedFileTypes(['image/png', 'image/jpeg', 'image/jpg'])
                             ->maxSize(2048)
@@ -70,7 +78,7 @@ class FacilityResource extends Resource
                 Tables\Columns\ImageColumn::make('image')
                     ->label('Gambar')
                     ->height(100),
-                Tables\Columns\TextColumn::make('user.name')
+                Tables\Columns\TextColumn::make('user_name')
                     ->label('Dibuat Oleh')
                     ->sortable(),
             ])

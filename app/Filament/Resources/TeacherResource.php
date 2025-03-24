@@ -46,6 +46,7 @@ class TeacherResource extends Resource
                         Forms\Components\TextInput::make('job')
                             ->label('Posisi')
                             ->placeholder('Masukkan posisi guru di sekolah')
+                            ->hint('Jika wali kelas, masukkan "Wali Kelas"')
                             ->required(),
                         Forms\Components\Select::make('starting_year')
                             ->label('Tahun')

@@ -8,6 +8,7 @@ use Filament\Forms\Form;
 use App\Models\ClassWork;
 use Filament\Tables\Table;
 use Filament\Resources\Resource;
+use Illuminate\Support\Facades\DB;
 use Filament\Support\Enums\ActionSize;
 use Illuminate\Database\Eloquent\Builder;
 use App\Filament\Resources\ClassWorkResource\Pages;
@@ -24,7 +25,12 @@ class ClassWorkResource extends Resource
     {
         return 'Tugas Kelas';
     }
-
+    public static function getEloquentQuery(): Builder
+    {
+        return ClassWork::query()
+            ->select('class_works.*', 'student_classes.class_name as class_name')
+            ->join('student_classes', 'student_classes.id', '=', 'class_works.student_class_id');
+    }
     public static function form(Form $form): Form
     {
         return $form
@@ -36,11 +42,18 @@ class ClassWorkResource extends Resource
                     ->schema([
                         Forms\Components\TextInput::make('title')
                             ->label('Judul')
+                            ->placeholder('Masukkan Judul Tugas')
                             ->required(),
                         Forms\Components\Select::make('student_class_id')
                             ->label('Kelas')
-                            ->relationship('student_class', 'class_name')
-                            ->searchable()
+                            ->placeholder('Pilih Kelas')
+                            ->options(function (): array {
+                                return DB::table('student_classes')
+                                    ->select('id', 'class_name')
+                                    ->orderBy('class_name')
+                                    ->pluck('class_name', 'id')
+                                    ->toArray();
+                            })
                             ->required(),
                         Forms\Components\RichEditor::make('description')
                             ->label('Deskripsi')
@@ -58,7 +71,7 @@ class ClassWorkResource extends Resource
                 Tables\Columns\TextColumn::make('title')
                     ->label('Judul')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('student_class.class_name')
+                Tables\Columns\TextColumn::make('class_name')
                     ->label('Kelas')
                     ->sortable(),
                 Tables\Columns\TextColumn::make('description')

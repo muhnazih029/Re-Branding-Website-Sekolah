@@ -13,6 +13,7 @@ use Filament\Resources\Resource;
 use Filament\Support\Enums\ActionSize;
 use Illuminate\Support\Facades\Storage;
 use App\Filament\Resources\AnnouncementResource\Pages;
+use Illuminate\Database\Eloquent\Builder;
 
 class AnnouncementResource extends Resource
 {
@@ -24,6 +25,12 @@ class AnnouncementResource extends Resource
     {
         return 'Pengumuman';
     }
+    public static function getEloquentQuery(): Builder
+    {
+        return Announcement::query()
+            ->select('announcements.*', 'users.name as user_name')
+            ->join('users', 'users.id', '=', 'announcements.user_id');
+    }
     public static function form(Form $form): Form
     {
         return $form
@@ -33,6 +40,7 @@ class AnnouncementResource extends Resource
                     ->schema([
                         Forms\Components\TextInput::make('title')
                             ->label('Judul')
+                            ->placeholder('Masukkan Judul Pengumuman')
                             ->live(onBlur: true)
                             ->afterStateUpdated(function (callable $set, $state) {
                                 $set('slug', Str::slug($state));
@@ -44,13 +52,14 @@ class AnnouncementResource extends Resource
                             ->required(),
                         Forms\Components\Textarea::make('content')
                             ->label('Deskripsi')
+                            ->placeholder('Masukkan Deskripsi Pengumuman')
                             ->required()
                             ->columnSpanFull(),
                         Forms\Components\Select::make('type')
                             ->label('Tipe')
                             ->options([
-                                'announcement' => 'Pengumuman',
-                                'news' => 'Berita',
+                                'pengumuman' => 'Pengumuman',
+                                'berita' => 'Berita',
                                 'lomba' => 'Lomba',
                             ])
                             ->required(),
@@ -87,7 +96,7 @@ class AnnouncementResource extends Resource
                     ->label('Tipe')
                     ->sortable()
                     ->searchable(),
-                Tables\Columns\TextColumn::make('user.name')
+                Tables\Columns\TextColumn::make('user_name')
                     ->label('Dibuat Oleh')
                     ->sortable(),
             ])
@@ -99,8 +108,7 @@ class AnnouncementResource extends Resource
                     Tables\Actions\ViewAction::make()
                         ->modalWidth('xl'),
                     Tables\Actions\EditAction::make()
-                        ->modalWidth('xl'),
-                    Tables\Actions\DeleteAction::make()
+                        ->modalWidth('xl')
                         ->using(function (Announcement $record, array $data): Announcement {
                             $record->fill($data);
                             if ($record->isDirty('image')) {
@@ -111,6 +119,12 @@ class AnnouncementResource extends Resource
                             }
                             $record->save();
                             return $record;
+                        }),
+                    Tables\Actions\DeleteAction::make()
+                        ->using(function (Announcement $record): Announcement {
+                            Storage::delete($record->image);
+                            $record->delete();
+                            return $record;
                         })
                 ])
                     ->size(ActionSize::ExtraSmall)
@@ -120,15 +134,9 @@ class AnnouncementResource extends Resource
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
                     Tables\Actions\DeleteBulkAction::make()
-                        ->using(function (Announcement $record, array $data): Announcement {
-                            $record->fill($data);
-                            if ($record->isDirty('image')) {
-                                $oldImage = $record->getOriginal('image');
-                                if ($oldImage && Storage::exists($oldImage)) {
-                                    Storage::delete($oldImage);
-                                }
-                            }
-                            $record->save();
+                        ->using(function (Announcement $record): Announcement {
+                            Storage::delete($record->image);
+                            $record->delete();
                             return $record;
                         })
                 ]),

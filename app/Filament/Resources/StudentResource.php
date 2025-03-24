@@ -9,6 +9,7 @@ use Filament\Forms\Form;
 use Filament\Tables\Table;
 use App\Models\StudentClass;
 use Filament\Resources\Resource;
+use Illuminate\Support\Facades\DB;
 use Filament\Support\Enums\ActionSize;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Database\Eloquent\Builder;
@@ -25,6 +26,12 @@ class StudentResource extends Resource
     public static function getLabel(): string
     {
         return 'Siswa';
+    }
+    public static function getEloquentQuery(): Builder
+    {
+        return Student::query()
+            ->select('students.*', 'student_classes.class_name as student_class_name')
+            ->join('student_classes', 'student_classes.id', '=', 'students.student_class_id');
     }
 
     public static function form(Form $form): Form
@@ -54,14 +61,13 @@ class StudentResource extends Resource
                         Forms\Components\Select::make('student_class_id')
                             ->label('Kelas')
                             ->placeholder('Pilih Kelas')
-                            ->relationship('student_class', 'class_name')
-                            ->searchable()
                             ->reactive()
                             ->options(function (): array {
-                                return StudentClass::query()
-                                    ->where('student_class')
+                                return DB::table('student_classes')
+                                    ->select('id', 'class_name')
+                                    ->orderBy('class_name')
                                     ->pluck('class_name', 'id')
-                                    ->all();
+                                    ->toArray();
                             })
                             ->required(),
                         Forms\Components\FileUpload::make('image')
@@ -92,7 +98,7 @@ class StudentResource extends Resource
                 Tables\Columns\TextColumn::make('gender')
                     ->label('Jenis Kelamin')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('student_class.class_name')
+                Tables\Columns\TextColumn::make('student_class_name')
                     ->label('Kelas')
                     ->sortable()
                     ->searchable(),
@@ -128,7 +134,6 @@ class StudentResource extends Resource
                             return $record;
                         }),
                 ])
-                    // ->label('Aksi')
                     ->size(ActionSize::ExtraSmall)
                     ->color('primary')
                     ->button()
@@ -137,7 +142,7 @@ class StudentResource extends Resource
                 Tables\Actions\BulkActionGroup::make([
                     Tables\Actions\DeleteBulkAction::make()
                         ->using(function (Student $record): Student {
-                            Storage::disk('public')->delete($record->image);
+                            Storage::delete($record->image);
                             $record->delete();
                             return $record;
                         }),
