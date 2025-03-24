@@ -515,6 +515,16 @@
         </div>
     </div>
 
+    <!-- Breadcrumb Navigation -->
+    <div class="flex items-center mt-10 mb-10 ml-8 space-x-2">
+        <a href="/.."
+                 class="bg-[#E6EAF7] text-[#2D336B] font-bold px-4 py-2 rounded-full shadow-md">Beranda</a>
+        <span class="text-[#2D336B]">›</span>
+        <a href="/pengumuman"
+                class="bg-[#E6EAF7] text-[#2D336B] font-bold px-4 py-2 rounded-full shadow-md">Pengumuman</a>
+        <span class="text-[#2D336B]"></span>
+    </div>
+    
     <!-- Footer  -->
     <footer class="py-10 text-white bg-blue-900">
         <div class="container grid grid-cols-1 gap-8 px-6 mx-auto md:grid-cols-4">
