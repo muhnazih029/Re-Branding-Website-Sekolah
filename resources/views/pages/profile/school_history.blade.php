@@ -497,7 +497,7 @@
                     <!-- Sejarah -->
                     <div class="mt-2 h-full">
 
-                        <img src="{{ asset('img/sekolah.jpg') }}" alt="Gambar Contoh"
+                        <img src="{{ asset('img/sdnbandarharjo.png') }}" alt="Gambar Contoh"
                             class="w-full h-auto md:w-3/4 lg:w-1/2 mx-auto">
                         <p class="mt-6 text-[rgb(45,51,107)] pl-2 font-semibold">Secara administrasi Sekolah Dasar (SD)
                             Negeri Bandarharjo 01 beralamat di Jalan Cumi-cumi Raya No. 2, Kelurahan Bandarharjo,
