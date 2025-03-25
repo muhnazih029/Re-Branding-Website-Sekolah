@@ -125,6 +125,8 @@
                         <a href="{{ route('kurikulum.calendar') }}"
                             class="block px-4 py-2 text-sm text-[rgb(45,51,107)] hover:bg-gray-100">Kalender
                             Pendidikan</a>
+                        <a href="{{ route('kurikulum.homework') }}"
+                            class="block px-4 py-2 text-sm text-[rgb(45,51,107)] hover:bg-gray-100">Tugas Siswa</a>
                         <a href="{{ route('kurikulum.learning_videos') }}"
                             class="block px-4 py-2 text-sm text-[rgb(45,51,107)] hover:bg-gray-100">Video
                             Pembelajaran
@@ -315,17 +317,13 @@
                     class="absolute left-0 z-50 w-48 mt-1 rounded-md shadow-lg top-full ring-1 ring-black ring-opacity-5 focus:outline-none">
                     <div class="py-1">
                         <a href="{{ route('kurikulum.school_curriculum') }}"
-                            class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Kurikulum
-                            Sekolah</a>
-                        <a href="{{ route('kurikulum.calendar') }}
-                            class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Kalender
-                            Pendidikan</a>
-                        <a href="kurikulu{{ route('kurikulum.learning_videos') }}
-                            class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Tugas
-                            Siswa</a>
-                        <a href="kurikulum/video-pembelajaran"
-                            class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Video
-                            Pembelajaran Siswa</a>
+                            class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Kurikulum Sekolah</a>
+                        <a href="{{ route('kurikulum.calendar') }}"
+                            class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Kalender Pendidikan</a>
+                        <a href="{{ route('kurikulum.homework') }}"
+                            class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Tugas Siswa</a>
+                        <a href="{{ route('kurikulum.learning_videos') }}"
+                            class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Video Pembelajaran Siswa</a>
                     </div>
                 </div>
             </div>
