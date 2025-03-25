@@ -460,10 +460,10 @@
     </div>
 
     <!-- Container Utama -->
-    <div class="flex flex-col items-center justify-center min-h-screen p-4 bg-gray-100">
+    <div class="flex flex-col items-center p-4">
 
         <!-- Judul -->
-        <div class="mt-10 text-center">
+        <div class="mt-4 text-center">
             <h1 class="text-lg font-bold text-blue-900 md:text-xl">
                 Berikut adalah siswa yang dinyatakan diterima di SDN Bandarharjo 01
             </h1>
@@ -473,10 +473,10 @@
         </div>
 
         <!-- Gambar Dokumen -->
-        <div class="flex justify-center mt-6">
-            <img src="img/ppdb.png" alt="Pendaftaran PPDB" class="w-4/5 max-w-md rounded-lg shadow-lg md:w-2/3 lg:w-1/3">
+        <div class="flex justify-center mt-4">
+            <img src="/img/ppdb.png" alt="Pendaftaran PPDB" 
+                class="w-full h-auto max-w-2xl rounded-lg shadow-lg sm:w-4/5 md:w-3/4 lg:w-1/2 xl:w-1/3">
         </div>
-
     </div>
     
     <!-- Breadcrumb Navigation -->
@@ -568,8 +568,3 @@
 
 </body>
 </html>
-
-<br>
-{{ 'Ini data dari database' }}
-<br>
-{{ $settings['kurikulum_sekolah'] }}
