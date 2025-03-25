@@ -1,5 +1,5 @@
 <!-- Footer  -->
-<footer class="py-10 text-white bg-blue-900">
+<footer class="py-10 text-white" style="background-color: #2D336B">
     <div class="container grid grid-cols-1 gap-8 px-6 mx-auto md:grid-cols-4">
         <!-- Logo and Address -->
         <div>
@@ -69,3 +69,4 @@
         </div>
     </div>
 </footer>
+<footer style="background-color: #304193;" class="flex items-center justify-between p-2 text-white md:p-4"></footer>
