@@ -11,9 +11,7 @@ use Filament\Resources\Resource;
 use Filament\Support\Enums\ActionSize;
 use Illuminate\Database\Eloquent\Builder;
 use App\Models\SchoolOperationalAssistance;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 use App\Filament\Resources\SchoolOperationalAssistanceResource\Pages;
-use App\Filament\Resources\SchoolOperationalAssistanceResource\RelationManagers;
 
 class SchoolOperationalAssistanceResource extends Resource
 {
@@ -25,7 +23,12 @@ class SchoolOperationalAssistanceResource extends Resource
     {
         return 'Dana BOS';
     }
-
+    public static function getEloquentQuery(): Builder
+    {
+        return SchoolOperationalAssistance::query()
+            ->select('school_operational_assistances.*', 'users.name as user_name')
+            ->join('users', 'users.id', '=', 'school_operational_assistances.user_id');
+    }
     public static function form(Form $form): Form
     {
         return $form
@@ -37,14 +40,17 @@ class SchoolOperationalAssistanceResource extends Resource
                             ->required(),
                         Forms\Components\TextInput::make('receipt')
                             ->label('Peherimaan')
+                            ->placeholder('Masukkan Dana Penerimaan')
                             ->numeric()
                             ->required(),
                         Forms\Components\TextInput::make('expenditure')
                             ->label('Pengeluaran')
+                            ->placeholder('Masukkan Dana Pengeluaran')
                             ->numeric()
                             ->required(),
                         Forms\Components\TextInput::make('bank_balance')
                             ->label('Saldo Bank')
+                            ->placeholder('Masukkan Saldo Bank')
                             ->numeric()
                             ->required(),
                         Forms\Components\Hidden::make('user_id')
@@ -73,7 +79,7 @@ class SchoolOperationalAssistanceResource extends Resource
                     ->label('Saldo Bank')
                     ->money('idr')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('user.name')
+                Tables\Columns\TextColumn::make('user_name')
                     ->label('Dibuat Oleh')
                     ->sortable(),
             ])

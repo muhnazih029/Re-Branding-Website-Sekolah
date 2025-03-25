@@ -12,6 +12,7 @@ use Filament\Resources\Resource;
 use Filament\Support\Enums\ActionSize;
 use Illuminate\Support\Facades\Storage;
 use App\Filament\Resources\CalendarAcademicResource\Pages;
+use Illuminate\Database\Eloquent\Builder;
 
 class CalendarAcademicResource extends Resource
 {
@@ -23,7 +24,12 @@ class CalendarAcademicResource extends Resource
     {
         return 'Kalender Akademik';
     }
-
+    public static function getEloquentQuery(): Builder
+    {
+        return CalendarAcademic::query()
+            ->select('calendar_academics.*', 'users.name as user_name')
+            ->join('users', 'users.id', '=', 'calendar_academics.user_id');
+    }
     public static function form(Form $form): Form
     {
         return $form
@@ -32,6 +38,7 @@ class CalendarAcademicResource extends Resource
                     ->schema([
                         Forms\Components\TextInput::make('title')
                             ->label('Judul')
+                            ->placeholder('Masukkan Judul Kalender')
                             ->required(),
                         Forms\Components\Select::make('year')
                             ->label('Tahun')
@@ -68,7 +75,7 @@ class CalendarAcademicResource extends Resource
                 Tables\Columns\TextColumn::make('year')
                     ->label('Tahun')
                     ->sortable(),
-                Tables\Columns\TextColumn::make('user.name')
+                Tables\Columns\TextColumn::make('user_name')
                     ->label('Dibuat Oleh')
                     ->sortable(),
             ])
@@ -80,7 +87,18 @@ class CalendarAcademicResource extends Resource
                     Tables\Actions\ViewAction::make()
                         ->modalWidth('xl'),
                     Tables\Actions\EditAction::make()
-                        ->modalWidth('xl'),
+                        ->modalWidth('xl')
+                        ->using(function (CalendarAcademic $record, array $data): CalendarAcademic {
+                            $record->fill($data);
+                            if ($record->isDirty('document')) {
+                                $oldDocument = $record->getOriginal('document');
+                                if ($oldDocument && Storage::exists($oldDocument)) {
+                                    Storage::delete($oldDocument);
+                                }
+                            }
+                            $record->save();
+                            return $record;
+                        }),
                     Tables\Actions\DeleteAction::make()
                         ->using(function (CalendarAcademic $record): CalendarAcademic {
                             Storage::delete($record->document);

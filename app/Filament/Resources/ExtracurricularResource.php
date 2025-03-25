@@ -26,7 +26,12 @@ class ExtracurricularResource extends Resource
     {
         return 'Ekstrakurikuler';
     }
-
+    public static function getEloquentQuery(): Builder
+    {
+        return Extracurricular::query()
+            ->select('extracurriculars.*', 'users.name as user_name')
+            ->join('users', 'users.id', '=', 'extracurriculars.user_id');
+    }
     public static function form(Form $form): Form
     {
         return $form
@@ -35,10 +40,12 @@ class ExtracurricularResource extends Resource
                     ->schema([
                         Forms\Components\TextInput::make('extra_name')
                             ->label('Nama')
+                            ->placeholder('Masukkan Nama Ekstrakurikuler')
                             ->autofocus()
                             ->required(),
                         Forms\Components\Textarea::make('description')
                             ->label('Deskripsi')
+                            ->placeholder('Masukkan Deskripsi Ekstrakurikuler')
                             ->required(),
                         Forms\Components\FileUpload::make('image')
                             ->label('Gambar')
@@ -70,7 +77,7 @@ class ExtracurricularResource extends Resource
                 Tables\Columns\ImageColumn::make('image')
                     ->label('Gambar')
                     ->height(100),
-                Tables\Columns\TextColumn::make('user.name')
+                Tables\Columns\TextColumn::make('user_name')
                     ->label('Dibuat Oleh')
                     ->sortable(),
             ])
