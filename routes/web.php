@@ -14,6 +14,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\SchoolOperationalAssistanceController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::delete('/logout', [HomeController::class, 'logout'])->name('logout');
 
 Route::prefix('pengumuman')->group(function () {
     Route::get('/', [AnnouncementController::class, 'index']);
