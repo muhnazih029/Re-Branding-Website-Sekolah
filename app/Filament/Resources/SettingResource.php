@@ -83,6 +83,7 @@ class SettingResource extends Resource
                     ->searchable(),
                 Tables\Columns\TextColumn::make('label')
                     ->label('Judul')
+                    ->limit(30)
                     ->searchable(),
                 Tables\Columns\TextColumn::make('value')
                     ->label('Deskripsi')
@@ -93,6 +94,8 @@ class SettingResource extends Resource
                     ->searchable(),
                 Tables\Columns\ImageColumn::make('image')
                     ->label('Gambar')
+                    ->stacked()
+                    ->limit(1)
                     ->height(50),
             ])
             ->filters([
@@ -105,7 +108,6 @@ class SettingResource extends Resource
                         $originalFiles = is_array($record->image) ? array_values($record->image) : (empty($record->image) ? [] : [$record->image]);
                         $newFiles = is_array($data['image'] ?? null) ? array_values($data['image']) : (empty($data['image']) ? [] : [$data['image']]);
                         $deletedFiles = array_diff($originalFiles, $newFiles);
-
                         foreach ($deletedFiles as $image) {
                             Storage::delete($image);
                         }

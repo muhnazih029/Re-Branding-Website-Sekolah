@@ -18,6 +18,8 @@ Route::delete('/logout', [HomeController::class, 'logout'])->name('logout');
 
 Route::prefix('pengumuman')->group(function () {
     Route::get('/', [AnnouncementController::class, 'index']);
+    Route::get('/announcement/{type}/{slug}', [AnnouncementController::class, 'show'])
+        ->name('announcement.show');
     Route::get('/ppdb', [AnnouncementController::class, 'new_student']);
 });
 
@@ -28,7 +30,7 @@ Route::prefix('kurikulum')->group(function () {
     Route::get('/kalender-akademik', [CalendarAcademicController::class, 'index']);
     Route::get('/tugas-siswa', [ClassWorkController::class, 'index']);
     // Route::get('/tugas-siswa/kelas/{id}', [ClassWorkController::class, 'ex_homework']);
-    Route::get('video-pembelajaraan', function () {
+    Route::get('video-pembelajaran', function () {
         return view('pages.curriculum.learning_videos');
     });
     Route::get('kurikulum-sekolah', [SettingController::class, 'school_curriculum']);
