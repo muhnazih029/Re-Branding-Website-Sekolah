@@ -17,22 +17,5 @@
         </div>
     </div>
 
-    <!-- Script untuk Swiper -->
-    <script>
-        var swiper = new Swiper(".mySwiper", {
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: false,
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-            loop: true,
-        });
-    </script>
-
-    <!-- Alpine.js -->
-    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
     <x-layouts.footer />
 </x-layouts>
