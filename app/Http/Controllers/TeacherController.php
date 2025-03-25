@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Teacher;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class TeacherController extends Controller
 {
@@ -13,7 +14,7 @@ class TeacherController extends Controller
      */
     public function index()
     {
-        $teachers = Teacher::select('teacher_name', 'nip', 'image', 'job', 'starting_year')->paginate(3);
+        $teachers = DB::table('teachers')->get();
         return view('pages.profile.teachers', compact('teachers'));
     }
 

@@ -17,8 +17,21 @@ class Setting extends Model
     protected $casts = [
         'image' => 'array',
     ];
-    public function setFileAttribute($value)
+    public function setImageAttribute($value)
     {
+        if (is_null($value) || $value === '') {
+            $this->attributes['image'] = json_encode([]);
+            return;
+        }
+
+        if (is_string($value)) {
+            $value = [$value];
+        }
+
+        if (!is_array($value)) {
+            $value = [];
+        }
+
         $this->attributes['image'] = json_encode(
             array_map(fn($file) => str_replace('\\', '', $file), $value),
             JSON_UNESCAPED_SLASHES

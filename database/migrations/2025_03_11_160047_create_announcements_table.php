@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('slug');
             $table->text('content');
             $table->string('image');
-            $table->string('type');
+            $table->enum('type', ['announcement', 'news', 'competition']);
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });

@@ -17,44 +17,46 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::delete('/logout', [HomeController::class, 'logout'])->name('logout');
 
 Route::prefix('pengumuman')->group(function () {
-    Route::get('/', [AnnouncementController::class, 'index']);
-    Route::get('/ppdb', [AnnouncementController::class, 'new_student']);
+    Route::get('/', [AnnouncementController::class, 'index'])->name('announcement.index');
+    Route::get('/announcement/{type}/{slug}', [AnnouncementController::class, 'show'])
+        ->name('announcement.show');
+    Route::get('/ppdb', [AnnouncementController::class, 'new_student'])->name('announcement.new_student');
 });
 
 Route::prefix('kurikulum')->group(function () {
     Route::get('/', function () {
         return redirect()->route('home');
     })->name('kurikulum.index');
-    Route::get('/kalender-akademik', [CalendarAcademicController::class, 'index']);
-    Route::get('/tugas-siswa', [ClassWorkController::class, 'index']);
+    Route::get('kurikulum-sekolah', [SettingController::class, 'school_curriculum'])->name('kurikulum.school_curriculum');
+    Route::get('/kalender-akademik', [CalendarAcademicController::class, 'index'])->name('kurikulum.calendar');
+    Route::get('/tugas-siswa', [ClassWorkController::class, 'index'])->name('kurikulum.homework');
     // Route::get('/tugas-siswa/kelas/{id}', [ClassWorkController::class, 'ex_homework']);
-    Route::get('video-pembelajaraan', function () {
+    Route::get('video-pembelajaran', function () {
         return view('pages.curriculum.learning_videos');
-    });
-    Route::get('kurikulum-sekolah', [SettingController::class, 'school_curriculum']);
+    })->name('kurikulum.learning_videos');
 });
 
 Route::prefix('galeri')->group(function () {
     Route::get('/', function () {
         return redirect()->route('home');
     })->name('galeri.index');
-    Route::get('/foto', [GaleryController::class, 'photo']);
-    Route::get('/video', [GaleryController::class, 'video']);
+    Route::get('/foto', [GaleryController::class, 'photo'])->name('galery.photo');
+    Route::get('/video', [GaleryController::class, 'video'])->name('galery.video');
 });
 
 Route::prefix('profile')->group(function () {
     Route::get('/', function () {
         return redirect()->route('home');
     })->name('profile.index');
-    Route::get('/visi-misi', [SettingController::class, 'vision_mission']);
-    Route::get('/sejarah-sekolah', [SettingController::class, 'history']);
-    Route::get('/peserta-didik', [StudentController::class, 'index']);
-    Route::get('/pendidik', [TeacherController::class, 'index']);
-    Route::get('/ekstrakulikuler', [ExtracurricularController::class, 'index']);
-    Route::get('/sarana-prasarana', [FacilityController::class, 'index']);
-    Route::get('/dana-bos', [SchoolOperationalAssistanceController::class, 'index']);
+    Route::get('/visi-misi', [SettingController::class, 'vision_mission'])->name('profile.vision_mission');
+    Route::get('/sejarah-sekolah', [SettingController::class, 'history'])->name('profile.history');
+    Route::get('/pendidik', [TeacherController::class, 'index'])->name('profile.teachers');
+    Route::get('/peserta-didik', [StudentController::class, 'index'])->name('profile.students');
+    Route::get('/ekstrakulikuler', [ExtracurricularController::class, 'index'])->name('profile.extracurricular');
+    Route::get('/dana-bos', [SchoolOperationalAssistanceController::class, 'index'])->name('profile.dana_bos');
+    Route::get('/sarana-prasarana', [FacilityController::class, 'index'])->name('profile.facility');
 });
 
 Route::get('/kontak', function () {
     return view('pages.contact.contact');
-});
+})->name('contact');
