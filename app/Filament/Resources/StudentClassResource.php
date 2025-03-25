@@ -87,6 +87,7 @@ class StudentClassResource extends Resource
                                             ->required(),
                                         Forms\Components\TextInput::make('nisn')
                                             ->label('NISN')
+                                            ->numeric()
                                             ->placeholder('Masukkan Nomor Induk Siswa Nasional')
                                             ->required(),
                                         Forms\Components\Select::make('gender')

@@ -58,9 +58,9 @@ class AnnouncementResource extends Resource
                         Forms\Components\Select::make('type')
                             ->label('Tipe')
                             ->options([
-                                'pengumuman' => 'Pengumuman',
-                                'berita' => 'Berita',
-                                'lomba' => 'Lomba',
+                                'announcement' => 'Pengumuman',
+                                'news' => 'Berita',
+                                'competition' => 'Lomba',
                             ])
                             ->required(),
                         Forms\Components\FileUpload::make('image')

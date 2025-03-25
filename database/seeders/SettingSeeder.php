@@ -22,8 +22,15 @@ class SettingSeeder extends Seeder
             ],
             [
                 'key' => 'sambutan_text',
-                'label' => 'Sambutan Kepala Sekolah - Text',
-                'value' => 'Selamat datang di website SDN Bandarharjo 01. Website ini menjadi media informasi, komunikasi, dan publikasi sekolah kami kepada masyarakat luas.',
+                'label' => 'Selamat Datang di Website Resmi SDN Bandarharjo 01',
+                'value' => 'Assalamualaikum wr. wb.
+                            Selamat datang di website resmi SDN Bandarharjo 01
+                            Dengan penuh rasa syukur dan bangga, kami mempersembahkan website ini sebagai salah satu wadah untuk memperkenalkan dan berbagi informasi mengenai sekolah kita tercinta. Melalui media digital ini, kami berharap dapat menjangkau seluruh keluarga besar SDN Bandarharjo 01, mulai dari siswa, orang tua, hingga alumni, serta masyarakat luas.
+
+                            Website ini dirancang dengan tujuan untuk memberikan kemudahan akses informasi mengenai kegiatan akademik, jadwal sekolah, berita terbaru, dan berbagai aktivitas lainnya yang berlangsung di sekolah kita. Selain itu, kami juga menyediakan berbagai sumber daya yang bermanfaat bagi siswa, orang tua, dan tenaga pendidik dalam mendukung proses belajar mengajar.
+
+                            Kami percaya bahwa komunikasi yang baik antara sekolah, siswa, dan orang tua merupakan kunci kesuksesan pendidikan. Oleh karena itu, kami berharap website ini dapat menjadi sarana yang efektif untuk memperkuat hubungan tersebut, serta mempermudah dalam menyampaikan berbagai informasi penting.
+                            Wassalamualaikum wr. wb',
                 'type' => 'longtext',
                 'image' => null,
             ],

@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Announcement;
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Controller;
 
 class AnnouncementController extends Controller
 {
@@ -13,7 +14,13 @@ class AnnouncementController extends Controller
      */
     public function index()
     {
-        return view('pages.announcement.school_news');
+        $announcements = DB::table('announcements')
+            ->join('users', 'announcements.user_id', '=', 'users.id')
+            ->select('announcements.*', 'users.name as author')
+            ->orderBy('announcements.created_at', 'desc')
+            ->paginate(10);
+
+        return view('announcements.index', compact('announcements'));
     }
 
     public function new_student()
@@ -40,9 +47,21 @@ class AnnouncementController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Announcement $announcement)
+
+    public function show($type, $slug)
     {
-        //
+        $announcement = DB::table('announcements')
+            ->join('users', 'announcements.user_id', '=', 'users.id')
+            ->select('announcements.*', 'users.name as author')
+            ->where('announcements.type', $type)
+            ->where('announcements.slug', $slug)
+            ->first();
+
+        if (!$announcement) {
+            abort(404);
+        }
+
+        return view('pages.announcement.detail', compact('announcement'));
     }
 
     /**
