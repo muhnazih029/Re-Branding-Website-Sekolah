@@ -56,7 +56,7 @@
             class="absolute left-0 w-full bg-white shadow-lg md:hidden top-full">
             <div class="container flex flex-col py-3 mx-auto space-y-2 uppercase">
                 <!-- Beranda -->
-                <a href="/.."
+                <a href="{{ route('home') }}"
                     class="text-[rgb(45,51,107)] font-semibold px-4 py-2 hover:bg-gray-100 text-sm">Beranda</a>
 
                 <!-- Dropdown Profil -->
@@ -76,29 +76,29 @@
                         x-transition:leave="transition ease-in duration-150"
                         x-transition:leave-start="opacity-100 transform scale-100"
                         x-transition:leave-end="opacity-0 transform scale-95" class="pl-4">
-                        <a href="/profile/visi-misi"
+                        <a href="{{ route('profile.vision_mission') }}"
                             class="block px-4 py-2 text-sm text-[rgb(45,51,107)] hover:bg-gray-100">Visi &
                             Misi</a>
                         <a href="https://referensi.data.kemdikbud.go.id/tabs.php?npsn=20329336"
                             class="block px-4 py-2 text-sm text-[rgb(45,51,107)] hover:bg-gray-100">NPSN</a>
-                        <a href="/profile/sejarah-sekolah"
+                        <a href="{{ route('profile.history') }}"
                             class="block px-4 py-2 text-sm text-[rgb(45,51,107)] hover:bg-gray-100">Sejarah
                             Sekolah</a>
-                        <a href="/profile/pendidik"
+                        <a href="{{ route('profile.teachers') }}"
                             class="block px-4 py-2 text-sm text-[rgb(45,51,107)] hover:bg-gray-100">Pendidik &
                             Tenaga
-                            Pendidik</a>
-                        <a href="/profile/peserta-didik"
-                            class="block px-4 py-2 text-sm text-[rgb(45,51,107)] hover:bg-gray-100">Peserta
-                            Didik</a>
-                        <a href="/profile/ekstrakulikuler"
-                            class="block px-4 py-2 text-sm text-[rgb(45,51,107)] hover:bg-gray-100">Ekstrakurikuler</a>
-                        <a href="/profile/dana-bos"
-                            class="block px-4 py-2 text-sm text-[rgb(45,51,107)] hover:bg-gray-100">BOS
-                            Bantuan Operasional Sekolah</a>
-                        <a href="/profile/sarana-prasarana"
-                            class="block px-4 py-2 text-sm text-[rgb(45,51,107)] hover:bg-gray-100">Sarana
-                            & Prasarana</a>
+                            Pendidik</as>
+                            <a href="{{ route('profile.students') }}"
+                                class="block px-4 py-2 text-sm text-[rgb(45,51,107)] hover:bg-gray-100">Peserta
+                                Didik</a>
+                            <a href="{{ route('profile.extracurricular') }}"
+                                class="block px-4 py-2 text-sm text-[rgb(45,51,107)] hover:bg-gray-100">Ekstrakurikuler</a>
+                            <a href="{{ route('profile.dana_bos') }}"
+                                class="block px-4 py-2 text-sm text-[rgb(45,51,107)] hover:bg-gray-100">BOS
+                                Bantuan Operasional Sekolah</a>
+                            <a href="{{ route('profile.facility') }}"
+                                class="block px-4 py-2 text-sm text-[rgb(45,51,107)] hover:bg-gray-100">Sarana
+                                & Prasarana</a>
                     </div>
                 </div>
 
@@ -119,13 +119,13 @@
                         x-transition:leave="transition ease-in duration-150"
                         x-transition:leave-start="opacity-100 transform scale-100"
                         x-transition:leave-end="opacity-0 transform scale-95" class="pl-4">
-                        <a href="/kurikulum/kurikulum-sekolah"
+                        <a href="{{ route('kurikulum.school_curriculum') }}"
                             class="block px-4 py-2 text-sm text-[rgb(45,51,107)] hover:bg-gray-100">Kurikulum
                             Sekolah</a>
-                        <a href="/kurikulum/kalender-akademik"
+                        <a href="{{ route('kurikulum.calendar') }}"
                             class="block px-4 py-2 text-sm text-[rgb(45,51,107)] hover:bg-gray-100">Kalender
                             Pendidikan</a>
-                        <a href="/kurikulum/video-pembelajaran"
+                        <a href="{{ route('kurikulum.learning_videos') }}"
                             class="block px-4 py-2 text-sm text-[rgb(45,51,107)] hover:bg-gray-100">Video
                             Pembelajaran
                             Siswa</a>
@@ -149,15 +149,15 @@
                         x-transition:leave="transition ease-in duration-150"
                         x-transition:leave-start="opacity-100 transform scale-100"
                         x-transition:leave-end="opacity-0 transform scale-95" class="pl-4">
-                        <a href="/pengumuman/ppdb"
+                        <a href="{{ route('announcement.new_student') }}"
                             class="block px-4 py-2 text-sm text-[rgb(45,51,107)] hover:bg-gray-100">Pendaftaran
                             Peserta Didik Baru</a>
-                        <a href="/pengumuman"
+                        <a href="{{ route('announcement.index') }}"
                             class="block px-4 py-2 text-sm text-[rgb(45,51,107)] hover:bg-gray-100">Berita
                             Sekolah</a>
-                        <a href="/pengumuman"
+                        <a href="{{ route('announcement.index') }}"
                             class="block px-4 py-2 text-sm text-[rgb(45,51,107)] hover:bg-gray-100">Lomba</a>
-                        <a href="/pengumuman"
+                        <a href="{{ route('announcement.index') }}"
                             class="block px-4 py-2 text-sm text-[rgb(45,51,107)] hover:bg-gray-100">Prestasi
                             Sekolah</a>
                     </div>
@@ -180,9 +180,9 @@
                         x-transition:leave="transition ease-in duration-150"
                         x-transition:leave-start="opacity-100 transform scale-100"
                         x-transition:leave-end="opacity-0 transform scale-95" class="pl-4">
-                        <a href="/galeri/foto"
+                        <a href="{{ route('galery.photo') }}"
                             class="block px-4 py-2 text-sm text-[rgb(45,51,107)] hover:bg-gray-100">Foto</a>
-                        <a href="/galeri/video"
+                        <a href="{{ route('galery.video') }}"
                             class="block px-4 py-2 text-sm text-[rgb(45,51,107)] hover:bg-gray-100">Video</a>
                     </div>
                 </div>
@@ -227,7 +227,7 @@
                     </div>
                 </div>
                 <!-- Kontak Kami -->
-                <a href="/kontak"
+                <a href="{{ route('contact') }}"
                     class="text-[rgb(45,51,107)] font-semibold px-4 py-2 hover:bg-gray-100 text-sm">Kontak Kami</a>
             </div>
         </div>
@@ -235,7 +235,8 @@
         <!-- Menu untuk layar besar -->
         <div class="container flex-wrap justify-center hidden py-3 mx-auto space-x-2 uppercase md:flex">
             <!-- Beranda -->
-            <a href="/.." class="text-[rgb(45,51,107)] font-semibold px-2 py-1 relative group text-lg">
+            <a href="{{ route('home') }}"
+                class="text-[rgb(45,51,107)] font-semibold px-2 py-1 relative group text-lg">
                 Beranda
                 <span
                     class="absolute inset-x-0 bottom-0 h-0.5 bg-blue-900 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
@@ -263,26 +264,28 @@
                     @mouseleave="open = false" style="background-color: #2D336B;"
                     class="absolute left-0 z-50 w-56 mt-1 rounded-md shadow-lg top-full ring-1 ring-black ring-opacity-5 focus:outline-none">
                     <div class="py-1">
-                        <a href="/profile/visi-misi" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Visi
+                        <a href="{{ route('profile.vision_mission') }}"
+                            class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Visi
                             &
                             Misi</a>
                         <a href="https://referensi.data.kemdikbud.go.id/tabs.php?npsn=20329336"
                             class="block px-4 py-2 text-sm text-white hover:bg-blue-900">NPSN</a>
-                        <a href="/profile/sejarah-sekolah"
+                        <a href="{{ route('profile.history') }}"
                             class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Sejarah
                             Sekolah</a>
-                        <a href="/profile/pendidik"
+                        <a href="{{ route('profile.teachers') }}"
                             class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Pendidik &
                             Tenaga Pendidik</a>
-                        <a href="/profile/peserta-didik"
+                        <a href="{{ route('profile.students') }}"
                             class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Peserta
                             Didik</a>
-                        <a href="/profile/ekstrakulikuler"
+                        <a href="{{ route('profile.extracurricular') }}"
                             class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Ekstrakurikuler</a>
-                        <a href="/profile/dana-bos" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">BOS
+                        <a href="{{ route('profile.dana_bos') }}"
+                            class="block px-4 py-2 text-sm text-white hover:bg-blue-900">BOS
                             Bantuan
                             Operasional Sekolah</a>
-                        <a href="/profile/sarana-prasarana"
+                        <a href="{{ route('profile.facility') }}"
                             class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Sarana &
                             Prasarana</a>
                     </div>
@@ -311,13 +314,13 @@
                     @mouseleave="open = false" style="background-color: #2D336B;"
                     class="absolute left-0 z-50 w-48 mt-1 rounded-md shadow-lg top-full ring-1 ring-black ring-opacity-5 focus:outline-none">
                     <div class="py-1">
-                        <a href="/kurikulum/kurikulum-sekolah"
+                        <a href="{{ route('kurikulum.school_curriculum') }}"
                             class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Kurikulum
                             Sekolah</a>
-                        <a href="kurikulum/kalender-akademik"
+                        <a href="{{ route('kurikulum.calendar') }}
                             class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Kalender
                             Pendidikan</a>
-                        <a href="kurikulum/tugas-siswa"
+                        <a href="kurikulu{{ route('kurikulum.learning_videos') }}
                             class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Tugas
                             Siswa</a>
                         <a href="kurikulum/video-pembelajaran"
@@ -349,13 +352,16 @@
                     @mouseleave="open = false" style="background-color: #2D336B;"
                     class="absolute left-0 z-50 w-56 mt-1 rounded-md shadow-lg top-full ring-1 ring-black ring-opacity-5 focus:outline-none">
                     <div class="py-1">
-                        <a href="/pengumuman/ppdb"
+                        <a href="{{ route('announcement.new_student') }}"
                             class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Pendaftaran
                             Peserta Didik Baru</a>
-                        <a href="/pengumuman" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Berita
+                        <a href="{{ route('announcement.index') }}"
+                            class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Berita
                             Sekolah</a>
-                        <a href="/pengumuman" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Lomba</a>
-                        <a href="/pengumuman" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Prestasi
+                        <a href="{{ route('announcement.index') }}"
+                            class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Lomba</a>
+                        <a href="{{ route('announcement.index') }}"
+                            class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Prestasi
                             Sekolah</a>
 
                     </div>
@@ -384,8 +390,10 @@
                     @mouseleave="open = false" style="background-color: #2D336B;"
                     class="absolute left-0 z-50 w-56 mt-1 rounded-md shadow-lg top-full ring-1 ring-black ring-opacity-5 focus:outline-none">
                     <div class="py-1">
-                        <a href="/galeri/foto" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Foto</a>
-                        <a href="/galeri/video" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Video</a>
+                        <a href="{{ route('galery.photo') }}"
+                            class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Foto</a>
+                        <a href="{{ route('galery.video') }}"
+                            class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Video</a>
                     </div>
                 </div>
             </div>
@@ -434,7 +442,8 @@
                 </div>
             </div>
             <!-- Kontak Kami -->
-            <a href="/kontak" class="text-[rgb(45,51,107)] font-semibold px-2 py-1 relative group text-lg">
+            <a href="{{ route('contact') }}"
+                class="text-[rgb(45,51,107)] font-semibold px-2 py-1 relative group text-lg">
                 Kontak Kami
                 <span
                     class="absolute inset-x-0 bottom-0 h-0.5 bg-blue-900 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
