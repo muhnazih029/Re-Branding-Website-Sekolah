@@ -457,10 +457,12 @@
         <h1 class="text-xl font-bold text-white">KALENDER AKADEMIK</h1>
     </div>
     
+    <h1 class="mb-4 text-2xl font-bold text-center">Kalender Pendidikan Tahun Ajaran 2025/2026</h1>
+    <br>
+        
     <div class="flex items-center justify-center h-auto p-4 bg-gray-100">
         <div class="w-full max-w-4xl p-4 bg-white rounded-lg shadow-lg">
-        <h1 class="mb-4 text-2xl font-bold text-center">Kalender Pendidikan Tahun Ajaran 2025/2026</h1>
-        <br>
+        
         <iframe 
             src="/img/kaldik.pdf" 
             class="w-full rounded-lg shadow h-64 sm:h-80 md:h-96 lg:h-[1080px]" 
