@@ -1,12 +1,12 @@
 @props(['settings', 'kepsek'])
 <!-- Sambutan Kepsek -->
 <div class="container mx-auto mt-24 mb-10 text-center">
-    <h1 class="text-4xl font-semibold text-blue-900 ">
+    <h1 class="text-4xl font-semibold text-blue-900">
         {{ $settings['sambutan_text']->label }}
     </h1>
 </div>
 <!-- Sambutan dan Foto Kepala Sekolah -->
-<div class="p-5 mx-4 bg-gray-100 rounded-lg md:mx-8">
+<div class="container p-5 mx-auto bg-gray-100 rounded-lg md:p-8">
     <div class="flex flex-col items-center md:flex-row">
         <!-- Container Foto Kepsek-->
         <div class="relative w-full text-center md:w-1/3 ">
