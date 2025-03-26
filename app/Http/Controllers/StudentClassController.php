@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\StudentClass;
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Controller;
 
 class StudentClassController extends Controller
 {
@@ -13,7 +14,18 @@ class StudentClassController extends Controller
      */
     public function index()
     {
-        //
+        $classes = DB::table('student_classes')
+            ->leftJoin('students', 'student_classes.id', '=', 'students.student_class_id')
+            ->select(
+                'student_classes.id',
+                'student_classes.class_name',
+                'student_classes.image',
+                DB::raw('COUNT(students.id) as student_count')
+            )
+            ->groupBy('student_classes.id', 'student_classes.class_name', 'student_classes.image')
+            ->get();
+
+        return view('pages.profile.students', compact('classes'));
     }
 
     /**

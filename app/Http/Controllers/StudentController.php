@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Student;
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Controller;
 
 class StudentController extends Controller
 {
@@ -14,11 +15,11 @@ class StudentController extends Controller
     public function index()
     {
         // $students = Student::select('student_name', 'nisn', 'image')->with('student_class')->paginate(5);
-        $students = Student::select('students.*', 'student_classes.class_name', 'teachers.teacher_name')
-            ->join('student_classes', 'students.student_class_id', '=', 'student_classes.id')
-            ->join('teachers', 'student_classes.teacher_id', '=', 'teachers.id')
-            ->get();
-        return view('pages.profile.students', compact('students'));
+        // $students = Student::select('students.*', 'student_classes.class_name', 'teachers.teacher_name')
+        //     ->join('student_classes', 'students.student_class_id', '=', 'student_classes.id')
+        //     ->join('teachers', 'student_classes.teacher_id', '=', 'teachers.id')
+        //     ->get();
+        // return view('pages.profile.detail', compact('students'));
     }
 
     /**
@@ -40,10 +41,21 @@ class StudentController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Student $student)
+    public function show($id)
     {
-        //
+        $class = DB::table('student_classes')
+            ->leftJoin('teachers', 'student_classes.teacher_id', '=', 'teachers.id')
+            ->select('student_classes.id', 'teachers.*')
+            ->where('student_classes.id', $id)
+            ->first();
+
+        $students = DB::table('students')
+            ->where('student_class_id', $id)
+            ->get();
+
+    return view('pages.profile.detail', compact('class', 'students'));
     }
+
 
     /**
      * Show the form for editing the specified resource.
