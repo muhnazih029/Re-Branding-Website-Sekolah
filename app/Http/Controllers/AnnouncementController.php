@@ -20,7 +20,7 @@ class AnnouncementController extends Controller
             ->orderBy('announcements.created_at', 'desc')
             ->paginate(10);
 
-        return view('announcements.index', compact('announcements'));
+        return view('pages.announcement.school_news', compact('announcements'));
     }
 
     public function new_student()
