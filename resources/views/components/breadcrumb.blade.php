@@ -34,22 +34,22 @@
         'profile.students' => [
             ['label' => 'Beranda', 'url' => route('home')],
             ['label' => 'Profil', 'url' => route('profile.index')],
-            ['label' => 'Pendidik', 'url' => route('profile.students')],
+            ['label' => 'Peserta Didik', 'url' => route('profile.students')],
         ],
         'profile.extracurricular' => [
             ['label' => 'Beranda', 'url' => route('home')],
             ['label' => 'Profil', 'url' => route('profile.index')],
-            ['label' => 'Pendidik', 'url' => route('profile.extracurricular')],
+            ['label' => 'Ekstrakulikuler', 'url' => route('profile.extracurricular')],
         ],
         'profile.dana_bos' => [
             ['label' => 'Beranda', 'url' => route('home')],
             ['label' => 'Profil', 'url' => route('profile.index')],
-            ['label' => 'Pendidik', 'url' => route('profile.dana_bos')],
+            ['label' => 'Dana BOS', 'url' => route('profile.dana_bos')],
         ],
         'profile.facility' => [
             ['label' => 'Beranda', 'url' => route('home')],
             ['label' => 'Profil', 'url' => route('profile.index')],
-            ['label' => 'Pendidik', 'url' => route('profile.facility')],
+            ['label' => 'Sarana dan Prasarana', 'url' => route('profile.facility')],
         ],
 
         // Kurikulum
@@ -61,17 +61,17 @@
         'kurikulum.calendar' => [
             ['label' => 'Beranda', 'url' => route('home')],
             ['label' => 'Kurikulum', 'url' => route('kurikulum.index')],
-            ['label' => 'Kurikulum Sekolah', 'url' => route('kurikulum.calendar')],
+            ['label' => 'Kalender Pendidikan', 'url' => route('kurikulum.calendar')],
         ],
         'kurikulum.homework' => [
             ['label' => 'Beranda', 'url' => route('home')],
             ['label' => 'Kurikulum', 'url' => route('kurikulum.index')],
-            ['label' => 'Kurikulum Sekolah', 'url' => route('kurikulum.homework')],
+            ['label' => 'Tugas Kelas', 'url' => route('kurikulum.homework')],
         ],
         'kurikulum.learning_videos' => [
             ['label' => 'Beranda', 'url' => route('home')],
             ['label' => 'Kurikulum', 'url' => route('kurikulum.index')],
-            ['label' => 'Kurikulum Sekolah', 'url' => route('kurikulum.learning_videos')],
+            ['label' => 'Video Pembelajaran', 'url' => route('kurikulum.learning_videos')],
         ],
 
         // Galeri
@@ -81,7 +81,7 @@
         ],
         'galery.video' => [
             ['label' => 'Beranda', 'url' => route('home')],
-            ['label' => 'Foto', 'url' => route('galery.video')],
+            ['label' => 'Video', 'url' => route('galery.video')],
         ],
 
         'contact' => [['label' => 'Beranda', 'url' => route('home')], ['label' => 'Kontak', 'url' => route('contact')]],

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\StudentClassController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GaleryController;
 use App\Http\Controllers\SettingController;
@@ -51,7 +52,8 @@ Route::prefix('profile')->group(function () {
     Route::get('/visi-misi', [SettingController::class, 'vision_mission'])->name('profile.vision_mission');
     Route::get('/sejarah-sekolah', [SettingController::class, 'history'])->name('profile.history');
     Route::get('/pendidik', [TeacherController::class, 'index'])->name('profile.teachers');
-    Route::get('/peserta-didik', [StudentController::class, 'index'])->name('profile.students');
+    Route::get('/peserta-didik', [StudentClassController::class, 'index'])->name('profile.students');
+    Route::get('/peserta-didik/kelas/{id}', [StudentController::class, 'show'])->name('students.show');
     Route::get('/ekstrakulikuler', [ExtracurricularController::class, 'index'])->name('profile.extracurricular');
     Route::get('/dana-bos', [SchoolOperationalAssistanceController::class, 'index'])->name('profile.dana_bos');
     Route::get('/sarana-prasarana', [FacilityController::class, 'index'])->name('profile.facility');
