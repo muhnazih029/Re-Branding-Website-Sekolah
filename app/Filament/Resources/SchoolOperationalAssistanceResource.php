@@ -65,7 +65,7 @@ class SchoolOperationalAssistanceResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('date')
-                    ->label('Judul')
+                    ->label('Tanggal')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('receipt')
                     ->label('Penerimaan')
