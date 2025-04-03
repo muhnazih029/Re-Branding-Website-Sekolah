@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Facility;
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Controller;
 
 class FacilityController extends Controller
 {
@@ -13,7 +14,10 @@ class FacilityController extends Controller
      */
     public function index()
     {
-        return view('pages.profile.facility');
+        $facilities = DB::table('facilities')
+            ->select('facilities.id', 'facilities.name', 'facilities.quantity', 'facilities.image')
+            ->get();
+        return view('pages.profile.facility', compact('facilities'));
     }
 
     /**
