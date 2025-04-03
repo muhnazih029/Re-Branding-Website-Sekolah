@@ -94,8 +94,8 @@
                             <a href="{{ route('profile.extracurricular') }}"
                                 class="block px-4 py-2 text-sm text-[rgb(45,51,107)] hover:bg-gray-100">Ekstrakurikuler</a>
                             <a href="{{ route('profile.dana_bos') }}"
-                                class="block px-4 py-2 text-sm text-[rgb(45,51,107)] hover:bg-gray-100">BOS
-                                Bantuan Operasional Sekolah</a>
+                                class="block px-4 py-2 text-sm text-[rgb(45,51,107)] hover:bg-gray-100">Bantuan
+                                Operasional Sekolah</a>
                             <a href="{{ route('profile.facility') }}"
                                 class="block px-4 py-2 text-sm text-[rgb(45,51,107)] hover:bg-gray-100">Sarana
                                 & Prasarana</a>
@@ -284,8 +284,7 @@
                         <a href="{{ route('profile.extracurricular') }}"
                             class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Ekstrakurikuler</a>
                         <a href="{{ route('profile.dana_bos') }}"
-                            class="block px-4 py-2 text-sm text-white hover:bg-blue-900">BOS
-                            Bantuan
+                            class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Bantuan
                             Operasional Sekolah</a>
                         <a href="{{ route('profile.facility') }}"
                             class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Sarana &
