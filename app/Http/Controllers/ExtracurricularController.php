@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Extracurriculars;
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Extracurricular;
+use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Controller;
 
 class ExtracurricularController extends Controller
 {
@@ -13,7 +14,17 @@ class ExtracurricularController extends Controller
      */
     public function index()
     {
-        return view('pages.profile.extracurriculars');
+        $extracurriculars = DB::table("extracurriculars")
+            ->select(
+                "extracurriculars.id",
+                "extracurriculars.extra_name",
+                "extracurriculars.description",
+                "extracurriculars.image",
+            )
+            ->orderBy('extracurriculars.extra_name')
+            ->get();
+
+        return view('pages.profile.extracurriculars', compact('extracurriculars'));
     }
 
     /**
@@ -35,7 +46,7 @@ class ExtracurricularController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Extracurriculars $extracurriculars)
+    public function show(Extracurricular $extracurriculars)
     {
         //
     }
@@ -43,7 +54,7 @@ class ExtracurricularController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Extracurriculars $extracurriculars)
+    public function edit(Extracurricular $extracurriculars)
     {
         //
     }
@@ -51,7 +62,7 @@ class ExtracurricularController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Extracurriculars $extracurriculars)
+    public function update(Request $request, Extracurricular $extracurriculars)
     {
         //
     }
@@ -59,7 +70,7 @@ class ExtracurricularController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Extracurriculars $extracurriculars)
+    public function destroy(Extracurricular $extracurriculars)
     {
         //
     }
