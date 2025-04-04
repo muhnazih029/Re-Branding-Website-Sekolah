@@ -31,7 +31,7 @@ Route::prefix('kurikulum')->group(function () {
     Route::get('kurikulum-sekolah', [SettingController::class, 'school_curriculum'])->name('kurikulum.school_curriculum');
     Route::get('/kalender-akademik', [CalendarAcademicController::class, 'index'])->name('kurikulum.calendar');
     Route::get('/tugas-siswa', [ClassWorkController::class, 'index'])->name('kurikulum.homework');
-    // Route::get('/tugas-siswa/kelas/{id}', [ClassWorkController::class, 'ex_homework']);
+    Route::get('/tugas-siswa/kelas-{id}', [ClassWorkController::class, 'show'])->name('kurikulum.ex_homework');
     Route::get('video-pembelajaran', function () {
         return view('pages.curriculum.learning_videos');
     })->name('kurikulum.learning_videos');

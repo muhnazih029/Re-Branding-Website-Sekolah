@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\ClassWork;
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Controller;
 
 class ClassWorkController extends Controller
 {
@@ -13,13 +14,13 @@ class ClassWorkController extends Controller
      */
     public function index()
     {
-        return view('pages.curriculum.homework');
+        $classworks = DB::table('class_works')
+            ->leftJoin('student_classes', 'class_works.student_class_id', '=', 'student_classes.id')
+            ->select('class_works.*', 'student_classes.class_name')
+            ->get();
+        return view('pages.curriculum.homework', compact('classworks'));
     }
 
-    public function ex_homework()
-    {
-        return view('pages.curriculum.ex_homework');
-    }
     /**
      * Show the form for creating a new resource.
      */
@@ -39,9 +40,14 @@ class ClassWorkController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(ClassWork $classWork)
+    public function show($id)
     {
-        //
+        $classworks = DB::table('class_works')
+            ->leftJoin('student_classes', 'class_works.student_class_id', '=', 'student_classes.id')
+            ->select('class_works.*', 'student_classes.class_name as class_name')
+            ->where('class_works.id', $id)
+            ->get();
+        return view('pages.curriculum.ex_homework', compact('classworks'));
     }
 
     /**
