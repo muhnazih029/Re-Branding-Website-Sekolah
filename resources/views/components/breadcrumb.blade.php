@@ -68,6 +68,11 @@
             ['label' => 'Kurikulum', 'url' => route('kurikulum.index')],
             ['label' => 'Tugas Kelas', 'url' => route('kurikulum.homework')],
         ],
+        'kurikulum.ex_homework' => [
+            ['label' => 'Beranda', 'url' => route('home')],
+            ['label' => 'Kurikulum', 'url' => route('kurikulum.index')],
+            ['label' => 'Tugas Kelas', 'url' => route('kurikulum.homework')],
+        ],
         'kurikulum.learning_videos' => [
             ['label' => 'Beranda', 'url' => route('home')],
             ['label' => 'Kurikulum', 'url' => route('kurikulum.index')],
