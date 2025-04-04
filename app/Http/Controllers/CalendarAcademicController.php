@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\CalendarAcademic;
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\CalendarAcademic;
+use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Controller;
 
 class CalendarAcademicController extends Controller
 {
@@ -13,7 +14,11 @@ class CalendarAcademicController extends Controller
      */
     public function index()
     {
-        return view('pages.curriculum.calandar_academic');
+        $calendar = DB::table('calendar_academics')
+            ->select('title', 'document', 'created_at')
+            ->orderBy('created_at', 'desc')
+            ->first();
+        return view('pages.curriculum.calandar_academic', compact('calendar'));
     }
 
     /**
