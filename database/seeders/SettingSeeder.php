@@ -62,8 +62,21 @@ class SettingSeeder extends Seeder
             ],
             [
                 'key' => 'kurikulum_sekolah',
-                'label' => 'Kurikulum Sekolah - Title',
-                'value' => 'Kami menggunakan Kurikulum Merdeka untuk membangun karakter dan keterampilan siswa.',
+                'label' => 'KURIKULUM SDN BANDARHARJO 01 KOTA SEMARANG',
+                'value' => 'Saat ini kami telah melaksanakan Kurikulum 2013 sejak Tahun Pelajaran 2017/2018. Prinsip Kurikulum Kurikulum SDN Bandarharjo 01 Semarang mengacu kepada Standar Nasional Pendidikan untuk mencapai tujuan pendidikan nasional. Standar Nasional Pendidikan terdiri dari:
+                Standar Isi
+                Standar Proses
+                Standar Kompetensi Lulusan
+                Standar Pendidik dan Tenaga Kependidikan
+                Standar Sarana dan Prasarana
+                Standar Pengelolaan
+                Standar Pembiayaan
+                Standar Penilaian Pendidikan
+                Pengembangan Pendidikan
+                Kurikulum sekolah ini disusun agar peserta didik dapat memperoleh kesempatan pembelajaran yang:
+                Memungkinkan peserta didik belajar sesuai dengan potensi, minat, dan bakatnya.
+                Mengintegrasikan pendidikan karakter dan nilai-nilai luhur yang berakar dari Pancasila.
+                Mengembangkan keterampilan abad 21 untuk berbagai aspek kehidupan.',
                 'type' => 'longtext',
                 'image' => null,
             ],
