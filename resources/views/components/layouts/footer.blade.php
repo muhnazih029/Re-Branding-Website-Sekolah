@@ -62,7 +62,7 @@
             <hr class="my-2 border-t border-white-300">
             <ul class="space-y-0 text-sm">
                 <li><a href="{{ route('contact') }}" class="hover:text-yellow-400">Hubungi Kami</a></li>
-                <li><a href="{{ route('contact') }} #pengaduan" class="hover:text-yellow-400">Pengaduan</a></li>
+                <li><a href="{{ route('contact') }}#pengaduan" class="hover:text-yellow-400">Pengaduan</a></li>
             </ul>
         </div>
     </div>
