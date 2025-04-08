@@ -18,7 +18,10 @@ class SettingSeeder extends Seeder
                 'label' => 'Corousel',
                 'value' => null,
                 'type' => 'image',
-                'image' => null,
+                'image' => '[
+                    img/slider1.jpeg,
+                    img/slider2.jpg,
+                    img/slider3.jpeg,]',
             ],
             [
                 'key' => 'sambutan_text',
@@ -32,7 +35,7 @@ class SettingSeeder extends Seeder
                             Kami percaya bahwa komunikasi yang baik antara sekolah, siswa, dan orang tua merupakan kunci kesuksesan pendidikan. Oleh karena itu, kami berharap website ini dapat menjadi sarana yang efektif untuk memperkuat hubungan tersebut, serta mempermudah dalam menyampaikan berbagai informasi penting.
                             Wassalamualaikum wr. wb',
                 'type' => 'longtext',
-                'image' => null,
+                'image' => 'img/kepsek.png',
             ],
             [
                 'key' => 'visi',
@@ -58,7 +61,7 @@ class SettingSeeder extends Seeder
                 'label' => 'Sejarah Singkat - Text',
                 'value' => 'Secara administrasi Sekolah Dasar (SD) Negeri Bandarharjo 01 beralamat di Jalan Cumi-cumi Raya No. 2, Kelurahan Bandarharjo, Kecamatan Semarang Utara, Kota Semarang, Provinsi Jawa Tengah. Untuk menunjang proses Kegiatan Belajar Mengajar, sekolah mempunyai fasilitas sebagai berikut: - 6 Ruang Kelas - 1 ruang Kepala Sekolah menyatu dengan: (1 ruang tamu Kepala Sekolah - 1 ruang tata usaha, 1 ruang Guru) - 1 ruang Guru - 1 ruang Perpustakaan menyatu dengan ruang komputer - 1 ruang UKS - 1 ruang ibadah - 2 kamar mandi guru - 3 toilet Siswa - 2 Kantin sekolah SDN Bandarharjo 01 berdiri sejak tahun 1973 dan berdasarkan Surat Wali kota Nomor : 030/1301 tanggal 6 April 2006 telah dimasukan inventarisasi aset tanah Pemerintah Kota Semarang. Sejak pertama kali berdiri sudah berganti kepala sekolah sebanyak 9 kali hingga saat ini: Bu Suwarti, Bapak Soeyoto, Bu Veronika Utami, Bu Sri Lestari, Bu Rustiah, Bapak Sarpio, Bu Diah Erowati, Bu Sri Widiyati, Bu Bugiyanti. Sekolah SDN Bandarharjo 01 adalah salah satu SD awal yang pertama kali berdiri di kota semarang. Memberi pelayanan pendidikan guna meningkatakn SDM yang berkualitas dan bermartabat berdasarkan ketaqwaan dan cinta tanah air & bangsa.',
                 'type' => 'longtext',
-                'image' => null,
+                'image' => 'img/sdnbandarharjo.png',
             ],
             [
                 'key' => 'kurikulum_sekolah',
@@ -83,16 +86,16 @@ class SettingSeeder extends Seeder
             [
                 'key' => 'contact_alamat',
                 'label' => 'Alamat',
-                'value' => 'Jl. Cumi-Cumi Raya No.2 Bandarharjo, Semarang Utara',
+                'value' => 'Jalan Cumi-Cumi Raya No 2, Bandarharjo, Kec. Semarang Utara, Kota Semarang, Provinsi Jawa Tengah',
                 'type' => 'text',
-                'image' => null,
+                'image' => 'img/map.png',
             ],
             [
                 'key' => 'contact_email',
                 'label' => 'Email',
                 'value' => 'sdnbandarharjo01@gmail.com',
                 'type' => 'text',
-                'image' => null,
+                'image' => 'img/call.png',
             ],
             [
                 'key' => 'contact_telp',
@@ -105,8 +108,8 @@ class SettingSeeder extends Seeder
                 'key' => 'contact_jam_kerja',
                 'label' => 'Jam Kerja',
                 'value' => 'Senin - Jumat, 07.00 - 14.00 WIB',
-                'type' => 'textarea',
-                'image' => null,
+                'type' => 'longtext',
+                'image' => 'img/jam.png',
             ],
             [
                 'key' => 'contact_youtube',
@@ -126,13 +129,6 @@ class SettingSeeder extends Seeder
                 'key' => 'contact_facebook',
                 'label' => 'Facebook',
                 'value' => 'https://www.facebook.com/people/SDN-Bandarharjo-01/1000637487xxxx/',
-                'type' => 'text',
-                'image' => null,
-            ],
-            [
-                'key' => 'contact_mail',
-                'label' => 'Mail',
-                'value' => 'sdnbandarharjo01@gmail.com',
                 'type' => 'text',
                 'image' => null,
             ],

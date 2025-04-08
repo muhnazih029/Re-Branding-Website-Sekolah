@@ -64,9 +64,7 @@ Route::prefix('profile')->group(function () {
     Route::get('/sarana-prasarana', [FacilityController::class, 'index'])->name('profile.facility');
 });
 
-Route::get('/kontak', function () {
-    return view('pages.contact.contact');
-})->name('contact');
+Route::get('/kontak', [SettingController::class, 'contact'])->name('contact');
 
 // API for Search Bar
 Route::get('/api/announcements', [AnnouncementController::class, 'AnnouncementSearch']);

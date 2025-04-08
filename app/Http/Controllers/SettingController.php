@@ -38,51 +38,13 @@ class SettingController extends Controller
             ->keyBy('key');
         return view('pages.curriculum.school_curriculum', compact('settings'));
     }
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
+    public function contact()
     {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(Setting $setting)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Setting $setting)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Setting $setting)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Setting $setting)
-    {
-        //
+        $settings = DB::table('settings')
+            ->whereIn('key', ['contact_alamat', 'contact_telp', 'contact_email', 'contact_jam_kerja'])
+            ->get()
+            ->keyBy('key');
+        return view('pages.contact.contact', compact('settings'));
     }
 }
