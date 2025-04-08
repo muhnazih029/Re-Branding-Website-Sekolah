@@ -1,604 +1,76 @@
-{{ 'ini halaman pengumuman sekolah' }}
+<x-layouts>
+    <x-layouts.header />
+    <x-announcement.hero />
 
-
-<!DOCTYPE html>
-<html lang="id">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SDN Bandarharjo 01</title>
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-        }
-    </style>
-</head>
-
-<body class="bg-gray-100 font-poppins pt-[190px]">
-    <div class="fixed top-0 left-0 z-50 w-full">
-
-        <!-- Header -->
-        <nav style="background-color: #304193;" class="flex items-center justify-between p-2 text-white md:p-4"></nav>
-        <nav style="background-color: #2D336B;" class="flex items-center justify-between p-4 text-white md:p-6">
-            <!-- Logo dan Nama Sekolah -->
-            <div class="flex items-center ml-2 space-x-2 md:space-x-3 md:ml-20">
-                <img src="{{ asset('img/logo.png') }}" alt="Logo SDN Bandarharjo" class="h-12 w-15">
-                <div class="flex flex-col">
-                    <span class="text-sm font-semibold md:text-lg">SDN BANDARHARJO 01</span>
-                    <span class="text-sm font-semibold md:text-lg">KOTA SEMARANG</span>
-                </div>
-            </div>
-            <!-- Tombol Gabung -->
-            <button style="color: #2D336B;"
-                class="px-3 py-1 mr-2 text-sm font-bold bg-white rounded-full md:px-4 md:py-2 md:mr-20 md:text-base">
-                Gabung
-            </button>
-        </nav>
-
-        <!-- Menu Header -->
-        <div x-data="{ open: false }" style="background-color: #E6EAF7;"
-            class="relative z-50 flex items-center justify-between p-2 shadow-md">
-
-            <!-- Hamburger Menu (Muncul hanya ketika layar mode kecil/medium) -->
-            <button @click="open = !open" @mouseenter="open = true" @mouseleave="open = open"
-                class="p-4 ml-auto md:hidden focus:outline-none">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
-                    </path>
-                </svg>
-            </button>
-
-            <!-- Menu untuk layar medium/kecil -->
-            <div x-show="open" x-transition:enter="transition ease-out duration-300"
-                x-transition:enter-start="opacity-0 transform -translate-y-4"
-                x-transition:enter-end="opacity-100 transform translate-y-0"
-                x-transition:leave="transition ease-in duration-200"
-                x-transition:leave-start="opacity-100 transform translate-y-0"
-                x-transition:leave-end="opacity-0 transform -translate-y-4"
-                class="absolute left-0 w-full bg-white shadow-lg md:hidden top-full">
-                <div class="container flex flex-col py-3 mx-auto space-y-2 uppercase">
-                    <!-- Beranda -->
-                    <a href="#"
-                        class="text-[rgb(45,51,107)] font-semibold px-4 py-2 hover:bg-gray-100 text-sm">Beranda</a>
-
-                    <!-- Dropdown Profil -->
-                    <div x-data="{ open: false }" class="relative">
-                        <button @click="open = !open"
-                            class="text-[rgb(45,51,107)] font-semibold focus:outline-none uppercase px-4 py-2 w-full text-left hover:bg-gray-100 text-sm">
-                            Profil
-                            <svg class="inline w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19 9l-7 7-7-7">
-                                </path>
-                            </svg>
-                        </button>
-                        <div x-show="open" x-transition:enter="transition ease-out duration-200"
-                            x-transition:enter-start="opacity-0 transform scale-95"
-                            x-transition:enter-end="opacity-100 transform scale-100"
-                            x-transition:leave="transition ease-in duration-150"
-                            x-transition:leave-start="opacity-100 transform scale-100"
-                            x-transition:leave-end="opacity-0 transform scale-95" class="pl-4">
-                            <a href="#"
-                                class="block px-4 py-2 text-sm text-[rgb(45,51,107)] hover:bg-gray-100">Visi &
-                                Misi</a>
-                            <a href="#"
-                                class="block px-4 py-2 text-sm text-[rgb(45,51,107)] hover:bg-gray-100">NPSN</a>
-                            <a href="#"
-                                class="block px-4 py-2 text-sm text-[rgb(45,51,107)] hover:bg-gray-100">Sejarah
-                                Sekolah</a>
-                            <a href="#"
-                                class="block px-4 py-2 text-sm text-[rgb(45,51,107)] hover:bg-gray-100">Pendidik &
-                                Tenaga
-                                Pendidik</a>
-                            <a href="#"
-                                class="block px-4 py-2 text-sm text-[rgb(45,51,107)] hover:bg-gray-100">Peserta
-                                Didik</a>
-                            <a href="#"
-                                class="block px-4 py-2 text-sm text-[rgb(45,51,107)] hover:bg-gray-100">Prestasi
-                                Sekolah</a>
-                            <a href="#"
-                                class="block px-4 py-2 text-sm text-[rgb(45,51,107)] hover:bg-gray-100">Ekstrakurikuler</a>
-                            <a href="#"
-                                class="block px-4 py-2 text-sm text-[rgb(45,51,107)] hover:bg-gray-100">BOS
-                                Bantuan Operasional Sekolah</a>
-                            <a href="#"
-                                class="block px-4 py-2 text-sm text-[rgb(45,51,107)] hover:bg-gray-100">Sarana
-                                & Prasarana</a>
-                        </div>
-                    </div>
-
-                    <!-- Dropdown Kurikulum -->
-                    <div x-data="{ open: false }" class="relative">
-                        <button @click="open = !open"
-                            class="text-[rgb(45,51,107)] font-semibold focus:outline-none uppercase px-4 py-2 w-full text-left hover:bg-gray-100 text-sm">
-                            Kurikulum
-                            <svg class="inline w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19 9l-7 7-7-7">
-                                </path>
-                            </svg>
-                        </button>
-                        <div x-show="open" x-transition:enter="transition ease-out duration-200"
-                            x-transition:enter-start="opacity-0 transform scale-95"
-                            x-transition:enter-end="opacity-100 transform scale-100"
-                            x-transition:leave="transition ease-in duration-150"
-                            x-transition:leave-start="opacity-100 transform scale-100"
-                            x-transition:leave-end="opacity-0 transform scale-95" class="pl-4">
-                            <a href="#"
-                                class="block px-4 py-2 text-sm text-[rgb(45,51,107)] hover:bg-gray-100">Kurikulum
-                                Sekolah</a>
-                            <a href="#"
-                                class="block px-4 py-2 text-sm text-[rgb(45,51,107)] hover:bg-gray-100">Kalender
-                                Pendidikan</a>
-                            <a href="#"
-                                class="block px-4 py-2 text-sm text-[rgb(45,51,107)] hover:bg-gray-100">Video
-                                Pembelajaran
-                                Siswa</a>
-                        </div>
-                    </div>
-
-                    <!-- Dropdown Pengumuman -->
-                    <div x-data="{ open: false }" class="relative">
-                        <button @click="open = !open"
-                            class="text-[rgb(45,51,107)] font-semibold focus:outline-none uppercase px-4 py-2 w-full text-left hover:bg-gray-100 text-sm">
-                            Pengumuman
-                            <svg class="inline w-4 h-4 ml-1" fill="none" stroke="currentColor"
-                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19 9l-7 7-7-7">
-                                </path>
-                            </svg>
-                        </button>
-                        <div x-show="open" x-transition:enter="transition ease-out duration-200"
-                            x-transition:enter-start="opacity-0 transform scale-95"
-                            x-transition:enter-end="opacity-100 transform scale-100"
-                            x-transition:leave="transition ease-in duration-150"
-                            x-transition:leave-start="opacity-100 transform scale-100"
-                            x-transition:leave-end="opacity-0 transform scale-95" class="pl-4">
-                            <a href="#"
-                                class="block px-4 py-2 text-sm text-[rgb(45,51,107)] hover:bg-gray-100">Berita
-                                Sekolah</a>
-                            <a href="#"
-                                class="block px-4 py-2 text-sm text-[rgb(45,51,107)] hover:bg-gray-100">Pendaftaran
-                                Peserta
-                                Didik Baru</a>
-                            <a href="#"
-                                class="block px-4 py-2 text-sm text-[rgb(45,51,107)] hover:bg-gray-100">Lomba</a>
-                        </div>
-                    </div>
-
-                    <!-- Dropdown Galeri -->
-                    <div x-data="{ open: false }" class="relative">
-                        <button @click="open = !open"
-                            class="text-[rgb(45,51,107)] font-semibold focus:outline-none uppercase px-4 py-2 w-full text-left hover:bg-gray-100 text-sm">
-                            Galeri
-                            <svg class="inline w-4 h-4 ml-1" fill="none" stroke="currentColor"
-                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19 9l-7 7-7-7">
-                                </path>
-                            </svg>
-                        </button>
-                        <div x-show="open" x-transition:enter="transition ease-out duration-200"
-                            x-transition:enter-start="opacity-0 transform scale-95"
-                            x-transition:enter-end="opacity-100 transform scale-100"
-                            x-transition:leave="transition ease-in duration-150"
-                            x-transition:leave-start="opacity-100 transform scale-100"
-                            x-transition:leave-end="opacity-0 transform scale-95" class="pl-4">
-                            <a href="#"
-                                class="block px-4 py-2 text-sm text-[rgb(45,51,107)] hover:bg-gray-100">Foto</a>
-                            <a href="#"
-                                class="block px-4 py-2 text-sm text-[rgb(45,51,107)] hover:bg-gray-100">Video</a>
-                        </div>
-                    </div>
-
-                    <!-- Dropdown Website Terkait -->
-                    <div x-data="{ open: false }" class="relative">
-                        <button @click="open = !open"
-                            class="text-[rgb(45,51,107)] font-semibold focus:outline-none uppercase px-4 py-2 w-full text-left hover:bg-gray-100 text-sm">
-                            Website Terkait
-                            <svg class="inline w-4 h-4 ml-1" fill="none" stroke="currentColor"
-                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19 9l-7 7-7-7">
-                                </path>
-                            </svg>
-                        </button>
-                        <div x-show="open" x-transition:enter="transition ease-out duration-200"
-                            x-transition:enter-start="opacity-0 transform scale-95"
-                            x-transition:enter-end="opacity-100 transform scale-100"
-                            x-transition:leave="transition ease-in duration-150"
-                            x-transition:leave-start="opacity-100 transform scale-100"
-                            x-transition:leave-end="opacity-0 transform scale-95" class="pl-4">
-                            <a href="#"
-                                class="block px-4 py-2 text-sm text-[rgb(45,51,107)] hover:bg-gray-100">Kemendikbud</a>
-                            <a href="#"
-                                class="block px-4 py-2 text-sm text-[rgb(45,51,107)] hover:bg-gray-100">Pemkot
-                                Semarang</a>
-                            <a href="#"
-                                class="block px-4 py-2 text-sm text-[rgb(45,51,107)] hover:bg-gray-100">Dinas
-                                Pendidikan
-                                Kota Semarang</a>
-                            <a href="#"
-                                class="block px-4 py-2 text-sm text-[rgb(45,51,107)] hover:bg-gray-100">Sang
-                                Juara</a>
-                            <a href="#"
-                                class="block px-4 py-2 text-sm text-[rgb(45,51,107)] hover:bg-gray-100">Nomor Induk
-                                Siswa
-                                Nasional</a>
-                            <a href="#"
-                                class="block px-4 py-2 text-sm text-[rgb(45,51,107)] hover:bg-gray-100">Dapodik</a>
-                            <a href="#"
-                                class="block px-4 py-2 text-sm text-[rgb(45,51,107)] hover:bg-gray-100">SIMPKB</a>
-                        </div>
-                    </div>
-                    <!-- Kontak Kami -->
-                    <a href="#"
-                        class="text-[rgb(45,51,107)] font-semibold px-4 py-2 hover:bg-gray-100 text-sm">Kontak Kami</a>
-                </div>
-            </div>
-
-            <!-- Menu untuk layar besar -->
-            <div class="container flex-wrap justify-center hidden py-3 mx-auto space-x-2 uppercase md:flex">
-                <!-- Beranda -->
-                <a href="#" class="text-[rgb(45,51,107)] font-semibold px-2 py-1 relative group text-lg">
-                    Beranda
-                    <span
-                        class="absolute inset-x-0 bottom-0 h-0.5 bg-blue-900 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
-                </a>
-
-                <!-- Dropdown Profil -->
-                <div x-data="{ open: false }" class="relative">
-                    <button @mouseenter="open = true" @mouseleave="open = false"
-                        class="text-[rgb(45,51,107)] font-semibold focus:outline-none uppercase px-2 py-1 relative group text-lg">
-                        Profil
-                        <svg class="inline w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
-                            </path>
-                        </svg>
-                        <span
-                            class="absolute inset-x-0 bottom-0 h-0.5 bg-blue-900 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
-                    </button>
-                    <div x-show="open" x-transition:enter="transition ease-out duration-200"
-                        x-transition:enter-start="opacity-0 transform scale-95"
-                        x-transition:enter-end="opacity-100 transform scale-100"
-                        x-transition:leave="transition ease-in duration-150"
-                        x-transition:leave-start="opacity-100 transform scale-100"
-                        x-transition:leave-end="opacity-0 transform scale-95" @mouseenter="open = true"
-                        @mouseleave="open = false" style="background-color: #2D336B;"
-                        class="absolute left-0 z-50 w-56 mt-1 rounded-md shadow-lg top-full ring-1 ring-black ring-opacity-5 focus:outline-none">
-                        <div class="py-1">
-                            <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Visi &
-                                Misi</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">NPSN</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Sejarah
-                                Sekolah</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Pendidik &
-                                Tenaga Pendidik</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Peserta
-                                Didik</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Prestasi
-                                Sekolah</a>
-                            <a href="#"
-                                class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Ekstrakurikuler</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">BOS Bantuan
-                                Operasional Sekolah</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Sarana &
-                                Prasarana</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Dropdown Kurikulum -->
-                <div x-data="{ open: false }" class="relative">
-                    <button @mouseenter="open = true" @mouseleave="open = false"
-                        class="text-[rgb(45,51,107)] font-semibold focus:outline-none uppercase px-2 py-1 relative group text-lg">
-                        Kurikulum
-                        <svg class="inline w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
-                            </path>
-                        </svg>
-                        <span
-                            class="absolute inset-x-0 bottom-0 h-0.5 bg-blue-900 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
-                    </button>
-                    <div x-show="open" x-transition:enter="transition ease-out duration-200"
-                        x-transition:enter-start="opacity-0 transform scale-95"
-                        x-transition:enter-end="opacity-100 transform scale-100"
-                        x-transition:leave="transition ease-in duration-150"
-                        x-transition:leave-start="opacity-100 transform scale-100"
-                        x-transition:leave-end="opacity-0 transform scale-95" @mouseenter="open = true"
-                        @mouseleave="open = false" style="background-color: #2D336B;"
-                        class="absolute left-0 z-50 w-48 mt-1 rounded-md shadow-lg top-full ring-1 ring-black ring-opacity-5 focus:outline-none">
-                        <div class="py-1">
-                            <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Kurikulum
-                                Sekolah</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Kalender
-                                Pendidikan</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Tugas
-                                Siswa</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Video
-                                Pembelajaran Siswa</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Dropdown Pengumuman -->
-                <div x-data="{ open: false }" class="relative">
-                    <button @mouseenter="open = true" @mouseleave="open = false"
-                        class="text-[rgb(45,51,107)] font-semibold focus:outline-none uppercase px-2 py-1 relative group text-lg">
-                        Pengumuman
-                        <svg class="inline w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
-                            </path>
-                        </svg>
-                        <span
-                            class="absolute inset-x-0 bottom-0 h-0.5 bg-blue-900 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
-                    </button>
-                    <div x-show="open" x-transition:enter="transition ease-out duration-200"
-                        x-transition:enter-start="opacity-0 transform scale-95"
-                        x-transition:enter-end="opacity-100 transform scale-100"
-                        x-transition:leave="transition ease-in duration-150"
-                        x-transition:leave-start="opacity-100 transform scale-100"
-                        x-transition:leave-end="opacity-0 transform scale-95" @mouseenter="open = true"
-                        @mouseleave="open = false" style="background-color: #2D336B;"
-                        class="absolute left-0 z-50 w-56 mt-1 rounded-md shadow-lg top-full ring-1 ring-black ring-opacity-5 focus:outline-none">
-                        <div class="py-1">
-                            <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Berita
-                                Sekolah</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Pendaftaran
-                                Peserta Didik Baru</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Lomba</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Dropdown Galeri -->
-                <div x-data="{ open: false }" class="relative">
-                    <button @mouseenter="open = true" @mouseleave="open = false"
-                        class="text-[rgb(45,51,107)] font-semibold focus:outline-none uppercase px-2 py-1 relative group text-lg">
-                        Galeri
-                        <svg class="inline w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
-                            </path>
-                        </svg>
-                        <span
-                            class="absolute inset-x-0 bottom-0 h-0.5 bg-blue-900 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
-                    </button>
-                    <div x-show="open" x-transition:enter="transition ease-out duration-200"
-                        x-transition:enter-start="opacity-0 transform scale-95"
-                        x-transition:enter-end="opacity-100 transform scale-100"
-                        x-transition:leave="transition ease-in duration-150"
-                        x-transition:leave-start="opacity-100 transform scale-100"
-                        x-transition:leave-end="opacity-0 transform scale-95" @mouseenter="open = true"
-                        @mouseleave="open = false" style="background-color: #2D336B;"
-                        class="absolute left-0 z-50 w-56 mt-1 rounded-md shadow-lg top-full ring-1 ring-black ring-opacity-5 focus:outline-none">
-                        <div class="py-1">
-                            <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Foto</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Video</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Dropdown Website Terkait -->
-                <div x-data="{ open: false }" class="relative">
-                    <button @mouseenter="open = true" @mouseleave="open = false"
-                        class="text-[rgb(45,51,107)] font-semibold focus:outline-none uppercase px-2 py-1 relative group text-lg">
-                        Website Terkait
-                        <svg class="inline w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
-                            </path>
-                        </svg>
-                        <span
-                            class="absolute inset-x-0 bottom-0 h-0.5 bg-blue-900 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
-                    </button>
-                    <div x-show="open" x-transition:enter="transition ease-out duration-200"
-                        x-transition:enter-start="opacity-0 transform scale-95"
-                        x-transition:enter-end="opacity-100 transform scale-100"
-                        x-transition:leave="transition ease-in duration-150"
-                        x-transition:leave-start="opacity-100 transform scale-100"
-                        x-transition:leave-end="opacity-0 transform scale-95" @mouseenter="open = true"
-                        @mouseleave="open = false" style="background-color: #2D336B;"
-                        class="absolute left-0 z-50 w-56 mt-1 rounded-md shadow-lg top-full ring-1 ring-black ring-opacity-5 focus:outline-none">
-                        <div class="py-1">
-                            <a href="#"
-                                class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Kemendikbud</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Pemkot
-                                Semarang</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Dinas
-                                Pendidikan Kota Semarang</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Sang
-                                Juara</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Nomor Induk
-                                Siswa Nasional</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Dapodik</a>
-                            <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-900">SIMPKB</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Kontak Kami -->
-                <a href="#" class="text-[rgb(45,51,107)] font-semibold px-2 py-1 relative group text-lg">
-                    Kontak Kami
-                    <span
-                        class="absolute inset-x-0 bottom-0 h-0.5 bg-blue-900 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
-                </a>
-            </div>
-        </div>
+    <!-- Judul Halaman -->
+    <div class="w-[300px] shadow-md p-4 text-center mt-10 ml-8 rounded-md" style="background-color: #2D336B;">
+        <h1 class="text-xl font-bold text-white">{{ $title }}</h1>
     </div>
 
-    <!-- Kotak Gambar Tittle -->
-    <div class="relative -mt-16 w-full h-80 md:h-[60vh] bg-cover bg-center"
-        style="background-image: url('{{ asset('img/sekolah.jpg') }}');">
-        <!-- Overlay-->
-        <div class="absolute inset-0 bg-gradient-to-r from-gray-900/50 to-transparent"></div>
-        <!-- Title-->
-        <div
-            class="absolute bottom-16 left-0 bg-[#E6EAF7] px-8 py-6 shadow-lg  z-10 w-[200px] flex items-center justify-center">
-            <span class="text-2xl font-bold text-[#2D336B]">PENGUMUMAN</span>
-        </div>
-    </div>
-
-    <!-- Header -->
-    <div style="background-color: #2D336B;" class="w-[300px] shadow-md p-4 text-center mt-10 ml-8 rounded-md">
-        <h1 class="text-xl font-bold text-white">BERITA SEKOLAH</h1>
-    </div>
-    
-    <!-- Konten Utama -->
-    <!-- Halaman Pengumuman -->
-    <div class="min-h-screen p-8 bg-gray-100">
-        <div class="flex justify-end mb-6">
+    <!-- Konten -->
+    <div class="min-h-screen px-6 py-12 bg-gray-100 md:px-20">
+        <!-- Search -->
+        <div class="flex justify-end mb-8">
             <div class="relative">
-                <input type="text" placeholder="Search" class="w-full py-2 pl-10 pr-4 border border-gray-300 rounded-full shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 md:w-64" />
+                <input type="text" id="search-announcement" placeholder="Search"
+                    class="w-full py-2 pl-10 pr-4 border border-gray-300 rounded-full shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 md:w-64" />
                 <div class="absolute inset-y-0 left-0 flex items-center pl-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-500" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M12.9 14.32a8 8 0 111.42-1.42l4.38 4.38a1 1 0 01-1.42 1.42l-4.38-4.38zM8 14a6 6 0 100-12 6 6 0 000 12z" clip-rule="evenodd" />
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-500" fill="currentColor"
+                        viewBox="0 0 20 20">
+                        <path fill-rule="evenodd"
+                            d="M12.9 14.32a8 8 0 111.42-1.42l4.38 4.38a1 1 0 01-1.42 1.42l-4.38-4.38zM8 14a6 6 0 100-12 6 6 0 000 12z"
+                            clip-rule="evenodd" />
                     </svg>
                 </div>
             </div>
         </div>
 
-        <!-- Daftar Pengumuman -->
-        <div class="mb-4 space-y-8">
-            <!-- Pengumuman -->
-            <div class="flex flex-col p-4 bg-white rounded-lg shadow-md md:flex-row">
-                <!-- Gambar -->
-                <img src="/img/landscape.png" alt="Gambar Pengumuman" class="object-cover w-full md:w-64 h-36 md:h-auto rounded-xl" />
-                <!-- Konten -->
-                <div class="mt-4 ml-0 md:ml-6 md:mt-0">
-                    <h2 class="text-xl font-bold">Pengumuman Kenaikan Kelas dan Penerimaan Hasil Belajar</h2>
-                    <p class="mt-1 text-sm text-gray-500">Maret 25, 2025 | Admin Sekolah</p>
-                    <p class="mt-2 text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt, nunc sit amet consequat auctor, risus sem volutpat lectus.</p>
-                    <button class="px-4 py-2 mt-4 text-white bg-blue-600 rounded-full">Selengkapnya</button>
+        <!-- Looping Pengumuman -->
+        <div id="announcement-container" data-type="{{ $type }}">
+            @forelse ($announcements as $announcement)
+                <div
+                    class="flex flex-col gap-6 p-6 mb-10 transition bg-white rounded-lg shadow md:flex-row hover:shadow-lg">
+                    <div class="w-full overflow-hidden bg-gray-300 rounded-lg h-100 md:w-1/3">
+                        <img src="{{ asset('storage/' . $announcement->image) }}" alt="{{ $announcement->title }}"
+                            class="object-cover w-full h-full" />
+                    </div>
+                    <div class="flex flex-col justify-between w-full md:w-2/3">
+                        <div>
+                            <h2 class="mb-2 text-xl font-semibold text-gray-800 md:text-2xl">
+                                {{ $announcement->title }}
+                            </h2>
+                            <p class="mb-4 text-sm text-gray-600">
+                                Oleh <strong>{{ $announcement->author }}</strong> •
+                                {{ \Carbon\Carbon::parse($announcement->created_at)->translatedFormat('d F Y') }}
+                            </p>
+                            <p class="text-sm text-gray-700">
+                                {{ Str::limit(strip_tags($announcement->content), 150, '...') }}
+                            </p>
+                        </div>
+                        <div class="mt-4">
+                            <a href="{{ route('announcement.show', ['type' => $announcement->type, 'slug' => $announcement->slug]) }}"
+                                class="inline-block bg-[#2D336B] text-white px-4 py-2 rounded-md hover:bg-blue-800 transition text-sm">
+                                Selengkapnya
+                            </a>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            @empty
+                <p class="text-center text-gray-500">Belum ada pengumuman atau berita.</p>
+            @endforelse
         </div>
-        <div class="mb-4 space-y-8">
-            <!-- Pengumuman -->
-            <div class="flex flex-col p-4 bg-white rounded-lg shadow-md md:flex-row">
-                <!-- Gambar -->
-                <img src="/img/landscape.png" alt="Gambar Pengumuman" class="object-cover w-full md:w-64 h-36 md:h-auto rounded-xl" />
-                <!-- Konten -->
-                <div class="mt-4 ml-0 md:ml-6 md:mt-0">
-                    <h2 class="text-xl font-bold">Pengumuman Kenaikan Kelas dan Penerimaan Hasil Belajar</h2>
-                    <p class="mt-1 text-sm text-gray-500">Maret 25, 2025 | Admin Sekolah</p>
-                    <p class="mt-2 text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt, nunc sit amet consequat auctor, risus sem volutpat lectus.</p>
-                    <button class="px-4 py-2 mt-4 text-white bg-blue-600 rounded-full">Selengkapnya</button>
-                </div>
-            </div>
-        </div>
-        <div class="mb-4 space-y-8">
-            <!-- Pengumuman -->
-            <div class="flex flex-col p-4 bg-white rounded-lg shadow-md md:flex-row">
-                <!-- Gambar -->
-                <img src="/img/landscape.png" alt="Gambar Pengumuman" class="object-cover w-full md:w-64 h-36 md:h-auto rounded-xl" />
-                <!-- Konten -->
-                <div class="mt-4 ml-0 md:ml-6 md:mt-0">
-                    <h2 class="text-xl font-bold">Pengumuman Kenaikan Kelas dan Penerimaan Hasil Belajar</h2>
-                    <p class="mt-1 text-sm text-gray-500">Maret 25, 2025 | Admin Sekolah</p>
-                    <p class="mt-2 text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt, nunc sit amet consequat auctor, risus sem volutpat lectus.</p>
-                    <button class="px-4 py-2 mt-4 text-white bg-blue-600 rounded-full">Selengkapnya</button>
-                </div>
-            </div>
+
+        <!-- Pagination -->
+        <x-pagination :paginator="$announcements" />
+
+        <!-- Breadcrumb -->
+        <div class="flex items-center ml-4 space-x-2 mt-14">
+            <x-breadcrumb />
         </div>
     </div>
 
-    <!-- Breadcrumb Navigation -->
-    <div class="flex items-center mt-10 mb-10 ml-8 space-x-2">
-        <a href="/.."
-                 class="bg-[#E6EAF7] text-[#2D336B] font-bold px-4 py-2 rounded-full shadow-md">Beranda</a>
-        <span class="text-[#2D336B]">›</span>
-        <a href="/pengumuman"
-                class="bg-[#E6EAF7] text-[#2D336B] font-bold px-4 py-2 rounded-full shadow-md">Pengumuman</a>
-        <span class="text-[#2D336B]"></span>
-    </div>
-    
-    <!-- Footer  -->
-    <footer class="py-10 text-white bg-blue-900">
-        <div class="container grid grid-cols-1 gap-8 px-6 mx-auto md:grid-cols-4">
-            <!-- Logo and Address -->
-            <div>
-                <div class="container flex items-center mx-auto space-x-4">
-                    <img src="/img/sd.png" alt="Logo SDN" class="mb-4 w-14">
-                    <h2 class="mb-4 text-base font-bold">SDN BANDARHARJO 01<br>KOTA SEMARANG</h2>
-                </div>
-                <p>Jalan Cumi-cumi Raya No. 2<br>Bandarharjo</p>
-                <p class="mt-2">📞 (024) 3551189</p>
-                <p>✉️ sdnbandarharjo01@gmail.com</p>
-                <div class="flex mt-4 space-x-2">
-                    <img src="/img/pemkot.png" alt="Logo Pemerintah Kota Semarang" class="w-10">
-                    <img src="/img/tutwuri.png" alt="Logo Tut Wuri Handayani" class="w-10">
-                </div>
-            </div>
-
-            <!-- Profil -->
-            <div>
-                <h3 class="mb-2 font-bold">Profil</h3>
-                <hr class="my-2 border-t border-white-300">
-                <ul class="space-y-0 text-sm">
-                    <li>Visi Misi Sekolah</li>
-                    <li>NPSN</li>
-                    <li>Sejarah Sekolah</li>
-                    <li>Pendidik dan Tenaga Kependidikan</li>
-                    <li>Peserta Didik</li>
-                    <li>Prestasi Sekolah</li>
-                    <li>Ekstrakurikuler</li>
-                    <li>BOS Bantuan Operasional Sekolah</li>
-                    <li>Sarana dan Prasarana</li>
-                </ul>
-            </div>
-
-            <!-- Website Terkait -->
-            <div>
-                <h3 class="mb-2 font-bold">Website Terkait</h3>
-                <hr class="my-2 border-t border-white-300">
-                <ul class="space-y-0 text-sm">
-                    <li>Kemendikbud</li>
-                    <li>Pemkot Semarang</li>
-                    <li>Dinas Pendidikan Kota Semarang</li>
-                    <li>Sang Juara</li>
-                    <li>Nomor Induk Siswa Nasional</li>
-                    <li>DAPODIK</li>
-                    <li>SIMPKB</li>
-                </ul>
-            </div>
-
-            <!-- Kurikulum dan Kontak-->
-            <div>
-                <h3 class="mb-2 font-bold">Kurikulum</h3>
-                <hr class="my-2 border-t border-white-300">
-                <ul class="space-y-0 text-sm">
-                    <li>Kurikulum Sekolah</li>
-                    <li>Kalender Pendidikan</li>
-                    <li>Tugas Siswa</li>
-                    <li>Buku Elektronik Siswa</li>
-                    <li>Video Pembelajaran Youtube</li>
-                </ul>
-                <br>
-                <h3 class="mb-2 font-bold">Kontak</h3>
-                <hr class="my-2 border-t border-white-300">
-                <ul class="space-y-0 text-sm">
-                    <li>Hubungi Kami</li>
-                    <li>Pengaduan</li>
-                </ul>
-            </div>
-        </div>
-    </footer>
-    
-    <!-- Alpine.js -->
-    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
-
-</body>
-</html>
+    @push('scripts')
+        @vite('resources/js/page/load-news.js')
+    @endpush
+    <x-layouts.footer />
+</x-layouts>

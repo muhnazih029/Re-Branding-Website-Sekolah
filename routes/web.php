@@ -18,8 +18,13 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::delete('/logout', [HomeController::class, 'logout'])->name('logout');
 
 Route::prefix('pengumuman')->group(function () {
-    Route::get('/', [AnnouncementController::class, 'index'])->name('announcement.index');
-    Route::get('/announcement/{type}/{slug}', [AnnouncementController::class, 'show'])
+    Route::get('/', function () {
+        return redirect()->route('announcement.index', ['type' => 'news']);
+    });
+    Route::get('/{type}', [AnnouncementController::class, 'index'])
+        ->where('type', 'announcement|competition')
+        ->name('announcement.index');
+    Route::get('/{type}/{slug}', [AnnouncementController::class, 'show'])
         ->name('announcement.show');
     Route::get('/ppdb', [AnnouncementController::class, 'new_student'])->name('announcement.new_student');
 });
@@ -64,5 +69,6 @@ Route::get('/kontak', function () {
 })->name('contact');
 
 // API for Search Bar
+Route::get('/api/announcements', [AnnouncementController::class, 'AnnouncementSearch']);
 Route::get('/api/galery/photos', [GaleryController::class, 'searchPhotos']);
 Route::get('/api/galery/videos', [GaleryController::class, 'searchVideos']);

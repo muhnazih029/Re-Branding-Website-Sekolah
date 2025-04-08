@@ -9,18 +9,25 @@ use App\Http\Controllers\Controller;
 
 class AnnouncementController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
+    public function index(Request $request, $type = 'news')
     {
+        $titleMap = [
+            'news' => 'PRESTASI SEKOLAH',
+            'announcement' => 'BERITA SEKOLAH',
+            'competition' => 'LOMBA'
+        ];
         $announcements = DB::table('announcements')
             ->join('users', 'announcements.user_id', '=', 'users.id')
             ->select('announcements.*', 'users.name as author')
+            ->where('announcements.type', $type)
             ->orderBy('announcements.created_at', 'desc')
-            ->paginate(10);
+            ->paginate(6);
 
-        return view('pages.announcement.school_news', compact('announcements'));
+        return view('pages.announcement.school_news', [
+            'announcements' => $announcements,
+            'type' => $type,
+            'title' => $titleMap[$type]
+        ]);
     }
 
     public function new_student()
@@ -28,25 +35,27 @@ class AnnouncementController extends Controller
         return view('pages.announcement.new_student_registration');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
+    public function AnnouncementSearch(Request $request)
     {
-        //
-    }
+        $type = $request->input('type', 'news');
+        $search = $request->input('search');
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
+        $announcements = DB::table('announcements')
+            ->join('users', 'announcements.user_id', '=', 'users.id')
+            ->select('announcements.*', 'users.name as author')
+            ->when($search, function ($query) use ($search) {
+                $query->where(function ($q) use ($search) {
+                    $q->where('announcements.title', 'like', "%$search%")
+                      ->orWhere('announcements.content', 'like', "%$search%");
+                });
+            })
+            ->where('announcements.type', $type)
+            ->orderBy('announcements.created_at', 'desc')
+            ->limit(10)
+            ->get();
 
-    /**
-     * Display the specified resource.
-     */
+        return response()->json($announcements);
+    }
 
     public function show($type, $slug)
     {
@@ -62,29 +71,5 @@ class AnnouncementController extends Controller
         }
 
         return view('pages.announcement.detail', compact('announcement'));
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Announcement $announcement)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Announcement $announcement)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Announcement $announcement)
-    {
-        //
     }
 }
