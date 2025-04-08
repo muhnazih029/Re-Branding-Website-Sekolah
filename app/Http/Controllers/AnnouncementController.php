@@ -51,7 +51,7 @@ class AnnouncementController extends Controller
             })
             ->where('announcements.type', $type)
             ->orderBy('announcements.created_at', 'desc')
-            ->limit(10)
+            ->limit(6)
             ->get();
 
         return response()->json($announcements);

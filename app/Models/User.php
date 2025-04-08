@@ -53,7 +53,7 @@ class User extends Authenticatable
     }
     public function extracurriculars()
     {
-        return $this->hasMany(Extracurriculars::class);
+        return $this->hasMany(Extracurricular::class);
     }
 
     public function galeries(): HasMany
@@ -74,5 +74,9 @@ class User extends Authenticatable
     public function SchoolOperationalAssistance(): HasMany
     {
         return $this->hasMany(SchoolOperationalAssistance::class);
+    }
+    public function complains(): HasMany
+    {
+        return $this->hasMany(Complain::class);
     }
 }

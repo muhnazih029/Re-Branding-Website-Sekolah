@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Teacher;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -15,6 +16,13 @@ class DatabaseSeeder extends Seeder
 
     public function run(): void
     {
+        Teacher::insert([
+            'teacher_name'=> 'Christina Ardiyanti, S.Pd',
+            'NIP' => '123456789',
+            'job' => 'Kepala Sekolah',
+            'image' => 'teachers/kepsek.png',
+            'starting_year' => '2010',
+        ]);
         // User::factory(10)->create();
         User::insert([
             [

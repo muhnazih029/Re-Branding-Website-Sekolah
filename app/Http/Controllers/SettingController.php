@@ -45,6 +45,9 @@ class SettingController extends Controller
             ->whereIn('key', ['contact_alamat', 'contact_telp', 'contact_email', 'contact_jam_kerja'])
             ->get()
             ->keyBy('key');
-        return view('pages.contact.contact', compact('settings'));
+        return view('pages.contact.contact', [
+            'settings' => $settings,
+            'user' => auth()->user(),
+        ]);
     }
 }
