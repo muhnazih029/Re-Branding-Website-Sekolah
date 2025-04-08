@@ -62,3 +62,7 @@ Route::prefix('profile')->group(function () {
 Route::get('/kontak', function () {
     return view('pages.contact.contact');
 })->name('contact');
+
+// API for Search Bar
+Route::get('/api/galery/photos', [GaleryController::class, 'searchPhotos']);
+Route::get('/api/galery/videos', [GaleryController::class, 'searchVideos']);

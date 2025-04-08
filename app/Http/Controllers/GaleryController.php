@@ -3,69 +3,77 @@
 namespace App\Http\Controllers;
 
 use App\Models\Galery;
-use App\Http\Controllers\Controller;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Controller;
 
 class GaleryController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function photo()
+    public function photo(Request $request)
     {
-        return view('pages.galery.photos');
+        $galleries = DB::table("galeries")
+            ->paginate(6);
+        return view('pages.galery.photos', compact('galleries'));
     }
 
     public function video()
     {
-        return view('pages.galery.videos');
+        $galleries = DB::table("galeries")
+            ->paginate(6);
+        return view('pages.galery.videos', compact('galleries'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
+    public function searchPhotos(Request $request)
     {
-        //
+        $search = $request->input('search');
+
+        $galleries = DB::table("galeries")
+            ->when($search, function ($query) use ($search) {
+                $query->where('name', 'like', '%' . $search . '%');
+            })
+            ->get()
+            ->map(function ($item) {
+                $files = json_decode($item->file);
+                $imageFiles = collect($files)->filter(function ($file) {
+                    return preg_match('/\.(jpg|jpeg|png|webp)$/i', $file);
+                })->values();
+                $item->files = $imageFiles;
+                return $item;
+            })
+            ->filter(function ($item) {
+                return count($item->files) > 0;
+            })
+            ->values();
+
+        return response()->json($galleries);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
+    public function searchVideos(Request $request)
     {
-        //
-    }
+        $search = $request->input('search');
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(Galery $galery)
-    {
-        //
-    }
+        $galleries = DB::table("galeries")
+        ->when($search, function ($query) use ($search) {
+            $query->where('name', 'like', '%' . $search . '%');
+        })
+        ->get()
+        ->map(function ($item) {
+            $files = json_decode($item->file);
+            $videoFiles = collect($files)->filter(function ($file) {
+                return preg_match('/\.(mp4)$/i', $file);
+            })->values();
+            $item->files = $videoFiles;
+            return $item;
+        })
+        ->filter(function ($item) {
+            return count($item->files) > 0;
+        })
+        ->values();
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Galery $galery)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Galery $galery)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Galery $galery)
-    {
-        //
+        return response()->json($galleries);
     }
 }

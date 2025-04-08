@@ -34,6 +34,7 @@
         </svg>
     </button> --}}
     {{ $slot }}
+    @stack('scripts')
 </body>
 
 </html>
