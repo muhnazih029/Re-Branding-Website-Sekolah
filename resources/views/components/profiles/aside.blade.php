@@ -1,4 +1,4 @@
-<div style="background-color: #E6EAF7; color:#2D336B;" class="w-[250px] h-[45vh] shadow-md p-5 mb-5 md:mb-0">
+<div style="background-color: #E6EAF7; color:#2D336B;" class="w-[250px] h-[fit-content] max-h-[80vh] overflow-y-auto shadow-md p-5 mb-5 md:mb-0">
     <h2 class="mb-4 text-xl font-bold">Profil</h2>
     <ul class="space-y-2">
         <li><a href="/profile/visi-misi" class="block text-[#7886C7] hover:text-blue-900 font-semibold">Visi Misi

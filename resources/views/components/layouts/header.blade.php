@@ -6,7 +6,7 @@
         <!-- Logo dan Nama Sekolah -->
         <div class="flex items-center ml-2 space-x-2 md:space-x-3 md:ml-20">
             <!-- Logo -->
-            <img src="{{ asset('img/logo.png') }}" alt="Logo SDN Bandarharjo" class="h-12 w-15 ">
+            <img src="{{ asset('img/sd.png') }}" alt="Logo SDN Bandarharjo" class="h-12 w-15 ">
             <!-- Nama Sekolah -->
             <div class="flex flex-col">
                 <span class="text-sm font-semibold md:text-lg">SDN BANDARHARJO 01</span>
