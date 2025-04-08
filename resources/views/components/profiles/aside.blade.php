@@ -14,8 +14,8 @@
                 Didik</a></li>
         <li><a href="/profile/ekstrakulikuler"
                 class="block text-[#7886C7] hover:text-blue-900 font-semibold">Ekstrakurikuler</a></li>
-        <li><a href="/profile/dana-bos" class="block text-[#7886C7] hover:text-blue-900 font-semibold">BOS
-                Bantuan Operasional Sekolah</a></li>
+        <li><a href="/profile/dana-bos" class="block text-[#7886C7] hover:text-blue-900 font-semibold">Bantuan
+                Operasional Sekolah</a></li>
         <li><a href="/profile/sarana-prasarana" class="block text-[#7886C7] hover:text-blue-900 font-semibold">Sarana
                 dan Prasarana</a></li>
     </ul>
