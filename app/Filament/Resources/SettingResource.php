@@ -49,9 +49,8 @@ class SettingResource extends Resource
                 Forms\Components\FileUpload::make('image')
                     ->label('Gambar')
                     ->acceptedFileTypes(['image/png', 'image/jpeg', 'image/jpg'])
-                    ->visible(fn($record) => in_array($record?->type, ['image']))
+                    ->multiple(fn($record) => $record?->type === 'image')
                     ->columnSpanFull()
-                    ->multiple()
                     ->maxParallelUploads(1)
                     ->maxFiles(5)
                     ->directory('settings')
@@ -59,18 +58,8 @@ class SettingResource extends Resource
                     ->downloadable()
                     ->image()
                     ->imageEditor()
-                    ->maxSize(2048),
-                Forms\Components\FileUpload::make('image')
-                    ->label('Gambar')
-                    ->acceptedFileTypes(['image/png', 'image/jpeg', 'image/jpg'])
-                    ->visible(fn($record) => in_array($record?->type, ['text', 'longtext']))
-                    ->columnSpanFull()
-                    ->directory('settings')
-                    ->openable()
-                    ->downloadable()
-                    ->image()
-                    ->imageEditor()
-                    ->maxSize(2048),
+                    ->maxSize(2048)
+                    ->visible(fn($record) => in_array($record?->type, ['image', 'text', 'longtext']))
             ]);
     }
 
