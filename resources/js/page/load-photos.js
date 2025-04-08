@@ -36,7 +36,6 @@ function renderPhotoGallery(galleries) {
         container.appendChild(card);
 
         // Modal
-        const modalWrapper = document.getElementById("modal-wrapper");
         const modal = document.createElement("div");
         modal.id = `modal-${index}`;
         modal.className =

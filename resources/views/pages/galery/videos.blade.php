@@ -54,12 +54,14 @@
     <div id="modal-wrapper"></div>
 
     <!-- Pagination -->
-    <x-galery.pagination :paginator="$galleries" />
+    <x-pagination :paginator="$galleries" />
 
     @push('scripts')
         @vite('resources/js/page/load-videos.js')
     @endpush
 
-    <x-breadcrumb />
+    <div class="flex items-center mt-10 mb-10 ml-24 space-x-2">
+        <x-breadcrumb />
+    </div>
     <x-layouts.footer />
 </x-layouts>
