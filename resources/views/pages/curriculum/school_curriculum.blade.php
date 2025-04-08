@@ -28,6 +28,9 @@
         {!! nl2br($settings['kurikulum_sekolah']->value) !!}
     </div>
 
-    <x-breadcrumb />
+    <div class="mt-6 mb-4 px-4 sm:px-6 md:px-8">
+        <x-breadcrumb />
+    </div>
+    
     <x-layouts.footer />
 </x-layouts>
