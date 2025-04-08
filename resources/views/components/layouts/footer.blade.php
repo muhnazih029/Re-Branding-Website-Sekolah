@@ -21,15 +21,14 @@
             <h3 class="mb-2 font-bold">Profil</h3>
             <hr class="my-2 border-t border-white-300">
             <ul class="space-y-0 text-sm">
-                <li>Visi Misi Sekolah</li>
-                <li>NPSN</li>
-                <li>Sejarah Sekolah</li>
-                <li>Pendidik dan Tenaga Kependidikan</li>
-                <li>Peserta Didik</li>
-                <li>Prestasi Sekolah</li>
-                <li>Ekstrakurikuler</li>
-                <li>BOS Bantuan Operasional Sekolah</li>
-                <li>Sarana dan Prasarana</li>
+                <li><a href="{{ route('profile.vision_mission') }}">Visi Misi Sekolah</a></li>
+                <li><a href="https://referensi.data.kemdikbud.go.id/tabs.php?npsn=20329336">NPSN</a></li>
+                <li><a href="{{ route('profile.history') }}">Sejarah Sekolah</a></li>
+                <li><a href="{{ route('profile.teachers') }}">Pendidik dan Tenaga Kependidikan</a></li>
+                <li><a href="{{ route('profile.students') }}">Peserta Didik</a></li>
+                <li><a href="{{ route('profile.extracurricular') }}">Ekstrakurikuler</a></li>
+                <li><a href="{{ route('profile.dana_bos') }}">BOS Bantuan Operasional Sekolah</a></li>
+                <li><a href="{{ route('profile.facility') }}">Sarana dan Prasarana</a></li>
             </ul>
         </div>
 
@@ -38,13 +37,15 @@
             <h3 class="mb-2 font-bold">Website Terkait</h3>
             <hr class="my-2 border-t border-white-300">
             <ul class="space-y-0 text-sm">
-                <li>Kemendikbud</li>
-                <li>Pemkot Semarang</li>
-                <li>Dinas Pendidikan Kota Semarang</li>
-                <li>Sang Juara</li>
-                <li>Nomor Induk Siswa Nasional</li>
-                <li>DAPODIK</li>
-                <li>SIMPKB</li>
+                <li><a href="https://kemdiktisaintek.go.id/">Kemendikbud</a></li>
+                <li><a href="https://semarangkota.go.id/">Pemkot Semarang</a></li>
+                <li><a href="https://disdiksmg.semarangkota.go.id/">Dinas Pendidikan Kota Semarang</a></li>
+                <li><a href="https://sangjuara.semarangkota.go.id/">Sang Juara</a></li>
+                <li><a href="https://nisn.data.kemdikbud.go.id/">Nomor Induk Siswa Nasional</a></li>
+                <li><a href="https://dapo.dikdasmen.go.id/">Dapodik</li>
+                <li><a
+                        href="https://paspor-gtk.simpkb.id/casgpo/login?service=https%3A%2F%2Fgtk.belajar.dikdasmen.go.id%2Fauth%2Flogin">SIMPKB</a>
+                </li>
             </ul>
         </div>
 
@@ -53,17 +54,16 @@
             <h3 class="mb-2 font-bold">Kurikulum</h3>
             <hr class="my-2 border-t border-white-300">
             <ul class="space-y-0 text-sm">
-                <li>Kurikulum Sekolah</li>
-                <li>Kalender Pendidikan</li>
-                <li>Tugas Siswa</li>
-                <li>Buku Elektronik Siswa</li>
-                <li>Video Pembelajaran Youtube</li>
+                <li><a href="{{ route('kurikulum.school_curriculum') }}">Kurikulum Sekolah</a></li>
+                <li><a href="{{ route('kurikulum.calendar') }}">Kalender Pendidikan</a></li>
+                <li><a href="{{ route('kurikulum.homework') }}">Tugas Siswa</a></li>
+                <li><a href="{{ route('kurikulum.learning_videos') }}">Video Pembelajaran Siswa</li>
             </ul>
             <br>
             <h3 class="mb-2 font-bold">Kontak</h3>
             <hr class="my-2 border-t border-white-300">
             <ul class="space-y-0 text-sm">
-                <li>Hubungi Kami</li>
+                <li><a href="{{ route('contact') }}">Hubungi Kami</a></li>
                 <li>Pengaduan</li>
             </ul>
         </div>
