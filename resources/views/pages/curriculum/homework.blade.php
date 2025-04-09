@@ -3,7 +3,7 @@
     <x-classwork.hero />
 
     <!-- Konten Utama -->
-    <div style="background-color: #2D336B;" class="w-[300px] shadow-md p-4 text-center mt-10 ml-8 rounded-md">
+    <div style="background-color: #2D336B;" class="w-[300px] shadow-md p-4 text-center mt-10 ml-16 rounded-md">
         <h1 class="text-xl font-bold text-white">TUGAS SISWA</h1>
     </div>
 
@@ -14,7 +14,7 @@
                     class="block overflow-hidden bg-white rounded-lg shadow-lg">
                     <div class="overflow-hidden bg-white rounded-lg shadow-lg">
                         <div class="w-full bg-gray-300 aspect-w-16 aspect-h-9"></div>
-                        <div class="py-2 font-semibold text-center text-white bg-blue-900">Kelas {{ $class->class_name }}
+                        <div class="py-2 font-semibold text-center text-white" style="background-color: #2D336B;">Kelas {{ $class->class_name }}
                         </div>
                     </div>
                 </a>
@@ -22,7 +22,7 @@
         </div>
     </div>
 
-    <div class="mt-6 mb-4 px-4 sm:px-6 md:px-8">
+    <div class="mt-6 mb-12 ml-10 px-4 sm:px-6 md:px-8">
         <x-breadcrumb />
     </div>
 
