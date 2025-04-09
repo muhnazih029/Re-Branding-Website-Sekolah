@@ -16,55 +16,79 @@
             </div>
         </div>
 
-        <!-- Profil -->
-        <div>
-            <h3 class="mb-2 font-bold">Profil</h3>
-            <hr class="my-2 border-t border-white-300">
-            <ul class="space-y-0 text-sm">
-                <li><a href="{{ route('profile.vision_mission') }}" class="hover:text-yellow-400">Visi Misi Sekolah</a></li>
-                <li><a href="https://referensi.data.kemdikbud.go.id/tabs.php?npsn=20329336" class="hover:text-yellow-400">NPSN</a></li>
-                <li><a href="{{ route('profile.history') }}" class="hover:text-yellow-400">Sejarah Sekolah</a></li>
-                <li><a href="{{ route('profile.teachers') }}" class="hover:text-yellow-400"">Pendidik dan Tenaga Kependidikan</a></li>
-                <li><a href="{{ route('profile.students') }}" class="hover:text-yellow-400">Peserta Didik</a></li>
-                <li><a href="{{ route('profile.extracurricular') }}" class="hover:text-yellow-400">Ekstrakurikuler</a></li>
-                <li><a href="{{ route('profile.dana_bos') }}" class="hover:text-yellow-400">BOS Bantuan Operasional Sekolah</a></li>
-                <li><a href="{{ route('profile.facility') }}" class="hover:text-yellow-400">Sarana dan Prasarana</a></li>
-            </ul>
+        <div class="md:col-span-3">
+            <div class="flex flex-col gap-8 md:flex-row">
+                <!-- Profil dan Galeri -->
+                <div class="flex-1">
+                    <h3 class="mb-2 font-bold">Profil</h3>
+                    <hr class="my-2 border-t border-white-300">
+                    <ul class="space-y-0 text-sm">
+                        <li><a href="{{ route('profile.vision_mission') }}" class="hover:text-yellow-400">Visi Misi Sekolah</a></li>
+                        <li><a href="https://referensi.data.kemdikbud.go.id/tabs.php?npsn=20329336" class="hover:text-yellow-400">NPSN</a></li>
+                        <li><a href="{{ route('profile.history') }}" class="hover:text-yellow-400">Sejarah Sekolah</a></li>
+                        <li><a href="{{ route('profile.teachers') }}" class="hover:text-yellow-400">Pendidik dan Tenaga Kependidikan</a></li>
+                        <li><a href="{{ route('profile.students') }}" class="hover:text-yellow-400">Peserta Didik</a></li>
+                        <li><a href="{{ route('profile.extracurricular') }}" class="hover:text-yellow-400">Ekstrakurikuler</a></li>
+                        <li><a href="{{ route('profile.dana_bos') }}" class="hover:text-yellow-400">BOS Bantuan Operasional Sekolah</a></li>
+                        <li><a href="{{ route('profile.facility') }}" class="hover:text-yellow-400">Sarana dan Prasarana</a></li>
+                    </ul>
+                    <br>
+                    <h3 class="mb-2 font-bold">Galeri</h3>
+                    <hr class="my-2 border-t border-white-300">
+                    <ul class="space-y-0 text-sm">
+                        <li><a href="{{ route('galery.photo') }}" class="hover:text-yellow-400">Foto</a></li>
+                        <li><a href="{{ route('galery.photo') }}" class="hover:text-yellow-400">Video</a></li>
+                    </ul>
+                </div>
+
+                <!-- Kurikulum dan Pengumuman -->
+                <div class="flex-1">
+                    <h3 class="mb-2 font-bold">Kurikulum</h3>
+                    <hr class="my-2 border-t border-white-300">
+                    <ul class="space-y-0 text-sm">
+                        <li><a href="{{ route('kurikulum.school_curriculum') }}" class="hover:text-yellow-400">Kurikulum Sekolah</a></li>
+                        <li><a href="{{ route('kurikulum.calendar') }}" class="hover:text-yellow-400">Kalender Pendidikan</a></li>
+                        <li><a href="{{ route('kurikulum.homework') }}" class="hover:text-yellow-400">Tugas Siswa</a></li>
+                        <li><a href="{{ route('kurikulum.learning_videos') }}" class="hover:text-yellow-400">Video Pembelajaran Siswa</a></li>
+                    </ul>
+                    <br>
+                    <h3 class="mb-2 font-bold">Pengumuman</h3>
+                    <hr class="my-2 border-t border-white-300">
+                    <ul class="space-y-0 text-sm">
+                        <li><a href="{{ route('announcement.index', ['type' => 'announcement']) }}" class="hover:text-yellow-400">Berita Sekolah</a></li>
+                        <li><a href="{{ route('announcement.index', ['type' => 'competition']) }}" class="hover:text-yellow-400">Lomba</a></li>
+                        <li><a href="{{ route('announcement.index', ['type' => 'news']) }}" class="hover:text-yellow-400">Prestasi</a></li>
+                        <li><a href="{{ route('announcement.new_student') }}" class="hover:text-yellow-400">PPDB</a></li>
+                    </ul>
+                </div>
+
+                <!-- Website Terkait dan Kontak-->
+                <div class="flex-1">
+                    <h3 class="mb-2 font-bold">Website Terkait</h3>
+                    <hr class="my-2 border-t border-white-300">
+                    <ul class="space-y-0 text-sm">
+                        <li><a href="https://kemdiktisaintek.go.id/" class="hover:text-yellow-400">Kemendikbud</a></li>
+                        <li><a href="https://semarangkota.go.id/" class="hover:text-yellow-400">Pemkot Semarang</a></li>
+                        <li><a href="https://disdiksmg.semarangkota.go.id/" class="hover:text-yellow-400">Dinas Pendidikan Kota Semarang</a></li>
+                        <li><a href="https://sangjuara.semarangkota.go.id/" class="hover:text-yellow-400">Sang Juara</a></li>
+                        <li><a href="https://nisn.data.kemdikbud.go.id/" class="hover:text-yellow-400">Nomor Induk Siswa Nasional</a></li>
+                        <li><a href="https://dapo.dikdasmen.go.id/" class="hover:text-yellow-400">Dapodik</li>
+                        <li><a href="https://paspor-gtk.simpkb.id/casgpo/login?service=https%3A%2F%2Fgtk.belajar.dikdasmen.go.id%2Fauth%2Flogin" class="hover:text-yellow-400">SIMPKB</a></li>
+                    </ul>
+                    <br>
+                    <h3 class="mb-2 font-bold">Kontak</h3>
+                    <hr class="my-2 border-t border-white-300">
+                    <ul class="space-y-0 text-sm">
+                        <li><a href="{{ route('contact') }}" class="hover:text-yellow-400">Hubungi Kami</a></li>
+                        <li><a href="{{ route('contact') }}#pengaduan" class="hover:text-yellow-400">Pengaduan</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
 
-        <!-- Website Terkait -->
-        <div>
-            <h3 class="mb-2 font-bold">Website Terkait</h3>
-            <hr class="my-2 border-t border-white-300">
-            <ul class="space-y-0 text-sm">
-                <li><a href="https://kemdiktisaintek.go.id/" class="hover:text-yellow-400">Kemendikbud</a></li>
-                <li><a href="https://semarangkota.go.id/" class="hover:text-yellow-400">Pemkot Semarang</a></li>
-                <li><a href="https://disdiksmg.semarangkota.go.id/" class="hover:text-yellow-400">Dinas Pendidikan Kota Semarang</a></li>
-                <li><a href="https://sangjuara.semarangkota.go.id/" class="hover:text-yellow-400">Sang Juara</a></li>
-                <li><a href="https://nisn.data.kemdikbud.go.id/" class="hover:text-yellow-400">Nomor Induk Siswa Nasional</a></li>
-                <li><a href="https://dapo.dikdasmen.go.id/" class="hover:text-yellow-400">Dapodik</li>
-                <li><a href="https://paspor-gtk.simpkb.id/casgpo/login?service=https%3A%2F%2Fgtk.belajar.dikdasmen.go.id%2Fauth%2Flogin" class="hover:text-yellow-400">SIMPKB</a></li>
-            </ul>
-        </div>
 
-        <!-- Kurikulum dan Kontak-->
-        <div>
-            <h3 class="mb-2 font-bold">Kurikulum</h3>
-            <hr class="my-2 border-t border-white-300">
-            <ul class="space-y-0 text-sm">
-                <li><a href="{{ route('kurikulum.school_curriculum') }}" class="hover:text-yellow-400">Kurikulum Sekolah</a></li>
-                <li><a href="{{ route('kurikulum.calendar') }}" class="hover:text-yellow-400">Kalender Pendidikan</a></li>
-                <li><a href="{{ route('kurikulum.homework') }}" class="hover:text-yellow-400">Tugas Siswa</a></li>
-                <li><a href="{{ route('kurikulum.learning_videos') }}" class="hover:text-yellow-400">Video Pembelajaran Siswa</a></li>
-            </ul>
-            <br>
-            <h3 class="mb-2 font-bold">Kontak</h3>
-            <hr class="my-2 border-t border-white-300">
-            <ul class="space-y-0 text-sm">
-                <li><a href="{{ route('contact') }}" class="hover:text-yellow-400">Hubungi Kami</a></li>
-                <li><a href="{{ route('contact') }}#pengaduan" class="hover:text-yellow-400">Pengaduan</a></li>
-            </ul>
-        </div>
+
+
     </div>
 </footer>
 <footer style="background-color: #304193;" class="flex justify-center gap-4 p-2 text-white md:p-4">
