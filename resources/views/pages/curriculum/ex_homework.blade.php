@@ -10,30 +10,30 @@
 
     <div class="w-full max-w-4xl p-4 mx-auto mt-6 rounded-lg">
         <!-- Judul -->
-        <div class="inline-block p-2 mb-4 text-sm font-bold text-white bg-blue-900 rounded-md">
+        <div class="inline-block p-2 mb-4 text-sm font-bold text-white rounded-md" style="background-color: #2D336B">
             Tugas Kelas {{ $classworks->first()->class_name ?? '' }}
         </div>
 
         <!-- Tabel -->
         <div class="overflow-x-auto">
-            <table class="w-full border border-collapse border-blue-500 bg-blue-50">
+            <table class="w-full border border-collapse" style="background-color: #2D336B">
                 <thead>
-                    <tr class="font-bold text-left text-blue-900">
-                        <th class="w-1/12 px-3 py-3 text-center border-2 border-blue-500">No</th>
-                        <th class="w-7/12 px-3 py-3 border-2 border-blue-500">Tugas</th>
-                        <th class="w-4/12 px-3 py-3 border-2 border-blue-500">Keterangan</th>
+                    <tr class="font-bold text-left">
+                        <th class="w-1/12 px-3 py-3 text-center border-2">No</th>
+                        <th class="w-7/12 px-3 py-3 border-2">Tugas</th>
+                        <th class="w-4/12 px-3 py-3 border-2">Keterangan</th>
                     </tr>
                 </thead>
                 <tbody>
                     @forelse ($classworks as $index => $work)
                         <tr>
-                            <td class="h-10 px-3 py-2 text-sm text-center border-2 border-blue-500 md:text-base">
+                            <td class="h-10 px-3 py-2 text-sm text-center border-2 md:text-base">
                                 {{ $index + 1 }}
                             </td>
-                            <td class="px-3 py-2 text-sm break-words border-2 border-blue-500 md:text-base">
+                            <td class="px-3 py-2 text-sm break-words border-2 md:text-base">
                                 {{ $work->title }}
                             </td>
-                            <td class="px-3 py-2 text-sm break-words border-2 border-blue-500 md:text-base">
+                            <td class="px-3 py-2 text-sm break-words border-2 md:text-base">
                                 {!! $work->description !!}
                             </td>
                         </tr>
@@ -49,7 +49,7 @@
         </div>
     </div>
 
-    <div class="mt-6 mb-12 ml-10 px-4 sm:px-6 md:px-8">
+    <div class="px-4 mt-6 mb-12 ml-10 sm:px-6 md:px-8">
         <x-breadcrumb />
     </div>
 
