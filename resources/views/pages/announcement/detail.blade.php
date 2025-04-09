@@ -16,10 +16,13 @@
             {!! nl2br(e($announcement->content)) !!}
         </div>
 
-        <a href="{{ route('announcement.index') }}"
+        <a href="{{ route('announcement.index', ['type' => $announcement->type]) }}"
             class="inline-block px-4 py-2 mt-6 text-white bg-blue-900 rounded-lg hover:bg-blue-800">
             ← Kembali
         </a>
+    </div>
+    <div class="flex items-center mb-10 ml-32 space-x-2">
+        <x-breadcrumb />
     </div>
     <x-layouts.footer />
 </x-layouts>

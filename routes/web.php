@@ -1,17 +1,18 @@
 <?php
 
-use App\Http\Controllers\StudentClassController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\GaleryController;
 use App\Http\Controllers\SettingController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\TeacherController;
+use App\Http\Controllers\ComplainController;
 use App\Http\Controllers\FacilityController;
 use App\Http\Controllers\ClassWorkController;
 use App\Http\Controllers\AnnouncementController;
-use App\Http\Controllers\CalendarAcademicController;
+use App\Http\Controllers\StudentClassController;
 use App\Http\Controllers\ExtracurricularController;
-use App\Http\Controllers\HomeController;
+use App\Http\Controllers\CalendarAcademicController;
 use App\Http\Controllers\SchoolOperationalAssistanceController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
@@ -65,6 +66,7 @@ Route::prefix('profile')->group(function () {
 });
 
 Route::get('/kontak', [SettingController::class, 'contact'])->name('contact');
+Route::post('/complaints', [ComplainController::class, 'store'])->name('complaints.store');
 
 // API for Search Bar
 Route::get('/api/announcements', [AnnouncementController::class, 'AnnouncementSearch']);

@@ -18,7 +18,11 @@ class SettingSeeder extends Seeder
                 'label' => 'Corousel',
                 'value' => null,
                 'type' => 'image',
-                'image' => null,
+                'image' => [
+                    'settings/slider1.jpeg',
+                    'settings/slider2.jpg',
+                    'settings/slider3.jpeg',
+                ],
             ],
             [
                 'key' => 'sambutan_text',
