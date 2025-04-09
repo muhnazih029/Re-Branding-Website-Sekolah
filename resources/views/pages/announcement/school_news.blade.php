@@ -32,7 +32,7 @@
                     class="flex flex-col gap-6 p-6 mb-10 transition bg-white rounded-lg shadow md:flex-row hover:shadow-lg">
                     <div class="w-full overflow-hidden bg-gray-300 rounded-lg h-100 md:w-1/3">
                         <img src="{{ asset('storage/' . $announcement->image) }}" alt="{{ $announcement->title }}"
-                            class="object-cover w-full h-full" />
+                            class="object-cover w-full h-full max-w-[1920px] max-h-[1080px]" />
                     </div>
                     <div class="flex flex-col justify-between w-full md:w-2/3">
                         <div>
