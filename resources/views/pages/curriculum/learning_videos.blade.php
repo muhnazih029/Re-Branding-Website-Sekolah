@@ -1,15 +1,16 @@
 <x-layouts>
     <x-layouts.header />
+    <x-curriculum.hero />
 
     <!-- Header -->
-    <div style="background-color: #2D336B;" class="w-[300px] shadow-md p-4 text-center mt-10 ml-8 rounded-md">
+    <div style="background-color: #2D336B;" class="w-[300px] shadow-md p-4 text-center mt-10 ml-16 rounded-md">
         <h1 class="text-xl font-bold text-white">VIDEO PEMBELAJARAN</h1>
     </div>
 
     <!-- Main Container -->
     <div class="min-h-screen p-8">
         <!-- Search Bar -->
-        <div class="flex justify-end mb-6">
+        <div class="flex justify-end mb-6 px-8">
             <div class="relative">
                 <input type="text" placeholder="Search"
                     class="w-full py-2 pl-10 pr-4 border border-gray-300 rounded-full shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 md:w-64" />
@@ -24,46 +25,46 @@
             </div>
         </div>
         <!-- Video Grid -->
-        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div class="grid grid-cols-1 gap-6 px-8 sm:grid-cols-2 lg:grid-cols-3">
             <!-- Video Card -->
             <div>
                 <iframe class="w-full h-64 rounded-md" src="https://www.youtube.com/embed/QCdDN1T1vdQ"
                     allowfullscreen></iframe>
-                <div class="py-2 mt-2 text-center text-white bg-indigo-800 rounded-md">FPB dan KPK</div>
+                <div class="py-2 mt-2 text-center text-white  rounded-md" style="background-color: #2D336B;">FPB dan KPK</div>
             </div>
             <div>
                 <iframe class="w-full h-64 rounded-md" src="https://www.youtube.com/embed/QCdDN1T1vdQ"
                     allowfullscreen></iframe>
-                <div class="py-2 mt-2 text-center text-white bg-indigo-800 rounded-md">FPB dan KPK</div>
-            </div>
-
-            <div>
-                <iframe class="w-full h-64 rounded-md" src="https://www.youtube.com/embed/QCdDN1T1vdQ"
-                    allowfullscreen></iframe>
-                <div class="py-2 mt-2 text-center text-white bg-indigo-800 rounded-md">FPB dan KPK</div>
+                <div class="py-2 mt-2 text-center text-white  rounded-md" style="background-color: #2D336B;">FPB dan KPK</div>
             </div>
 
             <div>
                 <iframe class="w-full h-64 rounded-md" src="https://www.youtube.com/embed/QCdDN1T1vdQ"
                     allowfullscreen></iframe>
-                <div class="py-2 mt-2 text-center text-white bg-indigo-800 rounded-md">FPB dan KPK</div>
+                <div class="py-2 mt-2 text-center text-white rounded-md" style="background-color: #2D336B;">FPB dan KPK</div>
             </div>
 
             <div>
                 <iframe class="w-full h-64 rounded-md" src="https://www.youtube.com/embed/QCdDN1T1vdQ"
                     allowfullscreen></iframe>
-                <div class="py-2 mt-2 text-center text-white bg-indigo-800 rounded-md">FPB dan KPK</div>
+                <div class="py-2 mt-2 text-center text-white rounded-md" style="background-color: #2D336B;">FPB dan KPK</div>
             </div>
 
             <div>
                 <iframe class="w-full h-64 rounded-md" src="https://www.youtube.com/embed/QCdDN1T1vdQ"
                     allowfullscreen></iframe>
-                <div class="py-2 mt-2 text-center text-white bg-indigo-800 rounded-md">FPB dan KPK</div>
+                <div class="py-2 mt-2 text-center text-white rounded-md" style="background-color: #2D336B;">FPB dan KPK</div>
+            </div>
+
+            <div>
+                <iframe class="w-full h-64 rounded-md" src="https://www.youtube.com/embed/QCdDN1T1vdQ"
+                    allowfullscreen></iframe>
+                <div class="py-2 mt-2 text-center text-white rounded-md" style="background-color: #2D336B;">FPB dan KPK</div>
             </div>
         </div>
     </div>
 
-    <div class="mt-6 mb-4 px-4 sm:px-6 md:px-8">
+    <div class="mt-6 mb-12 ml-10 px-4 sm:px-6 md:px-8">
         <x-breadcrumb />
     </div>
 
