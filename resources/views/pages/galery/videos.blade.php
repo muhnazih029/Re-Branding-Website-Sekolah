@@ -12,7 +12,7 @@
         });
     @endphp
     <!-- Grid Layout -->
-    <div id="video-container" class="grid grid-cols-3 gap-x-6 gap-y-32 px-36 py-36">
+    <div id="video-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-6 gap-y-10 px-4 md:px-12 lg:px-36 py-12">
         @foreach ($filteredGalleries as $index => $galery)
             @php
                 $videoFiles = $galery->files;
