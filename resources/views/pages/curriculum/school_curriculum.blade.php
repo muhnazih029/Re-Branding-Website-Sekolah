@@ -4,7 +4,7 @@
 
     <!-- Konten Utama -->
     <!-- Header -->
-    <div style="background-color: #2D336B;" class="w-[300px] shadow-md p-4 text-center mt-10 ml-8 rounded-md">
+    <div style="background-color: #2D336B;" class="w-[300px] shadow-md p-4 text-center mt-10 ml-16 rounded-md">
         <h1 class="text-xl font-bold text-white">KURIKULUM SEKOLAH</h1>
     </div>
 
@@ -28,9 +28,9 @@
         {!! nl2br($settings['kurikulum_sekolah']->value) !!}
     </div>
 
-    <div class="mt-6 mb-4 px-4 sm:px-6 md:px-8">
+    <div class="mt-6 mb-12 ml-10 px-4 sm:px-6 md:px-8">
         <x-breadcrumb />
     </div>
-    
+
     <x-layouts.footer />
 </x-layouts>
