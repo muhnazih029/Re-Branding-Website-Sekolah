@@ -49,7 +49,7 @@
         </div>
     </div>
 
-    <div class="mt-6 mb-4 px-4 sm:px-6 md:px-8">
+    <div class="mt-6 mb-12 ml-10 px-4 sm:px-6 md:px-8">
         <x-breadcrumb />
     </div>
 
