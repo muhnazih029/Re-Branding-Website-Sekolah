@@ -15,6 +15,7 @@
                 <x-card_news :announcement="$announcement" />
             @endforeach
         </div>
+        <div class="my-5 mt-10 mb-10 border-t-2 border-blue-900"></div>
     </div>
 
     <x-layouts.footer />
