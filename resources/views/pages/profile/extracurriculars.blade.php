@@ -29,9 +29,17 @@
                                 <h2 class="bg-[#7886C7] text-white px-4 py-2 shadow-md inline-block font-bold">
                                     {{ $key + 1 }}. {{ $extra->extra_name }}
                                 </h2>
-                                <div class="mt-2 bg-gray-300 h-64 w-full md:w-[55vh] rounded-md">
+                                <div class="relative mt-2 h-64 w-full md:w-[55vh] rounded-md overflow-hidden">
                                     <img src="{{ Storage::url($extra->image) }}" alt="{{ $extra->extra_name }}"
                                         class="object-cover w-full h-full rounded-md">
+                                    <!-- Kotak Keterangan -->
+                                    <<div class="absolute bottom-0 left-0 right-0 bg-[#E6EAF7] px-4 py-3 shadow-lg z-10">
+                                        <span
+                                            class="text-sm text-[#2D336B]">{{ $extra->extra_description ?? 'Semoga kita dipermudah kkn nya, entah itu ada keajaiban bisa rekognisi atau engga intinya ya gitu :))' }}</span>
+                                    </div>
+                                    <!-- Warna Keterangan -->
+                                    <div class="absolute inset-0 bg-gradient-to-t from-gray-900/30 to-transparent">
+                                    </div>
                                 </div>
                             </div>
                         @endforeach
