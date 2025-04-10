@@ -27,7 +27,7 @@ function renderPhotoGallery(galleries) {
         };
 
         card.innerHTML = `
-            <img src="/storage/${cover}" alt="${galery.name}" class="object-cover w-full h-40 rounded-lg" />
+            <img src="/storage/${cover}" alt="${galery.name}" class="object-cover w-full h-full" />
             <div class="absolute bottom-0 w-full bg-[#2D336B] text-white text-center py-2 font-semibold rounded-b-lg">
                 ${galery.name}
             </div>

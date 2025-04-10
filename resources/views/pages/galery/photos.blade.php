@@ -13,7 +13,8 @@
     @endphp
 
     <!-- Grid Layout -->
-    <div id="photos-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-6 gap-y-10 px-4 md:px-12 lg:px-36 py-12">
+    <div id="photos-container"
+        class="grid grid-cols-1 px-4 py-12 sm:grid-cols-2 md:grid-cols-3 gap-x-6 gap-y-10 md:px-12 lg:px-36">
         @foreach ($filteredGalleries as $index => $galery)
             @php
                 $imageFiles = $galery->files;
@@ -23,8 +24,13 @@
             @if ($cover)
                 <div class="relative overflow-hidden rounded-lg shadow-md cursor-pointer"
                     onclick="document.getElementById('modal-{{ $index }}').classList.remove('hidden')">
-                    <img src="{{ asset('storage/' . $cover) }}" alt="{{ $galery->name }}"
-                        class="object-cover w-full h-40 rounded-lg" />
+
+                    <!-- Gunakan aspect-ratio agar tidak gepeng -->
+                    <div class="w-full aspect-[4/3] overflow-hidden rounded-lg">
+                        <img src="{{ asset('storage/' . $cover) }}" alt="{{ $galery->name }}"
+                            class="object-cover w-full h-full" />
+                    </div>
+
                     <div
                         class="absolute bottom-0 w-full bg-[#2D336B] text-white text-center py-2 font-semibold rounded-b-lg">
                         {{ $galery->name }}
@@ -40,7 +46,8 @@
                         <h2 class="mb-4 text-xl font-semibold">{{ $galery->name }}</h2>
                         <div class="grid grid-cols-3 gap-4 max-h-[70vh] overflow-y-auto">
                             @foreach ($imageFiles as $file)
-                                <img src="{{ asset('storage/' . $file) }}" alt="" class="w-full rounded shadow">
+                                <img src="{{ asset('storage/' . $file) }}" alt=""
+                                    class="w-full rounded shadow object-cover aspect-[4/3]">
                             @endforeach
                         </div>
                     </div>
