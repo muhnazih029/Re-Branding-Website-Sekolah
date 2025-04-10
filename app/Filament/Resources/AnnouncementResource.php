@@ -58,8 +58,8 @@ class AnnouncementResource extends Resource
                         Forms\Components\Select::make('type')
                             ->label('Tipe')
                             ->options([
-                                'announcement' => 'Pengumuman',
-                                'news' => 'Berita',
+                                'announcement' => 'Berita Sekolah',
+                                'news' => 'Prestasi Sekolah',
                                 'competition' => 'Lomba',
                             ])
                             ->required(),

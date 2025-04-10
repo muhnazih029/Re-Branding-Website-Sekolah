@@ -23,7 +23,7 @@ Route::prefix('pengumuman')->group(function () {
         return redirect()->route('announcement.index', ['type' => 'news']);
     });
     Route::get('/{type}', [AnnouncementController::class, 'index'])
-        ->where('type', 'announcement|competition')
+        ->where('type', 'news|announcement|competition')
         ->name('announcement.index');
     Route::get('/{type}/{slug}', [AnnouncementController::class, 'show'])
         ->name('announcement.show');
