@@ -4,15 +4,15 @@
     <nav style="background-color: #304193;" class="flex items-center justify-between p-2 text-white md:p-4"></nav>
     <nav style="background-color: #2D336B;" class="flex items-center justify-between p-4 text-white md:p-6">
         <!-- Logo dan Nama Sekolah -->
-        <div class="flex items-center ml-2 space-x-2 md:space-x-3 md:ml-20">
+        <a class="flex items-center ml-2 space-x-2 md:space-x-3 md:ml-20" href="/">
             <!-- Logo -->
-            <img src="{{ asset('img/sd.png') }}" alt="Logo SDN Bandarharjo" class="h-12 w-15 ">
+            <img src="{{ asset('img/sd.png') }}" alt="Logo SDN Bandarharjo" class="h-12 w-15">
             <!-- Nama Sekolah -->
             <div class="flex flex-col">
                 <span class="text-sm font-semibold md:text-lg">SDN BANDARHARJO 01</span>
                 <span class="text-sm font-semibold md:text-lg">KOTA SEMARANG</span>
             </div>
-        </div>
+        </a>
 
         <!-- Tombol Gabung/Keluar -->
         @if (Auth::check())
