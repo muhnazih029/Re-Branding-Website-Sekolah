@@ -33,9 +33,9 @@
                                     <img src="{{ Storage::url($extra->image) }}" alt="{{ $extra->extra_name }}"
                                         class="object-cover w-full h-full rounded-md">
                                     <!-- Kotak Keterangan -->
-                                    <<div class="absolute bottom-0 left-0 right-0 bg-[#E6EAF7] px-4 py-3 shadow-lg z-10">
+                                    <<div class="absolute bottom-0 left-0 right-0 bg-[#2D336B] px-4 py-3 shadow-lg z-10">
                                         <span
-                                            class="text-sm text-[#2D336B]">{{ $extra->extra_description ?? 'Semoga kita dipermudah kkn nya, entah itu ada keajaiban bisa rekognisi atau engga intinya ya gitu :))' }}</span>
+                                            class="text-sm text-[#E6EAF7]">{{ $extra->extra_description ?? 'Semoga kita dipermudah kkn nya, entah itu ada keajaiban bisa rekognisi atau engga intinya ya gitu :))' }}</span>
                                     </div>
                                     <!-- Warna Keterangan -->
                                     <div class="absolute inset-0 bg-gradient-to-t from-gray-900/30 to-transparent">
