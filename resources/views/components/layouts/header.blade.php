@@ -151,11 +151,11 @@
                         x-transition:leave="transition ease-in duration-150"
                         x-transition:leave-start="opacity-100 transform scale-100"
                         x-transition:leave-end="opacity-0 transform scale-95" class="pl-4">
-                        <a href="{{ route('announcement.index', ['type' => 'announcement']) }}"
+                        <a href="{{ route('announcement.index', ['alias' => 'berita-sekolah']) }}"
                             class="block px-4 py-2 text-sm text-[rgb(45,51,107)] hover:bg-gray-100">Berita Sekolah</a>
-                        <a href="{{ route('announcement.index', ['type' => 'competition']) }}"
+                        <a href="{{ route('announcement.index', ['alias' => 'lomba']) }}"
                             class="block px-4 py-2 text-sm text-[rgb(45,51,107)] hover:bg-gray-100">Lomba</a>
-                        <a href="{{ route('announcement.index', ['type' => 'news']) }}"
+                        <a href="{{ route('announcement.index', ['alias' => 'prestasi-sekolah']) }}"
                             class="block px-4 py-2 text-sm text-[rgb(45,51,107)] hover:bg-gray-100">Prestasi
                             Sekolah</a>
                         <a href="{{ route('announcement.new_student') }}"
@@ -348,11 +348,11 @@
                     @mouseleave="open = false" style="background-color: #2D336B;"
                     class="absolute left-0 z-50 w-56 mt-1 rounded-md shadow-lg top-full ring-1 ring-black ring-opacity-5 focus:outline-none">
                     <div class="py-1">
-                        <a href="{{ route('announcement.index', ['type' => 'announcement']) }}"
+                        <a href="{{ route('announcement.index', ['alias' => 'berita-sekolah']) }}"
                             class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Berita Sekolah</a>
-                        <a href="{{ route('announcement.index', ['type' => 'competition']) }}"
+                        <a href="{{ route('announcement.index', ['alias' => 'lomba']) }}"
                             class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Lomba</a>
-                        <a href="{{ route('announcement.index', ['type' => 'news']) }}"
+                        <a href="{{ route('announcement.index', ['alias' => 'prestasi-sekolah']) }}"
                             class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Prestasi Sekolah</a>
                         <a href="{{ route('announcement.new_student') }}"
                             class="block px-4 py-2 text-sm text-white hover:bg-blue-900">Pendaftaran

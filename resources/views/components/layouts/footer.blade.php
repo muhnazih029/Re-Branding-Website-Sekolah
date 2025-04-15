@@ -150,13 +150,14 @@
                     <h3 class="mb-2 font-bold">Pengumuman</h3>
                     <hr class="my-2 border-t border-white-300">
                     <ul class="space-y-2 text-sm">
-                        <li><a href="{{ route('announcement.index', ['type' => 'announcement']) }}"
+                        <li><a href="{{ route('announcement.index', ['alias' => 'berita-sekolah']) }}"
                                 class="text-gray-300 transition-colors duration-200 hover:text-white">Berita
                                 Sekolah</a></li>
-                        <li><a href="{{ route('announcement.index', ['type' => 'competition']) }}"
+                        <li><a href="{{ route('announcement.index', ['alias' => 'lomba']) }}"
                                 class="text-gray-300 transition-colors duration-200 hover:text-white">Lomba</a></li>
-                        <li><a href="{{ route('announcement.index', ['type' => 'news']) }}"
-                                class="text-gray-300 transition-colors duration-200 hover:text-white">Prestasi</a></li>
+                        <li><a href="{{ route('announcement.index', ['alias' => 'prestasi-sekolah']) }}"
+                                class="text-gray-300 transition-colors duration-200 hover:text-white">Prestasi
+                                Sekolah</a></li>
                         <li><a href="{{ route('announcement.new_student') }}"
                                 class="text-gray-300 transition-colors duration-200 hover:text-white">PPDB</a></li>
                     </ul>

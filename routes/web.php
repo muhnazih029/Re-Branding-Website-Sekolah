@@ -19,16 +19,26 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::delete('/logout', [HomeController::class, 'logout'])->name('logout');
 
 Route::prefix('pengumuman')->group(function () {
+    // Redirect default ke prestasi-sekolah
     Route::get('/', function () {
-        return redirect()->route('announcement.index', ['type' => 'news']);
+        return redirect()->route('announcement.index', ['alias' => 'prestasi-sekolah']);
     });
-    Route::get('/{type}', [AnnouncementController::class, 'index'])
-        ->where('type', 'news|announcement|competition')
+
+    // Daftar berdasarkan kategori
+    Route::get('/{alias}', [AnnouncementController::class, 'index'])
+        ->where('alias', '^(prestasi-sekolah|berita-sekolah|lomba)$')
         ->name('announcement.index');
-    Route::get('/{type}/{slug}', [AnnouncementController::class, 'show'])
+
+    // Detail pengumuman
+    Route::get('/{alias}/{slug}', [AnnouncementController::class, 'show'])
+        ->where('alias', '^(prestasi-sekolah|berita-sekolah|lomba)$')
         ->name('announcement.show');
-    Route::get('/ppdb', [AnnouncementController::class, 'new_student'])->name('announcement.new_student');
+
+    // PPDB khusus
+    Route::get('/ppdb', [AnnouncementController::class, 'new_student'])
+        ->name('announcement.new_student');
 });
+
 
 Route::prefix('kurikulum')->group(function () {
     Route::get('/', function () {
@@ -37,7 +47,7 @@ Route::prefix('kurikulum')->group(function () {
     Route::get('kurikulum-sekolah', [SettingController::class, 'school_curriculum'])->name('kurikulum.school_curriculum');
     Route::get('/kalender-akademik', [CalendarAcademicController::class, 'index'])->name('kurikulum.calendar');
     Route::get('/tugas-siswa', [ClassWorkController::class, 'index'])->name('kurikulum.homework');
-    Route::get('/tugas-siswa/kelas-{id}', [ClassWorkController::class, 'show'])->name('kurikulum.ex_homework');
+    Route::get('/tugas-siswa/kelas-{className}', [ClassWorkController::class, 'show'])->name('kurikulum.ex_homework');
     Route::get('video-pembelajaran', function () {
         return view('pages.curriculum.learning_videos');
     })->name('kurikulum.learning_videos');

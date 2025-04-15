@@ -94,6 +94,13 @@ class AnnouncementResource extends Resource
                     ->height(100),
                 Tables\Columns\TextColumn::make('type')
                     ->label('Tipe')
+                    ->formatStateUsing(function ($state) {
+                        return [
+                            'announcement' => 'Berita Sekolah',
+                            'news' => 'Prestasi Sekolah',
+                            'competition' => 'Lomba',
+                        ][$state] ?? $state;
+                    })
                     ->sortable()
                     ->searchable(),
                 Tables\Columns\TextColumn::make('user_name')

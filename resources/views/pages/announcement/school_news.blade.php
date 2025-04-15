@@ -48,7 +48,7 @@
                             </p>
                         </div>
                         <div class="mt-4">
-                            <a href="{{ route('announcement.show', ['type' => $announcement->type, 'slug' => $announcement->slug]) }}"
+                            <a href="{{ route('announcement.show', ['alias' => $alias, 'slug' => $announcement->slug]) }}"
                                 class="inline-block bg-[#2D336B] text-white px-4 py-2 rounded-md hover:bg-blue-800 transition text-sm">
                                 Selengkapnya
                             </a>

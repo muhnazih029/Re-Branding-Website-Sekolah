@@ -1,10 +1,10 @@
 @php
     $announcementTypes = [
-        'news' => 'Prestasi Sekolah',
-        'announcement' => 'Berita Sekolah',
-        'competition' => 'Lomba',
+        'prestasi-sekolah' => 'Prestasi Sekolah',
+        'berita-sekolah' => 'Berita Sekolah',
+        'lomba' => 'Lomba',
     ];
-    $type = request()->route('type') ?? 'news';
+    $alias = request()->route('alias') ?? 'prestasi-sekolah';
     $routes = [
         // Pengumuman
         'announcement.new_student' => [
@@ -14,17 +14,17 @@
         'announcement.index' => [
             ['label' => 'Beranda', 'url' => route('home')],
             [
-                'label' => $announcementTypes[$type] ?? 'Pengumuman',
-                'url' => route('announcement.index', ['type' => $type]),
+                'label' => $announcementTypes[$alias] ?? 'Pengumuman',
+                'url' => route('announcement.index', ['alias' => $alias]),
             ],
         ],
         'announcement.show' => [
             ['label' => 'Beranda', 'url' => route('home')],
             [
-                'label' => $announcementTypes[$type] ?? 'Pengumuman',
-                'url' => route('announcement.index', ['type' => $type]),
+                'label' => $announcementTypes[$alias] ?? 'Pengumuman',
+                'url' => route('announcement.index', ['alias' => $alias]),
             ],
-            ['label' => request()->slug ?? 'Detail', 'url' => '#'],
+            ['label' => 'Detail', 'url' => '#'],
         ],
 
         // Profil

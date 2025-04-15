@@ -9,24 +9,42 @@ use App\Http\Controllers\Controller;
 
 class AnnouncementController extends Controller
 {
-    public function index(Request $request, $type = 'news')
+    public function index(Request $request, $alias = null)
     {
+        $typeMap = [
+            'prestasi-sekolah' => 'news',
+            'berita-sekolah' => 'announcement',
+            'lomba' => 'competition',
+        ];
+
         $titleMap = [
             'news' => 'PRESTASI SEKOLAH',
             'announcement' => 'BERITA SEKOLAH',
-            'competition' => 'LOMBA'
+            'competition' => 'LOMBA',
         ];
-        $announcements = DB::table('announcements')
+
+        $type = $alias ? ($typeMap[$alias] ?? null) : null;
+
+        if ($alias && !$type) {
+            abort(404);
+        }
+
+        $query = DB::table('announcements')
             ->join('users', 'announcements.user_id', '=', 'users.id')
-            ->select('announcements.*', 'users.name as author')
-            ->where('announcements.type', $type)
-            ->orderBy('announcements.created_at', 'desc')
+            ->select('announcements.*', 'users.name as author');
+
+        if ($type) {
+            $query->where('announcements.type', $type);
+        }
+
+        $announcements = $query->orderBy('announcements.created_at', 'desc')
             ->paginate(6);
 
         return view('pages.announcement.school_news', [
             'announcements' => $announcements,
             'type' => $type,
-            'title' => $titleMap[$type]
+            'alias' => $alias,
+            'title' => $type ? $titleMap[$type] : 'SEMUA PENGUMUMAN'
         ]);
     }
 
@@ -37,7 +55,15 @@ class AnnouncementController extends Controller
 
     public function AnnouncementSearch(Request $request)
     {
+        $typeMap = [
+            'prestasi-sekolah' => 'news',
+            'berita-sekolah' => 'announcement',
+            'lomba' => 'competition',
+        ];
+
         $type = $request->input('type', 'news');
+        $type = $typeMap[$type] ?? 'news';
+
         $search = $request->input('search');
 
         $announcements = DB::table('announcements')
@@ -46,7 +72,7 @@ class AnnouncementController extends Controller
             ->when($search, function ($query) use ($search) {
                 $query->where(function ($q) use ($search) {
                     $q->where('announcements.title', 'like', "%$search%")
-                      ->orWhere('announcements.content', 'like', "%$search%");
+                        ->orWhere('announcements.content', 'like', "%$search%");
                 });
             })
             ->where('announcements.type', $type)
@@ -57,8 +83,20 @@ class AnnouncementController extends Controller
         return response()->json($announcements);
     }
 
-    public function show($type, $slug)
+    public function show($alias, $slug)
     {
+        $typeMap = [
+            'prestasi-sekolah' => 'news',
+            'berita-sekolah' => 'announcement',
+            'lomba' => 'competition',
+        ];
+
+        $type = $typeMap[$alias] ?? null;
+
+        if (!$type) {
+            abort(404);
+        }
+
         $announcement = DB::table('announcements')
             ->join('users', 'announcements.user_id', '=', 'users.id')
             ->select('announcements.*', 'users.name as author')
@@ -72,4 +110,5 @@ class AnnouncementController extends Controller
 
         return view('pages.announcement.detail', compact('announcement'));
     }
+
 }

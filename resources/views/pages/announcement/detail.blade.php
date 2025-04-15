@@ -16,7 +16,7 @@
             {!! nl2br(e($announcement->content)) !!}
         </div>
 
-        <a href="{{ route('announcement.index', ['type' => $announcement->type]) }}"
+        <a href="{{ url()->previous() }}"
             class="inline-block px-4 py-2 mt-6 text-white bg-blue-900 rounded-lg hover:bg-blue-800">
             ← Kembali
         </a>
