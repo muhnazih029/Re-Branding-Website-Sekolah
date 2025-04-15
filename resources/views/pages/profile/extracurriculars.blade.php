@@ -22,23 +22,47 @@
                 <x-profiles.aside />
 
                 <!-- Konten -->
-                <div class="w-full p-5 bg-gray-100 rounded-lg md:w-3/4 md:ml-5">
-                    <div class="grid h-full grid-cols-1 gap-4 mt-4 sm:grid-cols-2">
+                <div
+                    class="w-full p-6 shadow-lg bg-gradient-to-br from-gray-100 via-white to-gray-200 rounded-3xl md:w-3/4 md:ml-5">
+                    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
                         @foreach ($extracurriculars as $key => $extra)
-                            <div class="mb-6">
-                                <h2 class="bg-[#7886C7] text-white px-4 py-2 shadow-md inline-block font-bold">
+                            <div x-data="{ open: false }"
+                                class="overflow-hidden transition duration-300 bg-white border border-gray-200 shadow-md rounded-2xl hover:shadow-xl">
+
+                                <div class="bg-[#2D336B] text-white px-5 py-3 font-semibold text-lg tracking-wide">
                                     {{ $key + 1 }}. {{ $extra->extra_name }}
-                                </h2>
-                                <div class="relative mt-2 h-64 w-full md:w-[55vh] rounded-md overflow-hidden">
+                                </div>
+
+                                <!-- Gambar -->
+                                <div @click="open = !open"
+                                    class="relative h-64 overflow-hidden transition-all duration-300 cursor-pointer group">
                                     <img src="{{ Storage::url($extra->image) }}" alt="{{ $extra->extra_name }}"
-                                        class="object-cover w-full h-full rounded-md">
-                                    <!-- Kotak Keterangan -->
-                                    <<div class="absolute bottom-0 left-0 right-0 bg-[#2D336B] px-4 py-3 shadow-lg z-10">
-                                        <span
-                                            class="text-sm text-[#E6EAF7]">{{ $extra->extra_description ?? 'Semoga kita dipermudah kkn nya, entah itu ada keajaiban bisa rekognisi atau engga intinya ya gitu :))' }}</span>
+                                        class="object-cover w-full h-full transition duration-500 transform group-hover:scale-105" />
+
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent">
                                     </div>
-                                    <!-- Warna Keterangan -->
-                                    <div class="absolute inset-0 bg-gradient-to-t from-gray-900/30 to-transparent">
+
+                                    <div
+                                        class="absolute px-3 py-1 text-sm font-medium text-gray-800 rounded-full shadow-sm bottom-4 right-4 bg-white/80">
+                                        Klik untuk lihat deskripsi
+                                    </div>
+                                </div>
+
+                                <!-- Deskripsi Container  -->
+                                <div
+                                    class="relative bg-[#2D336B] text-[#E6EAF7] text-sm px-5 py-4 h-40 overflow-hidden">
+                                    <div x-show="!open" x-transition.opacity class="line-clamp-6">
+                                        {{ $extra->description ?? 'Deskripsi tidak Ditemukan' }}
+                                    </div>
+
+                                    <div x-show="open" x-transition:enter="transition ease-out duration-300"
+                                        x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
+                                        x-transition:leave="transition ease-in duration-200"
+                                        x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0"
+                                        class="absolute inset-0 px-5 py-4 overflow-y-auto bg-[#2D336B] custom-scroll"
+                                        style="display: none;">
+                                        {{ $extra->description ?? 'Deskripsi tidak ditemukan' }}
                                     </div>
                                 </div>
                             </div>
