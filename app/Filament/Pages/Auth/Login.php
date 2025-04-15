@@ -16,11 +16,11 @@ class Login extends BaseLogin
                     ->schema([
                         $this->getEmailFormComponent(),
                         $this->getPasswordFormComponent(),
-                        $this->getRememberFormComponent(),
                         GRecaptcha::make('chaptcha')
                             ->label('Captcha')
                             ->required()
-                            ->helperText(__('Verifikasi bahwa Anda bukan robot.'))
+                            ->helperText(__('Verifikasi bahwa Anda bukan robot.')),
+                        $this->getRememberFormComponent(),
                     ])
                     ->statePath('data'),
             ),
