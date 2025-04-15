@@ -1,6 +1,6 @@
 <x-layouts>
     <x-layouts.header />
-    <x-classwork.hero />
+    <x-curriculum.hero />
 
     <!-- Konten Utama -->
     <!-- Header -->
@@ -15,38 +15,7 @@
         </div>
 
         <!-- Tabel -->
-        <div class="overflow-x-auto">
-            <table class="w-full border border-collapse" style="background-color: #2D336B">
-                <thead>
-                    <tr class="font-bold text-left">
-                        <th class="w-1/12 px-3 py-3 text-center border-2">No</th>
-                        <th class="w-7/12 px-3 py-3 border-2">Tugas</th>
-                        <th class="w-4/12 px-3 py-3 border-2">Keterangan</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @forelse ($classworks as $index => $work)
-                        <tr>
-                            <td class="h-10 px-3 py-2 text-sm text-center border-2 md:text-base">
-                                {{ $index + 1 }}
-                            </td>
-                            <td class="px-3 py-2 text-sm break-words border-2 md:text-base">
-                                {{ $work->title }}
-                            </td>
-                            <td class="px-3 py-2 text-sm break-words border-2 md:text-base">
-                                {!! $work->description !!}
-                            </td>
-                        </tr>
-                    @empty
-                        <tr>
-                            <td colspan="3" class="px-3 py-4 text-center text-gray-500 border-2 border-blue-500">
-                                Tidak ada tugas untuk kelas ini.
-                            </td>
-                        </tr>
-                    @endforelse
-                </tbody>
-            </table>
-        </div>
+        <x-curriculum.classwork-table :classworks="$classworks" />
     </div>
 
     <div class="px-4 mt-6 mb-12 ml-10 sm:px-6 md:px-8">

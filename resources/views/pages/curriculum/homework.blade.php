@@ -1,6 +1,6 @@
 <x-layouts>
     <x-layouts.header />
-    <x-classwork.hero />
+    <x-curriculum.hero />
 
     <!-- Konten Utama -->
     <div style="background-color: #2D336B;" class="w-[300px] shadow-md p-4 text-center mt-10 ml-16 rounded-md">
@@ -22,7 +22,7 @@
         </div>
     </div>
 
-    <div class="mt-6 mb-12 ml-10 px-4 sm:px-6 md:px-8">
+    <div class="px-4 mt-6 mb-12 ml-10 sm:px-6 md:px-8">
         <x-breadcrumb />
     </div>
 

@@ -16,7 +16,8 @@ class ClassWorkController extends Controller
     {
         $classworks = DB::table('class_works')
             ->leftJoin('student_classes', 'class_works.student_class_id', '=', 'student_classes.id')
-            ->select('class_works.*', 'student_classes.class_name')
+            ->select('student_classes.class_name')
+            ->distinct()
             ->get();
         return view('pages.curriculum.homework', compact('classworks'));
     }
@@ -40,12 +41,12 @@ class ClassWorkController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show($id)
+    public function show($className)
     {
         $classworks = DB::table('class_works')
             ->leftJoin('student_classes', 'class_works.student_class_id', '=', 'student_classes.id')
             ->select('class_works.*', 'student_classes.class_name as class_name')
-            ->where('class_works.id', $id)
+            ->where('class_name', $className)
             ->get();
         return view('pages.curriculum.ex_homework', compact('classworks'));
     }
