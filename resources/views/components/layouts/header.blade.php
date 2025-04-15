@@ -14,7 +14,7 @@
             </div>
         </a>
 
-        <!-- Tombol Gabung/Keluar -->
+        {{-- <!-- Tombol Gabung/Keluar -->
         @if (Auth::check())
             <form action="{{ route('logout') }}" method="POST" class="inline">
                 @csrf
@@ -29,7 +29,7 @@
                 class="px-3 py-1 mr-2 text-sm font-bold bg-white rounded-full md:px-4 md:py-2 md:mr-20 md:text-base">
                 Gabung
             </a>
-        @endif
+        @endif --}}
     </nav>
 
     <!-- Menu Header -->
