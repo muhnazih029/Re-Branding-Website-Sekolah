@@ -12,7 +12,8 @@
         });
     @endphp
     <!-- Grid Layout -->
-    <div id="video-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-6 gap-y-10 px-4 md:px-12 lg:px-36 py-12">
+    <div id="video-container"
+        class="grid grid-cols-1 px-4 py-12 sm:grid-cols-2 md:grid-cols-3 gap-x-6 gap-y-10 md:px-12 lg:px-36">
         @foreach ($filteredGalleries as $index => $galery)
             @php
                 $videoFiles = $galery->files;
@@ -23,8 +24,10 @@
                 {{-- Thumbnail & Trigger --}}
                 <div class="relative overflow-hidden rounded-lg shadow-md cursor-pointer"
                     onclick="document.getElementById('modal-video-{{ $index }}').classList.remove('hidden')">
-                    <video src="{{ asset('storage/' . $videoCover) }}"
-                        class="object-cover w-full h-40 rounded-lg"></video>
+                    <div class="aspect-video w-full max-h-[43vh]">
+                        <video src="{{ asset('storage/' . $videoCover) }}"
+                            class="object-cover w-full h-full rounded-lg"></video>
+                    </div>
                     <div
                         class="absolute bottom-0 w-full bg-[#2D336B] text-white text-center py-2 font-semibold rounded-b-lg">
                         {{ $galery->name }}
@@ -60,7 +63,7 @@
         @vite('resources/js/page/load-videos.js')
     @endpush
 
-    <div class="flex items-center mt-10 mb-10 ml-24 space-x-2">
+    <div class="flex items-center mt-10 mb-10 ml-4 space-x-2 sm:ml-24 md:space-x-4 lg:space-x-6">
         <x-breadcrumb />
     </div>
     <x-layouts.footer />

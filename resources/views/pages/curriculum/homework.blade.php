@@ -22,7 +22,7 @@
         </div>
     </div>
 
-    <div class="px-4 mt-6 mb-12 ml-10 sm:px-6 md:px-8">
+    <div class="px-4 mt-6 mb-12 ml-10 sm:px-6 md:px-8 lg:px-12 lg:ml-20">
         <x-breadcrumb />
     </div>
 

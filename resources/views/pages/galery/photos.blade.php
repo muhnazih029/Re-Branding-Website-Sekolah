@@ -25,7 +25,6 @@
                 <div class="relative overflow-hidden rounded-lg shadow-md cursor-pointer"
                     onclick="document.getElementById('modal-{{ $index }}').classList.remove('hidden')">
 
-                    <!-- Gunakan aspect-ratio agar tidak gepeng -->
                     <div class="w-full aspect-[4/3] overflow-hidden rounded-lg">
                         <img src="{{ asset('storage/' . $cover) }}" alt="{{ $galery->name }}"
                             class="object-cover w-full h-full" />
@@ -63,7 +62,7 @@
         @vite('resources/js/page/load-photos.js')
     @endpush
 
-    <div class="flex items-center mt-10 mb-10 ml-24 space-x-2">
+    <div class="flex items-center mt-10 mb-10 ml-4 space-x-2 sm:ml-24 md:space-x-4 lg:space-x-6">
         <x-breadcrumb />
     </div>
     <x-layouts.footer />

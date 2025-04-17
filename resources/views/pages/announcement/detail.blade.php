@@ -21,7 +21,7 @@
             ← Kembali
         </a>
     </div>
-    <div class="flex items-center mb-10 ml-32 space-x-2">
+    <div class="flex items-center mb-10 ml-4 space-x-2 md:ml-32">
         <x-breadcrumb />
     </div>
     <x-layouts.footer />
