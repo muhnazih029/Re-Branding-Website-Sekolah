@@ -76,7 +76,7 @@ Route::prefix('profile')->group(function () {
 });
 
 Route::get('/kontak', [SettingController::class, 'contact'])->name('contact');
-Route::post('/complaints', [ComplainController::class, 'store'])->name('complaints.store');
+Route::post('/complaints', [ComplainController::class, 'store'])->name('complaints.store')->middleware('throttle:10,1');
 
 // API for Search Bar
 Route::get('/api/announcements', [AnnouncementController::class, 'AnnouncementSearch']);
