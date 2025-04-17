@@ -9,7 +9,7 @@ use App\Http\Controllers\Controller;
 
 class AnnouncementController extends Controller
 {
-    public function index(Request $request, $alias = null)
+    public function index($alias = null)
     {
         $typeMap = [
             'prestasi-sekolah' => 'news',
@@ -110,5 +110,4 @@ class AnnouncementController extends Controller
 
         return view('pages.announcement.detail', compact('announcement'));
     }
-
 }

@@ -18,7 +18,7 @@
         </p>
 
         <!-- Tombol Baca Selengkapnya -->
-        <a href="{{ route('announcement.show', ['type' => $announcement->type, 'slug' => $announcement->slug]) }}"
+        <a href="{{ route('announcement.show', ['alias' => $announcement->alias, 'slug' => $announcement->slug]) }}"
             class="inline-block px-4 py-2 mt-4 text-sm font-semibold text-white transition duration-300 bg-blue-900 rounded-lg hover:bg-blue-800 w-fit">
             Baca Selengkapnya
         </a>
