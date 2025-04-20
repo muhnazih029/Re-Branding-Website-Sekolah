@@ -23,9 +23,9 @@
         </div>
     </div>
 
-    <div class="mt-6 mb-4 px-4 sm:px-6 md:px-8">
+    <div class="px-4 mt-6 mb-12 ml-3 sm:px-6 md:px-8 lg:px-12 lg:ml-14">
         <x-breadcrumb />
     </div>
-    
+
     <x-layouts.footer />
 </x-layouts>

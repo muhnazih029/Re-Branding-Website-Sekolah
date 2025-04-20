@@ -25,7 +25,8 @@
             </div>
         </div>
         <!-- Video Grid -->
-        <div id="learning-video-container" class="grid grid-cols-1 gap-6 px-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div id="learning-video-container"
+            class="grid grid-cols-1 gap-6 px-20 sm:grid-cols-1 sm:px-3 md:grid-cols-2 lg:px-20 lg:grid-cols-3">
             @php
                 function getYoutubeId($url)
                 {
