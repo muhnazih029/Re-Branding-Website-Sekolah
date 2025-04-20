@@ -20,12 +20,16 @@
             <!-- Contact -->
             <div class="flex flex-col justify-center gap-2">
                 <h3 class="text-lg font-semibold">Kontak Kami</h3>
-                <p>📍 Jl. Contoh Alamat, Semarang</p>
-                <p>📞 (024) 123-456</p>
-                <p>✉️ info@sdnbandarharjo.sch.id</p>
+                <p class="flex ">
+                    <span class="mr-2">📍</span>
+                    <span>{{ $footerSettings['contact_alamat']->value ?? 'Jl. Contoh Alamat, Semarang' }}</span>
+                </p>
+                <p>📞 {{ $footerSettings['contact_telp']->value ?? '(024) 3551189' }}</p>
+                <p>✉️ {{ $footerSettings['contact_email']->value ?? 'sdnbandarharjo01@gmail.com' }}</p>
                 <!-- Social Media -->
                 <div class="flex gap-3 mt-2">
-                    <a href="https://id-id.facebook.com/sdbandarharjo.negeri/" target="_blank" aria-label="Facebook"
+                    <a href="{{ $footerSettings['contact_facebook']->value ?? 'https://id-id.facebook.com/sdbandarharjo.negeri' }}"
+                        target="_blank" aria-label="Facebook"
                         class="transition-colors duration-200 hover:text-yellow-400">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="h-6">
                             <path fill="currentColor"
@@ -33,15 +37,17 @@
                             </path>
                         </svg>
                     </a>
-                    <a href="https://www.youtube.com/channel/UC4s4UjNNJ5eO6MJrtgck2wQ" target="_blank"
-                        aria-label="YouTube" class="transition-colors duration-200 hover:text-yellow-400">
+                    <a href="{{ $footerSettings['contact_youtube']->value ?? 'https://www.youtube.com/channel/UC4s4UjNNJ5eO6MJrtgck2wQ' }}"
+                        target="_blank" aria-label="YouTube"
+                        class="transition-colors duration-200 hover:text-yellow-400">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="h-6">
                             <path fill="currentColor"
                                 d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z">
                             </path>
                         </svg>
                     </a>
-                    <a href="https://www.instagram.com/sdnbandarharjo01" target="_blank" aria-label="Instagram"
+                    <a href="{{ $footerSettings['contact_instagram']->value ?? 'https://www.instagram.com/sdnbandarharjo01' }}"
+                        target="_blank" aria-label="Instagram"
                         class="transition-colors duration-200 hover:text-yellow-400">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="h-6">
                             <path fill="currentColor"
