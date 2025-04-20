@@ -33,6 +33,7 @@
                     </div>
                 </div>
             </div>
+            <x-pagination :paginator="$teachers" />
             <x-breadcrumb />
         </div>
     </div>

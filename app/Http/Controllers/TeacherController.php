@@ -14,7 +14,7 @@ class TeacherController extends Controller
      */
     public function index()
     {
-        $teachers = DB::table('teachers')->get();
+        $teachers = DB::table('teachers')->paginate(6);
         return view('pages.profile.teachers', compact('teachers'));
     }
 
