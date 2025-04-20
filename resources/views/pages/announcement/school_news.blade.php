@@ -44,14 +44,14 @@
                                 {{ \Carbon\Carbon::parse($announcement->created_at)->translatedFormat('d F Y') }}
                             </p>
                             <p class="text-sm text-gray-700">
-                                {{ Str::limit(strip_tags($announcement->content), 150, '...') }}
+                                {{ Str::limit(strip_tags($announcement->content), 1000, '...') }}
                             </p>
-                        </div>
-                        <div class="mt-4">
-                            <a href="{{ route('announcement.show', ['alias' => $alias, 'slug' => $announcement->slug]) }}"
-                                class="inline-block bg-[#2D336B] text-white px-4 py-2 rounded-md hover:bg-blue-800 transition text-sm">
-                                Selengkapnya
-                            </a>
+                            <div class="mt-4">
+                                <a href="{{ route('announcement.show', ['alias' => $alias, 'slug' => $announcement->slug]) }}"
+                                    class="inline-block bg-[#2D336B] text-white px-4 py-2 rounded-md hover:bg-blue-800 transition text-sm">
+                                    Selengkapnya
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
