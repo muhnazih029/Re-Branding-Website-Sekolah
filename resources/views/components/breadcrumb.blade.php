@@ -109,7 +109,7 @@
 @endphp
 
 <!-- Breadcrumb Navigation -->
-<div class="flex items-center space-x-2 mt-[100px]">
+<div class="flex items-center space-x-2 mt-[50px]">
     @foreach ($breadcrumbs as $breadcrumb)
         @if (!$loop->last)
             <a href="{{ $breadcrumb['url'] }}"

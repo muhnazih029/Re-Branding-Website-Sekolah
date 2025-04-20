@@ -14,7 +14,8 @@
                     class="block overflow-hidden bg-white rounded-lg shadow-lg">
                     <div class="overflow-hidden bg-white rounded-lg shadow-lg">
                         <div class="w-full bg-gray-300 aspect-w-16 aspect-h-9"></div>
-                        <div class="py-2 font-semibold text-center text-white" style="background-color: #2D336B;">Kelas {{ $class->class_name }}
+                        <div class="py-2 font-semibold text-center text-white" style="background-color: #2D336B;">Kelas
+                            {{ $class->class_name }}
                         </div>
                     </div>
                 </a>
@@ -22,7 +23,7 @@
         </div>
     </div>
 
-    <div class="px-4 mt-6 mb-12 ml-10 sm:px-6 md:px-8 lg:px-12 lg:ml-20">
+    <div class="px-4 mt-6 mb-12 ml-3 sm:px-6 md:px-8 lg:px-12 lg:ml-14">
         <x-breadcrumb />
     </div>
 

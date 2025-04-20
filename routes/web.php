@@ -11,6 +11,7 @@ use App\Http\Controllers\FacilityController;
 use App\Http\Controllers\ClassWorkController;
 use App\Http\Controllers\AnnouncementController;
 use App\Http\Controllers\StudentClassController;
+use App\Http\Controllers\LearningVideoController;
 use App\Http\Controllers\ExtracurricularController;
 use App\Http\Controllers\CalendarAcademicController;
 use App\Http\Controllers\SchoolOperationalAssistanceController;
@@ -48,9 +49,7 @@ Route::prefix('kurikulum')->group(function () {
     Route::get('/kalender-akademik', [CalendarAcademicController::class, 'index'])->name('kurikulum.calendar');
     Route::get('/tugas-siswa', [ClassWorkController::class, 'index'])->name('kurikulum.homework');
     Route::get('/tugas-siswa/kelas-{className}', [ClassWorkController::class, 'show'])->name('kurikulum.ex_homework');
-    Route::get('video-pembelajaran', function () {
-        return view('pages.curriculum.learning_videos');
-    })->name('kurikulum.learning_videos');
+    Route::get('video-pembelajaran', [LearningVideoController::class, 'index'])->name('kurikulum.learning_videos');
 });
 
 Route::prefix('galeri')->group(function () {
@@ -79,6 +78,7 @@ Route::get('/kontak', [SettingController::class, 'contact'])->name('contact');
 Route::post('/complaints', [ComplainController::class, 'store'])->name('complaints.store')->middleware('throttle:10,1');
 
 // API for Search Bar
+Route::get('/api/learning-videos', [LearningVideoController::class, 'LearnVideoSearch']);
 Route::get('/api/announcements', [AnnouncementController::class, 'AnnouncementSearch']);
 Route::get('/api/galery/photos', [GaleryController::class, 'searchPhotos']);
 Route::get('/api/galery/videos', [GaleryController::class, 'searchVideos']);

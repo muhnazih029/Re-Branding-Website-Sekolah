@@ -8,11 +8,11 @@
     </div>
 
     <!-- Main Container -->
-    <div class="min-h-screen p-8">
+    <div class="p-8">
         <!-- Search Bar -->
-        <div class="flex justify-end mb-6 px-8">
+        <div class="flex justify-end px-8 mb-6">
             <div class="relative">
-                <input type="text" placeholder="Search"
+                <input type="text" id="search-learning-video" placeholder="Search"
                     class="w-full py-2 pl-10 pr-4 border border-gray-300 rounded-full shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 md:w-64" />
                 <div class="absolute inset-y-0 left-0 flex items-center pl-3">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-500" viewBox="0 0 20 20"
@@ -25,48 +25,50 @@
             </div>
         </div>
         <!-- Video Grid -->
-        <div class="grid grid-cols-1 gap-6 px-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div id="learning-video-container" class="grid grid-cols-1 gap-6 px-8 sm:grid-cols-2 lg:grid-cols-3">
+            @php
+                function getYoutubeId($url)
+                {
+                    preg_match(
+                        '/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/|v\/))([^\?&"\'>]+)/',
+                        $url,
+                        $matches,
+                    );
+                    return $matches[1] ?? null;
+                }
+            @endphp
+
             <!-- Video Card -->
-            <div>
-                <iframe class="w-full h-64 rounded-md" src="https://www.youtube.com/embed/QCdDN1T1vdQ"
-                    allowfullscreen></iframe>
-                <div class="py-2 mt-2 text-center text-white  rounded-md" style="background-color: #2D336B;">FPB dan KPK</div>
-            </div>
-            <div>
-                <iframe class="w-full h-64 rounded-md" src="https://www.youtube.com/embed/QCdDN1T1vdQ"
-                    allowfullscreen></iframe>
-                <div class="py-2 mt-2 text-center text-white  rounded-md" style="background-color: #2D336B;">FPB dan KPK</div>
-            </div>
-
-            <div>
-                <iframe class="w-full h-64 rounded-md" src="https://www.youtube.com/embed/QCdDN1T1vdQ"
-                    allowfullscreen></iframe>
-                <div class="py-2 mt-2 text-center text-white rounded-md" style="background-color: #2D336B;">FPB dan KPK</div>
-            </div>
-
-            <div>
-                <iframe class="w-full h-64 rounded-md" src="https://www.youtube.com/embed/QCdDN1T1vdQ"
-                    allowfullscreen></iframe>
-                <div class="py-2 mt-2 text-center text-white rounded-md" style="background-color: #2D336B;">FPB dan KPK</div>
-            </div>
-
-            <div>
-                <iframe class="w-full h-64 rounded-md" src="https://www.youtube.com/embed/QCdDN1T1vdQ"
-                    allowfullscreen></iframe>
-                <div class="py-2 mt-2 text-center text-white rounded-md" style="background-color: #2D336B;">FPB dan KPK</div>
-            </div>
-
-            <div>
-                <iframe class="w-full h-64 rounded-md" src="https://www.youtube.com/embed/QCdDN1T1vdQ"
-                    allowfullscreen></iframe>
-                <div class="py-2 mt-2 text-center text-white rounded-md" style="background-color: #2D336B;">FPB dan KPK</div>
-            </div>
+            @foreach ($learningVideos as $video)
+                @php
+                    $youtubeId = getYoutubeId($video->youtube_url);
+                @endphp
+                <div>
+                    @if ($youtubeId)
+                        <iframe class="w-full h-64 rounded-md" src="https://www.youtube.com/embed/{{ $youtubeId }}"
+                            allowfullscreen>
+                        </iframe>
+                    @else
+                        <div class="flex items-center justify-center w-full h-64 text-gray-600 bg-gray-300">
+                            Invalid YouTube URL
+                        </div>
+                    @endif
+                    <div class="py-2 mt-2 text-center text-white rounded-md" style="background-color: #2D336B;">
+                        {{ $video->title }}
+                    </div>
+                </div>
+            @endforeach
         </div>
+        <!-- Pagination -->
+        <x-pagination :paginator="$learningVideos" />
     </div>
 
-    <div class="mt-6 mb-12 ml-10 px-4 sm:px-6 md:px-8">
+    <div class="mb-12 ml-3 md:px-5 lg:px-12 lg:ml-14">
         <x-breadcrumb />
     </div>
 
+    @push('scripts')
+        @vite('resources/js/page/load-larning-videos.js')
+    @endpush
     <x-layouts.footer />
 </x-layouts>
