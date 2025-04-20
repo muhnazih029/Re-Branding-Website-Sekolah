@@ -39,22 +39,23 @@ class ComplainResource extends Resource
     public static function table(Table $table): Table
     {
         return $table
-        ->columns([
-            Tables\Columns\TextColumn::make('name')->searchable(),
-            Tables\Columns\TextColumn::make('email'),
-            Tables\Columns\TextColumn::make('created_at')->since()->sortable(),
-        ])
-        ->actions([
-            Tables\Actions\Action::make('Reply via Gmail')
-                ->icon('heroicon-o-envelope')
-                ->url(fn (Complain $record) =>
-                    'https://mail.google.com/mail/?view=cm&fs=1&to=' . urlencode($record->email) .
-                    '&su=' . urlencode('Balasan Pengaduan Anda') .
-                    '&body=' . urlencode("Halo {$record->name},\n\nKami telah menerima pengaduan Anda dan berikut ini adalah tanggapan dari kami:\n\n"))
-                ->openUrlInNewTab(),
-            Tables\Actions\DeleteAction::make(),
-        ]);
-}
+            ->defaultSort('created_at', 'desc')
+            ->columns([
+                Tables\Columns\TextColumn::make('name')->searchable(),
+                Tables\Columns\TextColumn::make('email'),
+                Tables\Columns\TextColumn::make('created_at')->since()->sortable(),
+            ])
+            ->actions([
+                Tables\Actions\Action::make('Reply via Gmail')
+                    ->icon('heroicon-o-envelope')
+                    ->url(fn(Complain $record) =>
+                        'https://mail.google.com/mail/?view=cm&fs=1&to=' . urlencode($record->email) .
+                        '&su=' . urlencode('Balasan Pengaduan Anda') .
+                        '&body=' . urlencode("Halo {$record->name},\n\nKami telah menerima pengaduan Anda dan berikut ini adalah tanggapan dari kami:\n\n"))
+                    ->openUrlInNewTab(),
+                Tables\Actions\DeleteAction::make(),
+            ]);
+    }
 
     public static function getPages(): array
     {
